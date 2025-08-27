@@ -11,13 +11,90 @@
       href="/aapd-fastock/assets/logo%20icon-CYodmLSN.svg"
     />
     <title>相片 | 快素 Fastock</title>
-    <script type="module" crossorigin src="/aapd-fastock/assets/main-DmzNcnKk.js"></script>
-    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-KnVg7dG6.css">
+    <script type="module" crossorigin src="/aapd-fastock/assets/main-D5SmykdC.js"></script>
+    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-C0F-oXoP.css">
   </head>
   <body>
     <header>
+  <svg class="d-none">
+    <!-- svg存放 -->
+    <!-- 用d-none存放，自用use引入使用，但icon的填滿效果無法使用 -->
+    <!-- 使用方法
+      <svg width="長" height="寬">
+        <use href="#ID名字"></use>
+      </svg> 
+    -->
+    <!-- 購物車空心 -->
+    <symbol id="icon-cart-outline" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
+      />
+      <path
+        fill="currentColor"
+        d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
+      />
+      <path
+        fill="currentColor"
+        d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
+      />
+    </symbol>
+    <!-- 購物車實心 -->
+    <symbol id="icon-cart-fill" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M3.09796 2.0046L3.19982 2.01925L5.52684 2.48312C6.02853 2.58317 6.41586 2.97616 6.5121 3.47043L6.52679 3.57102L6.90973 6.99975H20.7455C21.5417 6.99975 22.1366 7.73068 21.9727 8.50758L20.0727 17.5076C19.9505 18.0859 19.4382 18.4998 18.8455 18.4998H7.23978C6.59853 18.4995 6.06117 18.0166 5.99401 17.3807L5.01462 8.10914L4.59348 4.33567L2.8061 3.9802L2.70719 3.95481C2.22132 3.80573 1.91782 3.31118 2.01966 2.80344C2.12161 2.29598 2.5922 1.95608 3.09796 2.0046ZM9.02047 20.5C9.02047 21.3284 8.34696 22 7.51614 22C6.68532 22 6.0118 21.3284 6.0118 20.5C6.0118 19.6716 6.68532 19 7.51614 19C8.34696 19 9.02047 19.6716 9.02047 20.5ZM20.0523 20.5C20.0523 21.3284 19.3787 22 18.5479 22C17.7171 22 17.0436 21.3284 17.0436 20.5C17.0436 19.6716 17.7171 19 18.5479 19C19.3787 19 20.0523 19.6716 20.0523 20.5Z"
+      />
+    </symbol>
+    <!-- 愛心空心 -->
+    <symbol id="icon-heart-outline" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
+      />
+    </symbol>
+    <!-- 愛心實心 -->
+    <symbol id="icon-heart-fill" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M12.0006 4.71122C14.2946 2.42352 17.9983 2.43017 20.2838 4.73173C22.5719 7.03671 22.572 10.7715 20.2838 13.0765L12.8873 20.5257C12.3985 21.018 11.6027 21.0178 11.1138 20.5257L3.71735 13.0765C1.42885 10.7715 1.42885 7.03674 3.71735 4.73173C6.00289 2.43028 9.70662 2.42341 12.0006 4.71122Z"
+      />
+    </symbol>
+    <!-- right button -->
+    <symbol id="icon-right" viewBox="0 0 24 24">
+      <path
+        d="M8.24116 5.34955C8.60058 4.93023 9.23101 4.88173 9.65034 5.24116L16.6503 11.2412C16.872 11.4311 16.9999 11.708 16.9999 11.9999C16.9999 12.2919 16.872 12.5688 16.6503 12.7587L9.65034 18.7587C9.23101 19.1182 8.60058 19.0697 8.24116 18.6503C7.88173 18.231 7.93023 17.6006 8.34955 17.2412L14.4638 11.9999L8.34955 6.75873C7.93023 6.39931 7.88173 5.76888 8.24116 5.34955Z"
+        fill="currentColor"
+      />
+    </symbol>
+    <!-- left button -->
+    <symbol id="icon-left" viewBox="0 0 24 24">
+      <path
+        d="M15.7588 18.6503C15.3994 19.0697 14.7689 19.1182 14.3496 18.7587L7.34961 12.7587C7.12796 12.5688 7 12.2919 7 11.9999C7 11.708 7.12796 11.4311 7.34961 11.2412L14.3496 5.24116C14.7689 4.88173 15.3994 4.93023 15.7588 5.34955C16.1182 5.76888 16.0697 6.39931 15.6504 6.75873L9.53613 11.9999L15.6504 17.2412C16.0697 17.6006 16.1182 18.231 15.7588 18.6503Z"
+        fill="currentColor"
+      />
+    </symbol>
+    <!-- 手機板三條槓icon -->
+    <symbol id="icon-category" viewBox="0 0 24 24">
+      <rect width="24" height="24" fill="white" />
+      <path
+        d="M19 17C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H19Z"
+        fill="$neutral"
+      />
+      <path
+        d="M19 11C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H19Z"
+        fill="$neutral"
+      />
+      <path
+        d="M19 5C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6C4 5.44772 4.44772 5 5 5H19Z"
+        fill="$neutral"
+      />
+    </symbol>
+  </svg>
   <!-- 首頁nav-bar -->
-  <nav class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-12">
+  <nav
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-5"
+  >
     <div
       class="container-fluid d-flex justify-content-between align-items-center"
     >
@@ -63,7 +140,7 @@
           />
           <!-- 圖搜圖的圖示 -->
           <button
-            class="search-bar-btn btn-image-search"
+            class="search-bar-btn btn-image-search pe-6"
             type="button"
           ></button>
         </div>
@@ -72,7 +149,7 @@
       <ul class="list-unstyled mb-2 mb-lg-0 d-flex gap-2">
         <li class="nav-item">
           <a
-            class="nav-s-btn icon-primary-fill fs-sm fw-medium"
+            class="nav-login-btn icon-primary-fill fs-sm fw-medium"
             href="#"
             role="button"
             >登入</a
@@ -80,7 +157,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-s-btn icon-secondary-outline fs-sm fw-medium"
+            class="nav-login-btn icon-secondary-outline fs-sm fw-medium"
             href="#"
             role="button"
             >註冊</a
@@ -88,26 +165,8 @@
         </li>
         <li class="nav-item">
           <button class="icon-S icon-secondary-outline" type="button">
-            <svg
-              class="icon-cart-outline"
-              width="22px"
-              height="22px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.0978 2.00462L3.19965 2.01926L5.52668 2.48314C6.02844 2.58321 6.41577 2.9761 6.51194 3.47048L6.52663 3.57106L6.90957 6.99987H20.7454C21.5416 6.99987 22.1366 7.73076 21.9725 8.50772L20.0725 17.508C19.9502 18.0861 19.438 18.5002 18.8454 18.5002H7.23962C6.59841 18.4999 6.06113 18.0169 5.99384 17.381L5.01446 8.10927L4.59332 4.33573L2.80594 3.98026L2.70702 3.95486C2.22112 3.80589 1.9178 3.3112 2.01949 2.80347C2.1214 2.29589 2.59194 1.95601 3.0978 2.00462ZM7.91736 16.5001H18.2352L19.8189 8.99992H7.12504L7.91736 16.5001Z"
-                fill="currentColor"
-              />
-              <path
-                d="M9.02021 20.5C9.02021 21.3284 8.3467 22 7.51588 22C6.68506 22 6.01154 21.3284 6.01154 20.5C6.01154 19.6715 6.68506 18.9999 7.51588 18.9999C8.3467 18.9999 9.02021 19.6715 9.02021 20.5Z"
-                fill="currentColor"
-              />
-              <path
-                d="M20.052 20.5C20.052 21.3284 19.3785 22 18.5477 22C17.7168 22 17.0433 21.3284 17.0433 20.5C17.0433 19.6715 17.7168 18.9999 18.5477 18.9999C19.3785 18.9999 20.052 19.6715 20.052 20.5Z"
-                fill="currentColor"
-              />
+            <svg width="22px" height="22px">
+              <use href="#icon-cart-outline"></use>
             </svg>
           </button>
         </li>
@@ -115,10 +174,12 @@
     </div>
   </nav>
   <!-- 分類nav-bar -->
-  <div class="container navbar navbar-expand-lg navbar-white bg-white fs-md">
+  <div
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 pt-0 pb-6px d-flex justify-content-between"
+  >
     <!-- mobile search-bar -->
-    <form class="d-lg-none d-flex mx-auto">
-      <div class="input-group btn-select">
+    <form class="d-lg-none d-flex">
+      <div class="input-group">
         <!-- 下拉式搜尋 -->
         <button
           class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
@@ -144,12 +205,17 @@
           aria-label="Search"
         />
         <!-- 圖搜圖的圖示 -->
-        <button class="search-bar-btn btn-image-search" type="button"></button>
+        <button
+          class="search-bar-btn btn-image-search pe-6"
+          type="button"
+        ></button>
       </div>
     </form>
+
     <!-- 分類區 -->
+    <!-- PC版按鈕 整個隱藏 -->
     <button
-      class="navbar-toggler"
+      class="navbar-toggler border-none d-none"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
@@ -157,10 +223,13 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <svg width="24" height="24">
+        <use href="#icon-category"></use>
+      </svg>
     </button>
+    <!-- PC內容 -->
     <div
-      class="collapse navbar-collapse d-lg-flex justify-content-lg-center"
+      class="collapse navbar-collapse d-none d-lg-flex justify-content-lg-center"
       id="navbarSupportedContent"
     >
       <ul
@@ -168,17 +237,6 @@
       >
         <li class="nav-item nav-item-dropdown position-relative">
           <a href="#" class="nav-link sub-nav-btn">字型</a>
-          <ul class="dropdown-menu-hover">
-            <li>
-              <a href="#" class="nav-link sub-nav-btn">預約訂位</a>
-            </li>
-            <li>
-              <a href="#" class="nav-link sub-nav-btn">回饋意見</a>
-            </li>
-            <li>
-              <a href="#" class="nav-link sub-nav-btn">營業資訊</a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link sub-nav-btn">範本</a>
@@ -214,6 +272,175 @@
           <a href="#" class="nav-link sub-nav-btn">3D</a>
         </li>
       </ul>
+    </div>
+
+    <!-- 手機板按鈕 -->
+    <button
+      class="navbar-toggler border-none d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+      aria-label="Toggle navigation"
+    >
+      <svg width="24" height="24">
+        <use href="#icon-category"></use>
+      </svg>
+    </button>
+    <!-- 手機版內容 -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-full d-lg-none"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header shadow">
+        <h5 id="offcanvasRightLabel">
+          <img src="/aapd-fastock/assets/logo-mobile-ELEScDCN.svg" alt="logo-mobile" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body offcanvas-nav">
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>字型</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>範本</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>相片</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>主題</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>圖形</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>影片</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>音效</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>插畫</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>圖標</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>模板</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>筆刷</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black d-flex justify-content-between align-items-center py-1 px-2 mb-4"
+            >
+              <p>3D</p>
+              <svg width="24" height="24">
+                <use href="#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
