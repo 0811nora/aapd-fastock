@@ -4,15 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/aapd-fastock/assets/logo%20icon-CYodmLSN.svg"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/aapd-fastock/assets/logo%20icon-CYodmLSN.svg"/>
     <title>貓咪家庭 ｜ 相片 | 快素 Fastock</title>
-    <script type="module" crossorigin src="/aapd-fastock/assets/main-D5SmykdC.js"></script>
-    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-C0F-oXoP.css">
+    <script type="module" crossorigin src="/aapd-fastock/assets/main-tI8j0m7v.js"></script>
+    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-BBuKUjUh.css">
   </head>
   <body>
     <header>
@@ -463,7 +459,7 @@
             </nav>
           </div>
 
-          <div class="row justify-content-between">
+          <div class="row justify-content-between mb-8">
             <div class="col-lg-8 product-content-w mb-4">
               <!-- 照片區-標題列 -->
               <div class="d-flex justify-content-between mb-3">
@@ -479,70 +475,74 @@
 
             <!-- 照片區-主照片 -->
               <div class="position-relative mb-3">
-                  <img class="rounded-5" src="/aapd-fastock/assets/product-image-BAgJAGpK.png" alt="">
-                  <div>
-                    <!-- 試用按鈕 - 互動 -->
-                    <div class="d-flex gap-3 position-absolute bottom-0 end-0 m-3">
-                      <button type="button" class="btn btn-sec-outline shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        試用
-                      </button>
-                      <button type="button" class="btn btn-sec-outline shadow ">探索相似</button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
+                <img class="rounded-5" src="/aapd-fastock/assets/product-image-BAgJAGpK.png" alt="">
+                <div>
+                  <!-- 試用按鈕 - 互動 -->
+                  <div class="d-flex gap-3 position-absolute bottom-0 end-0 m-3">
+                    <button type="button" class="btn btn-sec-outline shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      試用
+                    </button>
+                    <button type="button" class="btn btn-sec-outline shadow ">
+                      探索相似
+                    </button>
+                    <button type="button" class="inCardFav icon-M shadow">
+                      <svg
+                        class="icon-heart"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          class="heart-path"
+                          d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
 
-                    <!-- 試用鈕 - 互動樣式展開內容 -->
-                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
-                        <div class="modal-content">
-                          <div class="modal-header border-0 pb-0">
-                            <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <!-- 試用鈕 - 互動樣式展開內容 -->
+                  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
+                      <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                          <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
+                          <button type="button" class="btn-close trybtn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-6">
+                          <div class="d-flex align-items-center justify-content-between mb-6">
+                            <div class="w-85 h-547px">
+                              <img src="/aapd-fastock/assets/product-image-BAgJAGpK.png" class="rounded-5 w-100 h-100  choose-normal " alt="">
+                              <img src="/aapd-fastock/assets/porduct-cut-part-CBFJ1zZU.png" class="rounded-5 w-100  h-100 choose-cut-img d-none" alt="">
+                              <img src="/aapd-fastock/assets/porduct-nobg-BqtXSSB6.png" class="rounded-5 w-100 h-100 choose-only d-none" alt="">
+                            </div>
+                            <div class="w-15 d-flex flex-column gap-3 text-end ">
+                              <div>
+                                <button class="btn bg-primary-50 py-4 px-3 text-center choose-cut-btn">
+                                  <img src="data:image/svg+xml,%3csvg%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.81725%2025.6667C6.18325%2025.6667%205.65114%2025.1346%205.65114%2024.5006V22.3495H3.50008C2.86609%2022.3495%202.33398%2021.8174%202.33398%2021.1834C2.33398%2020.5495%202.86609%2020.0173%203.50008%2020.0173H5.65114V7.92613C5.65114%206.6921%206.69271%205.65053%207.92674%205.65053H20.018V3.49947C20.018%202.86548%2020.5501%202.33337%2021.1841%202.33337C21.8181%202.33337%2022.3502%202.86548%2022.3502%203.49947V5.65053H24.5012C25.1352%205.65053%2025.6673%206.18264%2025.6673%206.81664C25.6673%207.45063%2025.1352%207.98274%2024.5012%207.98274H22.3502V20.074C22.3502%2021.308%2021.3086%2022.3495%2020.0746%2022.3495H7.98335V24.5006C7.98335%2025.1346%207.45124%2025.6667%206.81725%2025.6667ZM20.0746%2020.0173L20.018%207.99406H7.91542V7.65442L7.97202%2020.0173H20.0632H20.0746Z'%20fill='%236157E6'/%3e%3c/svg%3e" alt="">
+                                  <p class="text-primary-600">局部選取</p>
+                                </button>
+                              </div>
+                              <div>
+                                <button class="btn bg-primary-50 py-4 px-3 text-center ai-nobg-btn">
+                                  <img src="data:image/svg+xml,%3csvg%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4092%207.5498C10.6658%207.55213%2010.9119%207.65226%2011.0996%207.83984L13.5195%2010.2598L13.5801%2010.3301C13.64%2010.4001%2013.6905%2010.4901%2013.7305%2010.5801C13.8004%2010.76%2013.82%2010.9605%2013.79%2011.1504C13.76%2011.2902%2013.7002%2011.4302%2013.6104%2011.54L13.5195%2011.6504L11.0996%2014.0703C11.0097%2014.1601%2010.9%2014.2401%2010.7803%2014.29C10.6604%2014.34%2010.5303%2014.3701%2010.4004%2014.3701C10.2704%2014.3701%2010.1395%2014.3498%2010.0195%2014.2998C9.89972%2014.2498%209.79007%2014.1797%209.7002%2014.0898C9.6102%2013.9998%209.53023%2013.8895%209.49023%2013.7695C9.44033%2013.6496%209.41992%2013.5195%209.41992%2013.3896C9.41998%2013.2598%209.45005%2013.1297%209.5%2013.0098C9.54993%2012.89%209.61998%2012.7803%209.71973%2012.6904L10.46%2011.9502H8C7.74%2011.9502%207.4898%2011.8502%207.2998%2011.6602C7.11982%2011.4802%207.00977%2011.23%207.00977%2010.96C7.00978%2010.7%207.10981%2010.4498%207.2998%2010.2598C7.4798%2010.0798%207.73001%209.96973%208%209.96973H10.46L9.71973%209.23047C9.53974%209.05048%209.4297%208.80003%209.42969%208.54004C9.42969%208.28007%209.52976%208.02984%209.71973%207.83984C9.89723%207.66234%2010.1528%207.55281%2010.4092%207.5498Z'%20fill='%236157E6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M19.46%204C20.66%204%2021.8199%204.48008%2022.6699%205.33008C23.5199%206.18008%2024%207.33004%2024%208.54004V19.4697C24%2020.6697%2023.5198%2021.8297%2022.6699%2022.6797C21.8199%2023.5297%2020.67%2024.0098%2019.46%2024.0098H8.54004C7.34004%2024.0098%206.18008%2023.5297%205.33008%2022.6797C4.48015%2021.8297%204%2020.6797%204%2019.4697V8.54004C4%207.34004%204.48008%206.18008%205.33008%205.33008C6.18008%204.48008%207.33004%204%208.54004%204H19.46ZM18.1904%2013.7998C18.1004%2013.8698%2017.9898%2013.9797%2017.7998%2014.1797L9.95996%2022.0195H19.4697C20.1497%2022.0195%2020.8%2021.7495%2021.29%2021.2695C21.7798%2020.7896%2022.04%2020.13%2022.04%2019.4502V17.6104L18.5898%2014.1699C18.4599%2014.04%2018.3301%2013.91%2018.2002%2013.79L18.1904%2013.7998ZM8.54004%205.96973C7.86004%205.96973%207.20973%206.23973%206.71973%206.71973C6.23973%207.19973%205.96973%207.86004%205.96973%208.54004V19.4697C5.96973%2020.1497%206.2398%2020.8001%206.71973%2021.29C6.93973%2021.51%207.21023%2021.6903%207.49023%2021.8203C7.56023%2021.7103%207.62969%2021.6196%207.67969%2021.5596L7.91016%2021.2998L16.4199%2012.79C16.5899%2012.6201%2016.7602%2012.4503%2016.9102%2012.3203L17.04%2012.21C17.18%2012.1%2017.3497%2011.9997%2017.5596%2011.9297L17.5898%2011.9199C17.9198%2011.8199%2018.2704%2011.8099%2018.6104%2011.8799L18.75%2011.9199L18.7803%2011.9297C19.0502%2012.0297%2019.2697%2012.1803%2019.4297%2012.3203L19.6699%2012.54L21.9902%2014.8604V8.5498C21.9902%207.87004%2021.72%207.22038%2021.2402%206.73047C20.7602%206.25047%2020.0999%205.98047%2019.4199%205.98047H8.54004V5.96973Z'%20fill='%236157E6'/%3e%3c/svg%3e" alt="">
+                                  <p class="text-primary-600">智能去背</p>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-
-                          <div class="modal-body p-6">
-                            <div class="d-flex align-items-center justify-content-between mb-6">
-                              <div class="w-85">
-                                <img src="/aapd-fastock/assets/product-image-BAgJAGpK.png" class="rounded-5 w-100" alt="">
-                              </div>
-                              <div class="w-15 d-flex flex-column gap-3 text-end ">
-                                <div>
-                                  <button class="btn bg-primary-50 py-4 px-3 text-center">
-                                    <img src="data:image/svg+xml,%3csvg%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.81725%2025.6667C6.18325%2025.6667%205.65114%2025.1346%205.65114%2024.5006V22.3495H3.50008C2.86609%2022.3495%202.33398%2021.8174%202.33398%2021.1834C2.33398%2020.5495%202.86609%2020.0173%203.50008%2020.0173H5.65114V7.92613C5.65114%206.6921%206.69271%205.65053%207.92674%205.65053H20.018V3.49947C20.018%202.86548%2020.5501%202.33337%2021.1841%202.33337C21.8181%202.33337%2022.3502%202.86548%2022.3502%203.49947V5.65053H24.5012C25.1352%205.65053%2025.6673%206.18264%2025.6673%206.81664C25.6673%207.45063%2025.1352%207.98274%2024.5012%207.98274H22.3502V20.074C22.3502%2021.308%2021.3086%2022.3495%2020.0746%2022.3495H7.98335V24.5006C7.98335%2025.1346%207.45124%2025.6667%206.81725%2025.6667ZM20.0746%2020.0173L20.018%207.99406H7.91542V7.65442L7.97202%2020.0173H20.0632H20.0746Z'%20fill='%236157E6'/%3e%3c/svg%3e" alt="">
-                                    <p class="text-primary-600">局部選取</p>
-                                  </button>
-                                </div>
-                                <div>
-                                  <button class="btn bg-primary-50 py-4 px-3 text-center">
-                                    <img src="data:image/svg+xml,%3csvg%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4092%207.5498C10.6658%207.55213%2010.9119%207.65226%2011.0996%207.83984L13.5195%2010.2598L13.5801%2010.3301C13.64%2010.4001%2013.6905%2010.4901%2013.7305%2010.5801C13.8004%2010.76%2013.82%2010.9605%2013.79%2011.1504C13.76%2011.2902%2013.7002%2011.4302%2013.6104%2011.54L13.5195%2011.6504L11.0996%2014.0703C11.0097%2014.1601%2010.9%2014.2401%2010.7803%2014.29C10.6604%2014.34%2010.5303%2014.3701%2010.4004%2014.3701C10.2704%2014.3701%2010.1395%2014.3498%2010.0195%2014.2998C9.89972%2014.2498%209.79007%2014.1797%209.7002%2014.0898C9.6102%2013.9998%209.53023%2013.8895%209.49023%2013.7695C9.44033%2013.6496%209.41992%2013.5195%209.41992%2013.3896C9.41998%2013.2598%209.45005%2013.1297%209.5%2013.0098C9.54993%2012.89%209.61998%2012.7803%209.71973%2012.6904L10.46%2011.9502H8C7.74%2011.9502%207.4898%2011.8502%207.2998%2011.6602C7.11982%2011.4802%207.00977%2011.23%207.00977%2010.96C7.00978%2010.7%207.10981%2010.4498%207.2998%2010.2598C7.4798%2010.0798%207.73001%209.96973%208%209.96973H10.46L9.71973%209.23047C9.53974%209.05048%209.4297%208.80003%209.42969%208.54004C9.42969%208.28007%209.52976%208.02984%209.71973%207.83984C9.89723%207.66234%2010.1528%207.55281%2010.4092%207.5498Z'%20fill='%236157E6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M19.46%204C20.66%204%2021.8199%204.48008%2022.6699%205.33008C23.5199%206.18008%2024%207.33004%2024%208.54004V19.4697C24%2020.6697%2023.5198%2021.8297%2022.6699%2022.6797C21.8199%2023.5297%2020.67%2024.0098%2019.46%2024.0098H8.54004C7.34004%2024.0098%206.18008%2023.5297%205.33008%2022.6797C4.48015%2021.8297%204%2020.6797%204%2019.4697V8.54004C4%207.34004%204.48008%206.18008%205.33008%205.33008C6.18008%204.48008%207.33004%204%208.54004%204H19.46ZM18.1904%2013.7998C18.1004%2013.8698%2017.9898%2013.9797%2017.7998%2014.1797L9.95996%2022.0195H19.4697C20.1497%2022.0195%2020.8%2021.7495%2021.29%2021.2695C21.7798%2020.7896%2022.04%2020.13%2022.04%2019.4502V17.6104L18.5898%2014.1699C18.4599%2014.04%2018.3301%2013.91%2018.2002%2013.79L18.1904%2013.7998ZM8.54004%205.96973C7.86004%205.96973%207.20973%206.23973%206.71973%206.71973C6.23973%207.19973%205.96973%207.86004%205.96973%208.54004V19.4697C5.96973%2020.1497%206.2398%2020.8001%206.71973%2021.29C6.93973%2021.51%207.21023%2021.6903%207.49023%2021.8203C7.56023%2021.7103%207.62969%2021.6196%207.67969%2021.5596L7.91016%2021.2998L16.4199%2012.79C16.5899%2012.6201%2016.7602%2012.4503%2016.9102%2012.3203L17.04%2012.21C17.18%2012.1%2017.3497%2011.9997%2017.5596%2011.9297L17.5898%2011.9199C17.9198%2011.8199%2018.2704%2011.8099%2018.6104%2011.8799L18.75%2011.9199L18.7803%2011.9297C19.0502%2012.0297%2019.2697%2012.1803%2019.4297%2012.3203L19.6699%2012.54L21.9902%2014.8604V8.5498C21.9902%207.87004%2021.72%207.22038%2021.2402%206.73047C20.7602%206.25047%2020.0999%205.98047%2019.4199%205.98047H8.54004V5.96973Z'%20fill='%236157E6'/%3e%3c/svg%3e" alt="">
-                                    <p class="text-primary-600">局部選取</p>
-                                  </button>
-                                </div>
-                                
-                              </div>
-                            </div>
-                            <div class="d-flex gap-4 justify-content-center">
-                              <button type="button" class="btn btn-sec-outline">PNG下載</button>
-                              <button type="button" class="btn btn-sec-outline">複製到剪貼簿</button>
-                            </div>
+                          <div class="d-flex gap-4 justify-content-center">
+                            <a href="/aapd-fastock/product-image-cut.png" class="btn btn-sec-outline" download="cat-cut.png" class="btn btn-pr-noneline ms-auto fw-medium border-0">PNG下載</a>
+                            <button type="button" id="copy-image-btn" class="btn btn-sec-outline">複製到剪貼簿
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
 
               <!-- 關於 -->
@@ -572,16 +572,18 @@
                   <h3 class="fs-6 fw-bold mb-3">商品評價<span class="ms-3">(2)</span></h3>
                   <div>
                     <div class="dropdown">
-                      <button class="btn fw-normal  dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn fw-normal  dropdown-toggle " type="button" id="sortButton" data-bs-toggle="dropdown" aria-expanded="false">
                         按<span class="fw-medium">最新</span>排序 <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.6504%208.24128C19.0697%208.6007%2019.1182%209.23113%2018.7588%209.65046L12.7588%2016.6505C12.5688%2016.8721%2012.2919%2017.0001%2012%2017.0001C11.7081%2017.0001%2011.4312%2016.8721%2011.2412%2016.6505L5.24122%209.65046C4.8818%209.23113%204.93029%208.6007%205.34962%208.24128C5.76894%207.88186%206.39937%207.93035%206.7588%208.34968L12%2014.4639L17.2412%208.34968C17.6006%207.93035%2018.2311%207.88186%2018.6504%208.24128Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="">
                       </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <ul class="dropdown-menu" aria-labelledby="sortButton" show>
                         <li><a class="dropdown-item" href="#">按最舊排序</a></li>
                         <li><a class="dropdown-item" href="#">最高評分優先</a></li>
                         <li><a class="dropdown-item" href="#">最低評分優先</a></li>
                       </ul>
                     </div>
+
                   </div>
+
                 </div>
 
                 <!-- 總分顯示 -->
@@ -875,20 +877,264 @@
                     </div>
                   </div>
                 </div>
-
-
               </div>
-
-
             </div>
 
           </div>
-
-          
-
         </div>
-
       </section>
+
+      <section>
+
+        <div class="container">
+          <!-- 類似-輪播 -->
+          <div class="mb-6">
+            <div class="d-flex justify-content-between mb-6">
+              <h3 class="fs-5">類似</h3>
+              <a href="product-list.html" class="text-primary">查看更多</a>
+            </div>
+            <div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2014-CeoVFNue.png" class="card-img-top card-img rounded-5 object-position-top"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">綠眼長毛貓側臉寫真</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-1-DWkrBvjG.png" class="card-img-top card-img rounded-5 object-position-right"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">藍眼虎斑貓正面特寫</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-2-DgO6qo9X.png" class="card-img-top card-img rounded-5 object-position-right-15"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">酷貓戴墨鏡幽默圖像</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-3-51tV24AX.png" class="card-img-top card-img rounded-5 object-position-center-25"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">驚訝表情白貓特寫照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2014-CeoVFNue.png" class="card-img-top card-img rounded-5 object-position-top"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">綠眼長毛貓側臉寫真</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-1-DWkrBvjG.png" class="card-img-top card-img rounded-5 object-position-right"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">藍眼虎斑貓正面特寫</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-2-DgO6qo9X.png" class="card-img-top card-img rounded-5 object-position-right-15"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">酷貓戴墨鏡幽默圖像</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-3-51tV24AX.png" class="card-img-top card-img rounded-5 object-position-center-25"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">驚訝表情白貓特寫照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 同個作者-輪播 -->
+          <div>
+            <div class="d-flex justify-content-between mb-6">
+              <h3 class="fs-5">同個作者</h3>
+              <a href="product-list.html" class="text-primary">查看更多</a>
+            </div>
+            <div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2012-C2Az_iEF.png" class="card-img-top card-img rounded-5 object-position-top"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">未來感藍球體藝術構圖</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2013-Dfga_pb7.png" class="card-img-top card-img rounded-5 object-position-bottom"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">極簡山丘風景照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%202-BOWiAgcR.png" class="card-img-top card-img rounded-5"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">雪山日出空拍景觀圖</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-4-CIa40UUh.png" class="card-img-top card-img rounded-5 object-position-center-25"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">新加坡濱海灣三人旅拍照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2012-C2Az_iEF.png" class="card-img-top card-img rounded-5 object-position-top"  alt="">
+                      <div class="tag-m tag-yellow"></div>
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">未來感藍球體藝術構圖</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%2013-Dfga_pb7.png" class="card-img-top card-img rounded-5 object-position-bottom"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">極簡山丘風景照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card%202-BOWiAgcR.png" class="card-img-top card-img rounded-5"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">雪山日出空拍景觀圖</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-0 w-305px">
+                      <img src="/aapd-fastock/assets/card-4-CIa40UUh.png" class="card-img-top card-img rounded-5 object-position-center-25"  alt="">
+                      <div class="card-body p-3">
+                        <h5 class="fs-lg fw-bold mb-1">新加坡濱海灣三人旅拍照</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p>相片</p>
+                          <p class="fs-lg fw-bold">$100</p>
+                        </div>
+                      </div>
+                      <a href="product-details.html" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
 
     </main>
 
@@ -972,9 +1218,36 @@
             </ul>
             </div>
     </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</footer>  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
     <script>
+
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerGroup: 1,   // 每個 slide 間距，可依需求調整
+          loop: true,
+          autoplay: {
+            delay: 2000,        // 每 3 秒自動切換一次（3000毫秒）
+            disableOnInteraction: false,  // 用戶操作後仍繼續自動播放
+            pauseOnMouseEnter: true,      // 滑鼠移入時暫停自動播放
+          },
+          breakpoints: {
+            0: {            // 手機
+              slidesPerView: 1.2,
+              spaceBetween: 24,
+            },
+            576: {          // 小平板
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            992: {          // 桌面
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }
+        });
+
+
       document.querySelectorAll('.single-check').forEach(cb => {
         cb.addEventListener('change', function() {
           if (this.checked) {
@@ -990,6 +1263,9 @@
       document.addEventListener("DOMContentLoaded", () => {
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el))
+
+        
+
       });
 
       // Bootstrap 5 原生驗證範例
@@ -1014,6 +1290,7 @@
 
       // 結帳跳轉到下一頁
       document.addEventListener("DOMContentLoaded", function () {
+        
         const form = document.querySelector(".needs-validation");
 
         form.addEventListener("submit", function (event) {
@@ -1035,6 +1312,75 @@
           // 確認跳轉
           window.location.href = "checkout.html"; // ← 確認 checkout.html 路徑是否正確
         });
+      });
+
+      const chooseCutBtn = document.querySelector(".choose-cut-btn");
+      const aiNobgBtn = document.querySelector(".ai-nobg-btn");
+      const chooseNormal = document.querySelector(".choose-normal");
+      const chooseCutImg = document.querySelector(".choose-cut-img");
+      const chooseOnly = document.querySelector(".choose-only");
+      const trybtnClose = document.querySelector(".trybtn-close");
+
+      trybtnClose.addEventListener("click", () => {
+        chooseNormal.classList.remove("d-none");
+        chooseCutImg.classList.add("d-none");
+        chooseOnly.classList.add("d-none");
+        chooseCutBtn.classList.remove("cut-btn-active");
+      });
+
+
+      function updateDisplay() {
+        const isCutActive = chooseCutBtn.classList.contains("cut-btn-active");
+        const isAiActive = aiNobgBtn.classList.contains("cut-btn-active");
+        
+        chooseNormal.classList.add("d-none");
+        chooseCutImg.classList.add("d-none");
+        chooseOnly.classList.add("d-none");
+        
+        if (isAiActive) {
+          chooseOnly.classList.remove("d-none");
+        } else if (isCutActive) {
+          chooseCutImg.classList.remove("d-none");
+        } else {
+          chooseNormal.classList.remove("d-none");
+        }
+      }
+
+      chooseCutBtn.addEventListener("click", () => {
+        chooseCutBtn.classList.toggle("cut-btn-active");
+        updateDisplay();
+      });
+
+      aiNobgBtn.addEventListener("click", () => {
+        aiNobgBtn.classList.toggle("cut-btn-active");
+        updateDisplay();
+      });
+
+      // 不使用 clipboard.js，直接用原生 API
+      const copyImageBtn = document.getElementById('copy-image-btn');
+
+      copyImageBtn.addEventListener('click', async () => {
+        try {
+          const response = await fetch('/aapd-fastock/product-image-cut.png');
+          const blob = await response.blob();
+          
+          await navigator.clipboard.write([
+            new ClipboardItem({ 'image/png': blob })
+          ]);
+          
+          // 成功提示
+          copyImageBtn.textContent = '已複製圖片！';
+          copyImageBtn.classList.add('btn-success');
+          
+          setTimeout(() => {
+            copyImageBtn.textContent = '複製到剪貼簿';
+            copyImageBtn.classList.remove('btn-success');
+          }, 2000);
+          
+        } catch (err) {
+          console.error('複製失敗:', err);
+        
+        }
       });
 
 
