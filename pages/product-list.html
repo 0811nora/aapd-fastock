@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/logo icon.svg"
-    />
-    <title>相片 | 快素 Fastock</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo icon.svg" />
+  <title>相片 | 快素 Fastock</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
     <%- include('./layout/sroll-top-btn.ejs'); -%>
+      <div class="product-list-banner pt-12 text-center">
+        <h3 class="mb-2 h4 text-white">相片</h3>
+        <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
+        <div class="searchtag">
+          <div>
+            <button type="button" class="btn-sm pl-banner-btn">
+              <img src="/assets/images/icon/icon-search.svg">背景</button>
+          </div>
+        </div>
+      </div>
+      <main class="pl-main container d-flex justify-content-between gap-5">
+        <div class="filter-panel">
+          <h2>隱藏篩選器</h2>
+        </div>
+        <div class="search-result d-flex flex-column">
+          <button>按
+            <span>最新</span>
+            排序</button>
+          <div class="content-box">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card’s
+                  content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    
-    
-    
-    <%- include('./layout/footer'); -%>
+      </main>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+
+
+
+      <%- include('./layout/footer'); -%>
+
+        <script type="module" src="../main.js"></script>
+</body>
+
 </html>
