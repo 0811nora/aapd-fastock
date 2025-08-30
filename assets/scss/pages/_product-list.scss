@@ -62,3 +62,41 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* 勾選後：隱藏左欄，右欄改滿版 */
+.layout:has(#toggleFilter:checked) .sidebar {
+    display: none;
+}
+
+.layout:has(#toggleFilter:checked) .content {
+    grid-column: 1 / -1;
+    /* 佔滿整列 */
+}
+
+/* 隱藏實體 checkbox */
+#toggleFilter {
+    position: absolute;
+    left: -9999px;
+}
+
+#newestFilter {
+    position: absolute;
+    left: -9999px;
+}
+
+.row-pd-list {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    /* 左 3 / 右 9 的概念 */
+    gap: 16px;
+    align-items: start;
+}
+
+.color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: var(--c);
+    display: inline-block
+}

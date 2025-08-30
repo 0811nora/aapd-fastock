@@ -16,41 +16,236 @@
         <h3 class="mb-2 h4 text-white">相片</h3>
         <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
         <div class="searchtag">
-          <div>
-            <button type="button" class="btn-sm pl-banner-btn">
-              <img src="/assets/images/icon/icon-search.svg">背景</button>
+          <div class="searchtag" id="bannerTags" role="group" aria-label="快速篩選標籤">
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="背景" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">背景
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="壁紙" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">壁紙
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="風景" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">風景
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="商業" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">商業
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="室內設計" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">室內設計
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="動物" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">動物
+            </button>
+            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="城市" aria-pressed="false">
+              <img src="/assets/images/icon/icon-search.svg" alt="">城市
+            </button>
           </div>
         </div>
       </div>
-      <main class="pl-main container d-flex justify-content-between gap-5">
-        <div class="filter-panel">
-          <h2>隱藏篩選器</h2>
+      <div class="container layout my-5">
+        <div class="d-flex">
+          <label for="toggleFilter" class="btn btn-sec-noline me-auto"><img src="/assets/images/icon/icon-filter.svg"
+              alt="">隱藏篩選器</label>
+          <input type="checkbox" id="toggleFilter">
+          <label for="toggleFilter" class="btn btn-sec-noline text-secondary-800">按<span
+              class="text-black">最新</span>排序<img src="/assets/images/icon/icon-down.svg" alt=""></label>
+          <input type="checkbox" id="newestFilter">
         </div>
-        <div class="search-result d-flex flex-column">
-          <button>按
-            <span>最新</span>
-            排序</button>
-          <div class="content-box">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card’s
-                  content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div class="row-pd-list">
+          <!-- 篩選器區 -->
+          <aside id="filter-panel" class="sidebar border-end pe-3">
+            <form class="vstack gap-3">
+              <fieldset class="border-top border-bottom">
+                <legend class="fs-6 d-none">類別</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="photo" id="cat-photo">
+                  <label class="form-check-label" for="cat-photo">促銷</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">人氣</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">每週免費</label>
+                </div>
+              </fieldset>
+              <fieldset class="border-bottom">
+                <legend class="fs-6">人數</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="photo" id="cat-photo">
+                  <label class="form-check-label" for="cat-photo">0人</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">1人</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">2人</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">3+人</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="fs-6 mb-2">顏色</legend>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="color-dot" style="--c:#F44336;"></span>
+                  <span class="color-dot" style="--c:#FF9800; border-color:#eee; opacity:.4;"></span>
+                  <span class="color-dot" style="--c:#FFEB3B;;"></span>
+                  <span class="color-dot" style="--c:#795548;;"></span>
+                  <span class="color-dot" style="--c:#4CAF50;;"></span>
+                  <span class="color-dot" style="--c:#9C27B0;;"></span>
+                  <span class="color-dot" style="--c:#2196F3;;"></span>
+                  <span class="color-dot" style="--c:#E91E63;;"></span>
+                  <span class="color-dot" style="--c:#000000;;"></span>
+                  <span class="color-dot" style="--c:#FFFFFF;;"></span>
+                  <span class="color-dot" style="--c:#9E9E9E;;"></span>
+                </div>
+              </fieldset>
+              <fieldset class="border-bottom">
+                <legend class="fs-6">比例</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="photo" id="cat-photo">
+                  <label class="form-check-label" for="cat-photo">垂直</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">水平</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template">
+                  <label class="form-check-label" for="cat-template">正方</label>
+                </div>
+              </fieldset>
+            </form>
+          </aside>
+
+          <!-- 卡片區 -->
+          <main id="card-area" class="content col-6 col-lg-9 ps-lg-3">
+            <div class="row g-4">
+              <div class="col-6 col-md-4">
+                <div class="card border-0">
+                  <img src="/assets/images/Homepage/card 1.png" class="card-img-top rounded-4" alt="">
+                  <div class="card-body">
+                    <h5 class="card-title">貓咪家庭</h5>
+                    <p class="card-text">$100</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </main>
         </div>
-
-      </main>
-
-
-
+      </div>
 
       <%- include('./layout/footer'); -%>
 
+        <!--  banner 標籤篩選器 js  -->
+        <script>
+          (() => {
+            // 你卡片的容器（grid）選擇器，請對到實際 DOM
+            const CARD_SELECTOR = '[data-tags]';            // 每一張卡片外層
+            const GRID_SELECTOR = '.row, .product-grid';    // 包住卡片的容器（會用來 query）
+
+            const $banner = document.getElementById('bannerTags');
+            const $grid = document.querySelector(GRID_SELECTOR) || document;
+            const $tagButtons = () => [...document.querySelectorAll('.tag-btn')];
+            const $tagCheckboxes = () => [...document.querySelectorAll('input[name="tag[]"]')];
+
+            const FilterStore = {
+              selected: new Set(),
+              fromURL() {
+                const p = new URLSearchParams(location.search);
+                const tags = (p.get('tags') || '').split(',').map(s => s.trim()).filter(Boolean);
+                this.selected = new Set(tags);
+              },
+              toURL() {
+                const p = new URLSearchParams(location.search);
+                const tags = [...this.selected];
+                if (tags.length) { p.set('tags', tags.join(',')); }
+                else { p.delete('tags'); }
+                history.replaceState(null, '', `${location.pathname}?${p.toString()}`);
+              },
+              toggle(tag) {
+                if (this.selected.has(tag)) this.selected.delete(tag);
+                else this.selected.add(tag);
+                this.syncUI();
+                this.apply();
+                this.toURL();
+              },
+              setFromArray(arr) {
+                this.selected = new Set(arr);
+                this.syncUI();
+                this.apply();
+                this.toURL();
+              },
+              clear() {
+                this.selected.clear();
+                this.syncUI();
+                this.apply();
+                this.toURL();
+              },
+              syncUI() {
+                // 同步 Banner 按鈕
+                $tagButtons().forEach(btn => {
+                  const tag = btn.dataset.tag;
+                  const active = this.selected.has(tag);
+                  btn.classList.toggle('active', active);
+                  btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+                });
+                // 同步 左側 checkbox
+                $tagCheckboxes().forEach(chk => {
+                  chk.checked = this.selected.has(chk.value);
+                });
+                // 派發事件（若其他模組想接）
+                document.dispatchEvent(new CustomEvent('filters:change', {
+                  detail: { tags: [...this.selected] }
+                }));
+              },
+              apply() {
+                const chosen = [...this.selected];
+                const cards = [...$grid.querySelectorAll(CARD_SELECTOR)];
+                cards.forEach(card => {
+                  const tags = (card.dataset.tags || '')
+                    .split(',')
+                    .map(s => s.trim())
+                    .filter(Boolean);
+                  // 規則：選了 N 個標籤 => 卡片必須同時包含這 N 個（AND 條件）
+                  const match = chosen.length === 0 || chosen.every(t => tags.includes(t));
+                  // 隱藏/顯示整個欄（盡量往外層一階，避免空白）
+                  const col = card.closest('.col') || card.closest('[class*="col-"]') || card;
+                  col.classList.toggle('d-none', !match);
+                });
+              }
+            };
+
+            // 事件：點 Banner 標籤
+            $banner?.addEventListener('click', (e) => {
+              const btn = e.target.closest('.tag-btn');
+              if (!btn) return;
+              const tag = btn.dataset.tag;
+              if (!tag) return;
+              FilterStore.toggle(tag);
+            });
+
+            // 事件：勾選左側 checkbox
+            document.addEventListener('change', (e) => {
+              const chk = e.target.closest('input[name="tag[]"]');
+              if (!chk) return;
+              const current = new Set(FilterStore.selected);
+              if (chk.checked) current.add(chk.value);
+              else current.delete(chk.value);
+              FilterStore.setFromArray([...current]);
+            });
+
+            // 初次載入：從 URL 帶入（如 ?tags=背景,風景）
+            FilterStore.fromURL();
+            FilterStore.syncUI();
+            FilterStore.apply();
+          })();
+        </script>
         <script type="module" src="../main.js"></script>
 </body>
 

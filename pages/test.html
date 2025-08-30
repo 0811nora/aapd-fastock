@@ -8,8 +8,71 @@
 </head>
 
 <body>
-    <h1>喵喵喵</h1>
-    <button type="button" class="btn-sm btn-sec-noneline">旺旺旺</button>
+    <style>
+        .row {
+            display: grid;
+            grid-template-columns: 25% 1fr;
+            /* 左 3 / 右 9 的概念 */
+            gap: 16px;
+            align-items: start;
+        }
+
+        /* 勾選後：隱藏左欄，右欄改滿版 */
+        .layout:has(#toggleFilter:checked) .sidebar {
+            display: none;
+        }
+
+        .layout:has(#toggleFilter:checked) .content {
+            grid-column: 1 / -1;
+            /* 佔滿整列 */
+        }
+
+        /* 小裝飾 */
+        .btn {
+            cursor: pointer;
+            padding: .5rem .75rem;
+            border: 1px solid #ccc;
+            border-radius: .5rem;
+            background: #f8f9fa;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* 隱藏實體 checkbox */
+        #toggleFilter {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+
+    <div class="container layout">
+        <!-- 這顆就是開關 -->
+        <label for="toggleFilter" class="btn">隱藏篩選器</label>
+        <input type="checkbox" id="toggleFilter">
+
+        <div class="row">
+            <aside class="sidebar">
+                <h2>喵喵喵</h2>
+                <!-- 你原本的左欄內容… -->
+            </aside>
+
+            <main class="content">
+                <div class="col-6 col-md-4">
+                    <div class="card border-0">
+                        <img src="/assets/images/Homepage/card 1.png" class="card-img-top rounded-4" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">貓咪家庭</h5>
+                            <p class="card-text">$100</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
 </body>
 <script type="module" src="../main.js"></script>
 
