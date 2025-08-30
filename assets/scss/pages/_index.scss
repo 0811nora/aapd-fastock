@@ -46,11 +46,71 @@
   width: 113px;
 }
 
-// 卡片區設定
-.feature-card-img {
-  max-width: 305px;
+// swiper+卡片區設定
+
+// swiper nav btn
+// 先隱藏swiper原始按鈕
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.mySwiper .card {
+  width: calc((100% - 60px)) / 4;
+  border: none;
+  @media (max-width: 576px) {
+    width: calc((100% - 44px)) / 2;
+    img,
+    .card-img {
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+  }
+}
+.name-tag {
+  color: $white;
+  z-index: 200;
+}
+
+.mySwiper .card {
+  .name-tag {
+    display: none;
+  }
+  &:hover .name-tag {
+    display: block;
+  }
+}
+.card-img {
   width: 100%;
   height: 302px;
+  border-radius: 12px;
+}
+// 漸層用偽元素避免跟stretched-link衝突
+.card-img-wrapper {
+  position: relative;
+}
+.card-img-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 5%,
+    rgba(0, 0, 0, 0.7) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.card:hover .card-img-wrapper::after {
+  opacity: 1;
 }
 
 .card .inCardBtnGroup {
@@ -87,38 +147,4 @@
   width: 200px;
   border-radius: 16px;
   padding: 12px 24px;
-}
-
-// swiper nav btn
-// 先隱藏原始按鈕
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
-}
-
-.mySwiper .card {
-  width: calc((100% - 60px)) / 4;
-  border: none;
-  @media (max-width: 576px) {
-    width: calc((100% - 44px)) / 2;
-    img {
-      height: 150px;
-      object-fit: cover;
-      object-position: center;
-      overflow: hidden;
-    }
-  }
-}
-.name-tag {
-  color: $white;
-  z-index: 200;
-}
-
-.mySwiper .card {
-  .name-tag {
-    display: none;
-  }
-  &:hover .name-tag {
-    display: block;
-  }
 }
