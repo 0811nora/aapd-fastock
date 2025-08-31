@@ -1,0 +1,123 @@
+.pd-list-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-list-banner {
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        /* 黑色 40% 疊層 */
+        url("/assets/images/產品列表頁/banner.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 278px;
+    width: 100%;
+
+}
+
+.pl-banner-btn {
+    color: $white;
+
+    position: relative;
+    padding-left: 2.5rem;
+    /* 給 icon 騰位置 */
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+
+    &:hover {
+        box-shadow: 0 0 2px 2px $secondary-400;
+    }
+
+    &:focus {
+        box-shadow: 0 0 2px 2px $white;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+
+    }
+
+    img {
+        color: $white;
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.pl-banner-btn::before {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 2a8 8 0 015.29 13.71l5 5a1 1 0 01-1.42 1.42l-5-5A8 8 0 1110 2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.pl-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 勾選後：隱藏左欄，右欄改滿版 */
+.layout:has(#toggleFilter:checked) .sidebar {
+    display: none;
+}
+
+.layout:has(#toggleFilter:checked) .content {
+    grid-column: 1 / -1;
+    /* 佔滿整列 */
+}
+
+/* 隱藏實體 checkbox */
+#toggleFilter {
+    position: absolute;
+    left: -9999px;
+}
+
+#newestFilter {
+    position: absolute;
+    left: -9999px;
+}
+
+#vertical {
+    position: absolute;
+    left: -9999px;
+}
+
+#horizontal {
+    position: absolute;
+    left: -9999px;
+}
+
+#icon-square {
+    position: absolute;
+    left: -9999px;
+}
+
+.row-pd-list {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    /* 左 3 / 右 9 的概念 */
+    gap: 16px;
+    align-items: start;
+}
+
+.color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: var(--c);
+    display: inline-block
+}
