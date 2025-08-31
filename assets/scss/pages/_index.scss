@@ -1,17 +1,24 @@
 .hero {
   width: 100%;
   height: 280px;
+  padding-left: 10%;
   background-color: $secondary-100;
-  background-image: url(/assets/images/Homepage/section-hero.svg);
+  background-image: url(/assets/images/Homepage/hero-main.svg);
   background-size: fill;
-  background-position: center;
+  background-position: right 8vw center;
   background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    padding-left: 0;
+    height: auto;
+    background-image: url(/assets/images/Homepage/section-hero-mobile.svg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    aspect-ratio: 1.618/1;
+  }
 }
 .color-block {
   background-color: $accent;
-}
-.ps-148 {
-  padding-left: 10%;
 }
 // 膠囊選單設定
 .category .nav-pills {
@@ -34,16 +41,73 @@
     }
   }
 }
-// 查看更多 按鈕的大小
+
+// swiper+卡片區設定
 .text-btn {
   width: 113px;
 }
+// swiper nav btn 先隱藏swiper原始按鈕
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
 
-// 卡片區設定
-.feature-card-img {
-  max-width: 305px;
+.mySwiper .card {
+  width: calc((100% - 60px)) / 4;
+  border: none;
+  @media (max-width: 576px) {
+    width: calc((100% - 44px)) / 2;
+    img,
+    .card-img {
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+  }
+}
+.name-tag {
+  color: $white;
+  z-index: 200;
+}
+
+.mySwiper .card {
+  .name-tag {
+    display: none;
+  }
+  &:hover .name-tag {
+    display: block;
+  }
+}
+.card-img {
   width: 100%;
   height: 302px;
+  border-radius: 12px;
+}
+// 漸層用偽元素避免跟stretched-link衝突
+.card-img-wrapper {
+  position: relative;
+}
+.card-img-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 5%,
+    rgba(0, 0, 0, 0.7) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.card:hover .card-img-wrapper::after {
+  opacity: 1;
 }
 
 .card .inCardBtnGroup {
@@ -58,24 +122,75 @@
 }
 
 // CTA
-.CTA {
+// creator cta
+.c-cta {
   position: relative;
   width: 100%;
   height: 300px;
-  background-image: url(/assets/images/Homepage/section-2.png);
   background-color: $secondary-100;
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  .card-text {
-    width: 428px;
-    padding-left: 150px;
+  transition: background-color 0.3s, transform 0.3s;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    background-color: $accent;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s;
+    border-radius: 100%;
+  }
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(100);
+  }
+}
+.cta-text {
+  width: 428px;
+  position: absolute;
+  top: center;
+  left: 10%;
+  z-index: 5;
+  @media (max-width: 992px) {
+    position: static;
+  }
+}
+.cta-img {
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    z-index: 3;
   }
 }
 
 .join-btn {
-  width: 200px;
-  border-radius: 16px;
-  padding: 12px 24px;
+  @include icon-size(12px, 24px, 16px, 200px);
+  @include icon-color;
+  @include icon-border;
+  &:hover {
+    background-color: mix($secondary-black, $primary-600, 20%);
+  }
+  &:focus,
+  &:active {
+    @include icon-color;
+    @include icon-border($primary-800);
+    box-shadow: 0px 0px 0px 2px $primary-50;
+  }
+}
+
+// membership cta
+.m-cta {
+  width: 100%;
+  background-image: url(/assets/images/Homepage/section-3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
 }

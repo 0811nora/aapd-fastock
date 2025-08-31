@@ -19,7 +19,9 @@
   @include icon-color;
   @include icon-base($bd-base: 1px solid $primary);
   @include overlay-style;
-  &:focus {
+  &:focus,
+  &:active {
+    @include icon-color;
     @include icon-border($primary-800);
     box-shadow: 0px 0px 0px 2px $primary-50;
   }
@@ -34,7 +36,8 @@
   &:hover {
     @include icon-hover-style;
   }
-  &:focus {
+  &:focus,
+  &:active {
     box-shadow: 0px 0px 0px 2px $primary-50;
   }
   &:disabled {
@@ -48,7 +51,8 @@
   &:hover {
     @include icon-hover-style;
   }
-  &:focus {
+  &:focus,
+  &:active {
     @include icon-border($primary-800);
   }
   &:disabled {
@@ -62,7 +66,9 @@
   @include icon-color($i-bg-color: $secondary);
   @include icon-base($bd-base: 1px solid $secondary);
   @include overlay-style(rgba(255, 255, 255, 0.2));
-  &:focus {
+  &:focus,
+  &:active {
+    @include icon-color($i-bg-color: $secondary);
     @include icon-border($secondary-900);
     box-shadow: 0px 0px 0px 2px $secondary-400;
   }
@@ -77,7 +83,8 @@
   &:hover {
     @include icon-hover-style($secondary-100);
   }
-  &:focus {
+  &:focus,
+  &:active {
     box-shadow: 0px 0px 0px 2px $secondary-400;
   }
   &:disabled {
@@ -91,7 +98,8 @@
   &:hover {
     @include icon-hover-style($secondary-100);
   }
-  &:focus {
+  &:focus,
+  &:active {
     @include icon-border($secondary-900);
   }
   &:disabled {
@@ -204,7 +212,7 @@
   }
 }
 
-@include size-sm{
+@include size-sm {
   .tag {
     &-s {
       padding: 4px 8px;

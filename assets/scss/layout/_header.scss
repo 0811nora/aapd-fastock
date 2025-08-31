@@ -116,6 +116,15 @@ header .input-group {
     }
   }
 }
+// input的全部dropdown
+header .input-group .dropdown {
+  .dropdown-menu .show {
+    width: 80px;
+  }
+}
+header ul.dropdown-menu.show {
+  display: inline-block;
+}
 
 // login btn
 header .nav-login-btn {
@@ -142,42 +151,132 @@ header .nav-link:hover {
 }
 
 header .nav-item-dropdown {
-  position: relative;
-
   // 大於用法https://pjchender.blogspot.com/2015/07/css.html
   // 指定子元素
   &:hover > .dropdown-menu-hover {
-    display: block;
+    display: flex;
   }
 }
 
-header .dropdown-menu-hover {
+header .dropdown-menu {
   width: 100%;
   display: none;
   position: absolute;
   text-align: center;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
   background: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 500;
   list-style: none;
-  padding: 8px 0;
   margin: 0;
 }
 
 // pc版分類下拉選單
-header .nav-item-dropdown:hover .dropdown-menu-hover {
-  display: flex;
+// a連結+section的hover效果
+.sub-nav .dropdown {
+  &:hover ~ section.dropdown-menu {
+    display: block;
+  }
+}
+section.dropdown-menu {
+  display: none;
 }
 
-.sc-list-left {
+.sub-nav .nav-item-dropdown {
+  section.dropdown-menu {
+    display: none;
+  }
+  &:hover section.dropdown-menu {
+    display: block;
+  }
+}
+
+.list-left {
   flex-basis: 25%;
+  // border: 1px solid red; 檢查用
+  padding: 16px 40px;
+}
+.list-left-pills-btn {
+  color: $black;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  &:hover {
+    background-color: rgba($black, 0.05);
+  }
+  &:active,
+  &:focus {
+    border: 1px solid $secondary-900;
+  }
+  &.active {
+    color: #fff;
+    background-color: #000;
+    box-shadow: none;
+  }
+}
+.pills-img {
+  width: calc(50% - 4px);
+  height: 135px;
+  border-radius: 12px;
+  overflow: hidden;
+  vertical-align: middle;
+  object-fit: cover;
+  @media screen {
+  }
 }
 
-.sc-list-right {
+.list-right {
   flex-basis: 75%;
+  // border: 1px solid green; 檢查用
+  padding: 16px 40px;
+  .list-group {
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+    .list-group-item {
+      display: block;
+      max-width: 260px;
+      width: calc((75vw - 180px) / 3);
+      padding: 4px 8px;
+      color: $neutral;
+      border: none;
+      border-radius: 4px;
+      text-align: left;
+      background-color: transparent;
+      &:hover {
+        background-color: $neutral-100;
+      }
+      &:disabled {
+        color: $secondary-700;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.list-right {
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: black;
+    text-decoration: none;
+    background-color: none;
+  }
+}
+.list-divider {
+  // height: 80%;
+  border-right: 2px solid $secondary-400;
+  z-index: inherit;
+}
+.divider-box {
+  width: 2px;
+  height: 484px;
+  background-color: $secondary-400;
+  z-index: inherit;
+  margin: 0px 16px;
 }
 
 // 手機板分類icon
@@ -207,20 +306,46 @@ header .navbar-toggler {
     }
     &:focus {
       @include icon-border($secondary-900);
+      box-shadow: none;
     }
-    @media (max-width: 1080px) {
+    @media (max-width: 1140px) {
       @include icon-size($px-sz: 12px, $w-sz: 70px);
     }
   }
 }
 
 // offcanvas 點選效果先留著做檢查用 待刪
-.offcanvas-nav {
-  ul li a {
-    border-radius: 4px;
-    &:active,
-    &:focus {
-      box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
-    }
+// .offcanvas-nav {
+//   ul li a {
+//     border-radius: 4px;
+//     &:active,
+//     &:focus {
+//       box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
+//     }
+//   }
+// }
+
+// offcanvas mainmenu
+.offcanvas {
+  .btn-close {
+    box-sizing: border-box;
+    opacity: 1;
+    border: none;
+  }
+}
+.offcanvas li a {
+  cursor: pointer;
+}
+
+// offcanvas submenu
+.offcanvas-submenu {
+  .btn-close {
+    margin-left: 0;
+  }
+  .list-group-item {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
