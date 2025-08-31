@@ -31,6 +31,12 @@ header .search-bar-btn {
 header .dropdown-toggle::after {
   display: none;
 }
+// 強制固定搜尋欄「全部」dropdown寬度 避免滿版設定的影響
+.search-dropdown .dropdown-menu {
+  width: 85px !important;
+  min-width: 85px !important;
+  max-width: 85px !important;
+}
 
 // 下拉選單 再加設計稿的icon
 header .dropdown-toggle {
