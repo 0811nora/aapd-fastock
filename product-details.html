@@ -5135,12 +5135,8 @@
     <script>
 
       var swiper = new Swiper(".mySwiper", {
-        slidesPerGroup: 1,   // 每次移動幾個
+        slidesPerGroup: 1,  
         loop: true,
-        autoplay: {
-          delay: 2000,       // 每 2000ms (2 秒) 切換
-          disableOnInteraction: false, // 使用者滑動後仍繼續自動播放
-        },
         breakpoints: {
           0: {  // 手機
             slidesPerView: 2,     // 一列兩個
@@ -5168,7 +5164,7 @@
         },
       });
 
-
+      
 
 
       document.querySelectorAll('.single-check').forEach(cb => {
