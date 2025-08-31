@@ -24,13 +24,13 @@
     <section
       class="hero container-fluid position-relative d-lg-flex justify-content-center justify-content-lg-start align-items-lg-center"
     >
-      <div class="d-flex flex-column pt-7 pt-lg-0 d-inline-block">
+      <div class="d-flex flex-column pt-7 pt-lg-0 d-inline-block ">
         <h2 class="fs-3 fw-bold mb-6p mb-lg-1">靈感從這裡開始。</h2>
         <div class="d-flex flex-column flex-lg-row">
           <h2 class="fs-3 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
           <h2 class="fs-3 fw-bold">
-            <!-- <span class="color-block">隨選即用。</span> -->
-            <span class="color-block p-2"
+            <span class="color-block">隨選即用。</span>
+            <!-- <span class="color-block p-2"
               ><a class="fs-5" href="./product-details.html"
                 >先點我去產品詳情頁</a
               ></span
@@ -42,7 +42,7 @@
             >
             <span class="color-block p-2"
               ><a class="fs-5" href="./checkout.html">先點我去結帳頁</a></span
-            >
+            > -->
           </h2>
         </div>
       </div>
@@ -133,7 +133,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -159,7 +159,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                         >
                           貓咪家庭</a
@@ -189,7 +189,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                         >
                           雪山日出空拍景觀圖
@@ -219,7 +219,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >商業品牌報告紙樣板</a
                         >
@@ -248,7 +248,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >抽象藝術</a
                         >
@@ -277,7 +277,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >優雅手寫風英文字體</a
                         >
@@ -306,7 +306,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >極簡幾何無襯線字體</a
                         >
@@ -349,7 +349,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -575,7 +575,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -831,7 +831,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -1062,13 +1062,13 @@
           <!-- 查看更多 -->
           <div class="d-flex justify-content-center my-0 my-md-8">
             <a
-              href="/pages/product-list.html"
+              href="./product-list.html"
               role="button"
               class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm"
               >查看更多</a
             >
             <a
-              href="/pages/product-list.html"
+              href="./product-list.html"
               role="button"
               class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm"
               >查看更多</a
@@ -1113,38 +1113,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
-    <!-- offcanvas submenu -->
-    <script>
-      // offcanvas submenu
-      document.addEventListener("DOMContentLoaded", function () {
-        const sharedSubMenu = document.getElementById("sharedSubMenu");
-
-        if (sharedSubMenu) {
-          sharedSubMenu.addEventListener("show.bs.offcanvas", function (event) {
-            const triggerElement = event.relatedTarget;
-
-            // 取得標題和分類的文字
-            const newTitle = triggerElement.getAttribute("data-title");
-            const newCategory = triggerElement.getAttribute("data-category");
-
-            // 取得子選單的標題 h5 元素
-            const subMenuTitle = document.getElementById("sharedSubMenuLabel");
-            // 取得子選單中的分類 h3 元素
-            const categoryTitle = document.getElementById("categoryTitle");
-
-            if (subMenuTitle) {
-              // 更新主標題
-              subMenuTitle.textContent = newTitle;
-            }
-
-            if (categoryTitle) {
-              // 更新分類標題
-              categoryTitle.textContent = newCategory;
-            }
-          });
-        }
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
