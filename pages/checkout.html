@@ -17,7 +17,7 @@
 
     <main>
 
-      <nav class="navbar navbar-light bg-white border-bottom shadow position-relative">
+      <nav class="navbar navbar-light bg-white border-bottom shadow position-relative d-none d-lg-block">
         <div class="container position-relative">
           <a class="navbar-brand py-5" href="index.html">
             <img src="/assets/images/logo-desktop.svg" alt="">
@@ -26,17 +26,21 @@
         </div>
       </nav>
     
-      <div class="container checkout-pages">
+      <div class="container px-6 checkout-pages">
         <div class="py-6 back-btn">
           <a href="product-details.html" class="text-black fw-bold fs-lg align-middle ">
-            <img src="/assets/images/icon/icon-left.svg" class="p-1 me-2" alt="">
+            <img src="/assets/images/icon/icon-left.svg" class="p-1 me-lg-2" alt="">
             返回
           </a>
         </div>
 
-        <div class="py-8 d-flex justify-content-between ">
-          <div class="w-728px">
-            <div>
+        <div class="d-lg-none mb-2">
+          <h3 class="fs-lg bg-primary-50 py-3 text-center rounded-5 ">確認結帳內容</h3>
+        </div>
+
+        <div class="py-lg-8 py-3 d-lg-flex justify-content-between gap-4 mb-5 mb-lg-0">
+          <div class="w-lg-728px ">
+            <div class="d-none d-lg-block">
               <h3 class="fs-lg mb-6">訂單內容</h3>
               <p class="text-secondary-700 mb-6">我們提供的授權範圍
                 <img src="/assets/images/icon/icon-info-gray.svg"
@@ -48,19 +52,24 @@
               </p>
             </div>
 
-            <div class="d-flex">
-              <div class="w-220px flex-shrink-0">
+            <div class="d-flex mb-4 mb-lg-0">
+              <div class="w-lg-220px w-sm-50 flex-shrink-0">
                 <img src="/assets/images/Homepage/card 1.png" class="rounded-5 w-100" alt="">
               </div>
 
-              <div class="py-3 ps-4 d-flex flex-column">
+              <div class="py-lg-3 ps-4 d-flex flex-column ">
                 <h3 class="fs-lg mb-1">貓咪家庭</h3>
-                <p>四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。</p>
-                <p class="mt-auto"><del class="text-neutral-500 me-1">120</del> $100</p>
+                <p class="line-clamp-2">四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。</p>
+                <div class="d-flex justify-content-between align-items-end d-lg-none mt-3 mt-lg-0">
+                  <p class="mt-auto"><del class="text-neutral-500 me-1">120</del> $100</p>
+                  <button class="btn border-0 p-0 flex-shrink-0 align-self-end pb-lg-3">
+                    <img src="/assets/images/icon/icon-bin.svg" class="w-28px" alt="">
+                  </button>
+                </div>
               </div>
               
               
-              <button class="btn border-0 p-0 flex-shrink-0 align-self-end pb-3">
+              <button class="btn border-0 p-0 flex-shrink-0 d-none d-lg-block align-self-end pb-3">
                 <img src="/assets/images/icon/icon-bin.svg" class="w-28px" alt="">
               </button>
               
@@ -68,9 +77,9 @@
             </div>
           </div>
 
-          <div class="w-512px">
+          <div class="w-lg-512px ">
             <div class="card rounded-5">
-              <div class="card-body p-6">
+              <div class="card-body p-6 ">
                 <h3 class="fs-lg mb-3">使用者資訊</h3>
                 <ul class="border-bottom pb-6">
                   <li class="py-2 d-flex justify-content-between">

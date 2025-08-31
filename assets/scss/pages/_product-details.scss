@@ -3,6 +3,9 @@
     a{
         color: inherit;
     }
+    h2,h3,h4,h5,h6{
+        line-height: 1.4;
+    }
     color: $neutral;
     .w-28px{
         width: 28px;
@@ -10,9 +13,7 @@
     .w-36px{
         width: 36px;
     }
-    .w-305px{
-        width: 305px;
-    }
+    
     .btn-close {
         --bs-btn-close-opacity: 1;
     }
@@ -96,23 +97,39 @@
         background-repeat: no-repeat;
         z-index: 1;
     }
+    .mySwiper {
+        width: 100%;
+        height: auto; 
+    }
+    .offcanvas-header .btn-close {
+        margin-left: 0 !important; 
+    }
+    .top-rounded{
+        border-radius:  16px 16px 0 0 ;
+    }
+    .offcanvas{
+        --bs-offcanvas-height: 80vh;
+    }
+    .line-clamp-2 {
+        display: -webkit-box;        /* 建立彈性盒子模型 */
+        -webkit-box-orient: vertical; /* 垂直排列 */
+        -webkit-line-clamp: 2;       /* 限制兩行 */
+        overflow: hidden;             /* 超出文字隱藏 */
+        text-overflow: ellipsis;      /* 文字截斷加省略號 */
+    }
 }
 
-
-
-
-    
 
 
 @include size-lg{
     .product-content{
         &-w{
-            width: 844px;
+            max-width: 844px;
         }
     }
     .product-actions{
         &-w{
-            width: 424px;
+            max-width: 424px;
         }
     }
     .product-details-pages{
@@ -125,6 +142,35 @@
             &-w{
                 width: 430px;
             }
+        }
+        .h-lg-547px{
+            height: 547px;
+        }
+        .w-lg-85{
+            width: 87.5%;
+        }
+        .w-lg-15{
+            width: 12.5%;
+        }
+    }
+}
+
+@include size-sm{
+    .product-details-pages{
+        .card.bg-lg-white{
+            background-color: $white !important;
+        }
+        .card-img{
+            height: 150px;
+        }
+        .h-188px{
+            height: 188px;
+        }
+        .w-sm-100{
+            width: 100%;
+        }
+        .modal-dialog-try {
+            margin: 0 auto;
         }
     }
 }

@@ -13,9 +13,7 @@
     .w-300px{
         width: 300px;
     }
-    .w-331px{
-        width: 331px;
-    }
+    
     ul{
         list-style: none;
         padding-left: 0;
@@ -33,4 +31,31 @@
         color: $white;
     }
 
+}
+
+@include size-lg{
+    .order-complete-pages{
+        .container-content{
+            max-width: 846px;
+            margin: 0 auto;
+        }
+        .w-lg-300px{
+            width: 300px;
+        }
+        .order-bg-color{
+            background-color: $secondary-100;
+        }
+        .w-lg-331px{
+            width: 331px;
+        }       
+    }
+}
+
+@include size-sm{
+    .order-complete-pages{
+        .w-sm-100{
+            width: 100%;
+        }
+        
+    }
 }
