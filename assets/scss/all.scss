@@ -3,7 +3,7 @@
 @import "./utils/mixin";
 @import "./utils/typography";
 @import "../../node_modules/bootstrap";
-@import './utils/utilities';
+@import "./utils/utilities";
 @import "bootstrap/scss/utilities/api";
 
 @import "/assets/scss/component/button";
@@ -18,3 +18,4 @@
 @import "./pages/product-details";
 @import "./pages/checkout";
 @import "./pages/order-complete";
+@import "./pages/product-list";

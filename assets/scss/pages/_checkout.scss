@@ -1,25 +1,46 @@
-.checkout-pages{
-    .w-728px{
-        width: 728px;
-    }
-    .w-512px{
-        width: 512px;
-    }
-    .w-220px{
-        width: 220px;
-    }
-    .w-28px{
-        width: 28px;
-    }
-    .back-btn{
-        margin-left: -40px;
-    }
-    ul{
-        list-style: none;
-        padding-left: 0;
-    }
-    .btn:hover{
-        color: $white;
-        
-    }
+.checkout-pages {
+  .w-28px {
+    width: 28px;
+  }
+  .w-50 {
+    width: 50%;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .btn:hover {
+    color: $white;
+  }
+  .line-clamp-2 {
+    display: -webkit-box; /* 建立彈性盒子模型 */
+    -webkit-box-orient: vertical; /* 垂直排列 */
+    -webkit-line-clamp: 2; /* 限制兩行 */
+    overflow: hidden; /* 超出文字隱藏 */
+    text-overflow: ellipsis; /* 文字截斷加省略號 */
+  }
+}
+
+@include size-lg {
+  .back-btn {
+    margin-left: -40px;
+  }
+  .w-lg-728px {
+    width: 728px;
+  }
+  .w-lg-512px {
+    width: 512px;
+  }
+  .w-lg-220px {
+    width: 220px;
+  }
+}
+
+@include size-sm {
+  .w-sm-50 {
+    width: 50%;
+  }
+  .w-sm-100 {
+    width: 100%;
+  }
 }

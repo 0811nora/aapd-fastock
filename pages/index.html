@@ -17,8 +17,8 @@
     <title>首頁 | 快素 Fastock</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/sroll-top-btn.ejs'); -%>
+    <%- include('./layout/header.ejs'); -%> <%-
+    include('./layout/scroll-top-btn.ejs'); -%>
 
     <!-- hero section -->
     <section
@@ -29,8 +29,8 @@
         <div class="d-flex flex-column flex-lg-row">
           <h2 class="fs-3 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
           <h2 class="fs-3 fw-bold">
-            <!-- <span class="color-block">隨選即用。</span> -->
-            <span class="color-block p-2"
+            <span class="color-block">隨選即用。</span>
+            <!-- <span class="color-block p-2"
               ><a class="fs-5" href="./product-details.html"
                 >先點我去產品詳情頁</a
               ></span
@@ -42,7 +42,7 @@
             >
             <span class="color-block p-2"
               ><a class="fs-5" href="./checkout.html">先點我去結帳頁</a></span
-            >
+            > -->
           </h2>
         </div>
       </div>
@@ -133,7 +133,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -150,7 +150,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 1.png"
+                        src="/assets/images/Homepage/card1.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="貓咪家庭"
                       />
@@ -159,7 +159,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                         >
                           貓咪家庭</a
@@ -180,7 +180,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 2.png"
+                        src="/assets/images/Homepage/card2.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="雪山日出空拍景觀圖"
                       />
@@ -189,7 +189,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                         >
                           雪山日出空拍景觀圖
@@ -210,7 +210,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 3.png"
+                        src="/assets/images/Homepage/card3.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="商業品牌報告紙樣板"
                       />
@@ -219,7 +219,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >商業品牌報告紙樣板</a
                         >
@@ -239,7 +239,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 4.png"
+                        src="/assets/images/Homepage/card4.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="抽象藝術"
                       />
@@ -248,7 +248,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >抽象藝術</a
                         >
@@ -268,7 +268,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 5.png"
+                        src="/assets/images/Homepage/card5.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="優雅手寫風英文字體"
                       />
@@ -277,7 +277,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >優雅手寫風英文字體</a
                         >
@@ -297,7 +297,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 6.png"
+                        src="/assets/images/Homepage/card6.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="極簡幾何無襯線字體"
                       />
@@ -306,7 +306,7 @@
                     <div class="card-body">
                       <h5 class="card-title fs-md fs-md-lg fw-bold">
                         <a
-                          href="/pages/product-details.html"
+                          href="./product-details.html"
                           class="stretched-link text-black"
                           >極簡幾何無襯線字體</a
                         >
@@ -349,7 +349,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -366,7 +366,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 5.png"
+                        src="/assets/images/Homepage/card5.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="優雅手寫風英文字體"
                       />
@@ -393,7 +393,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 6.png"
+                        src="/assets/images/Homepage/card6.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="極簡幾何無襯線字體"
                       />
@@ -420,7 +420,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 7.png"
+                        src="/assets/images/Homepage/card7.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="粗體手繪感英文字體"
                       />
@@ -447,7 +447,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 8.png"
+                        src="/assets/images/Homepage/card8.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="經典美式書寫體字型"
                       />
@@ -474,7 +474,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 5.png"
+                        src="/assets/images/Homepage/card5.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="優雅手寫風英文字體"
                       />
@@ -501,7 +501,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 6.png"
+                        src="/assets/images/Homepage/card6.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="極簡幾何無襯線字體"
                       />
@@ -575,7 +575,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -592,7 +592,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 9.png"
+                        src="/assets/images/Homepage/card9.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="紫色數位提案模擬稿"
                       />
@@ -619,7 +619,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 3.png"
+                        src="/assets/images/Homepage/card3.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="商業品牌報告紙樣板"
                       />
@@ -646,7 +646,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 10.png"
+                        src="/assets/images/Homepage/card10.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="質感名片展示模板"
                       />
@@ -673,7 +673,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 11.png"
+                        src="/assets/images/Homepage/card11.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="撕貼風格貼紙樣機組"
                       />
@@ -700,7 +700,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 9.png"
+                        src="/assets/images/Homepage/card9.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="紫色數位提案模擬稿"
                       />
@@ -727,7 +727,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 3.png"
+                        src="/assets/images/Homepage/card3.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="商業品牌報告紙樣板"
                       />
@@ -754,7 +754,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 10.png"
+                        src="/assets/images/Homepage/card10.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="質感名片展示模板"
                       />
@@ -781,7 +781,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 11.png"
+                        src="/assets/images/Homepage/card11.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="撕貼風格貼紙樣機組"
                       />
@@ -831,7 +831,7 @@
                   />
                 </button>
                 <a
-                  href="/pages/product-list.html"
+                  href="./product-list.html"
                   class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
                   role="button"
                   >查看更多</a
@@ -848,7 +848,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 12.png"
+                        src="/assets/images/Homepage/card12.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="未來感藍球體藝術構圖"
                       />
@@ -875,7 +875,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 13.png"
+                        src="/assets/images/Homepage/card13.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="極簡山丘風景照"
                       />
@@ -902,7 +902,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 2.png"
+                        src="/assets/images/Homepage/card2.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="雪山日出空拍景觀圖"
                       />
@@ -929,7 +929,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 14.png"
+                        src="/assets/images/Homepage/card14.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="綠眼長毛貓側臉寫真"
                       />
@@ -956,7 +956,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 12.png"
+                        src="/assets/images/Homepage/card12.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="未來感藍球體藝術構圖"
                       />
@@ -983,7 +983,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 13.png"
+                        src="/assets/images/Homepage/card13.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="極簡山丘風景照"
                       />
@@ -1010,7 +1010,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 2.png"
+                        src="/assets/images/Homepage/card2.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="雪山日出空拍景觀圖"
                       />
@@ -1037,7 +1037,7 @@
                       <div class="d-sm-none tag-s tag-yellow"></div>
                       <%- include('./layout/inCardBtn.ejs'); -%>
                       <img
-                        src="/assets/images/Homepage/card 14.png"
+                        src="/assets/images/Homepage/card14.png"
                         class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
                         alt="綠眼長毛貓側臉寫真"
                       />
@@ -1062,13 +1062,13 @@
           <!-- 查看更多 -->
           <div class="d-flex justify-content-center my-0 my-md-8">
             <a
-              href="/pages/product-list.html"
+              href="./product-list.html"
               role="button"
               class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm"
               >查看更多</a
             >
             <a
-              href="/pages/product-list.html"
+              href="./product-list.html"
               role="button"
               class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm"
               >查看更多</a
@@ -1113,38 +1113,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
-    <!-- offcanvas submenu -->
-    <script>
-      // offcanvas submenu
-      document.addEventListener("DOMContentLoaded", function () {
-        const sharedSubMenu = document.getElementById("sharedSubMenu");
-
-        if (sharedSubMenu) {
-          sharedSubMenu.addEventListener("show.bs.offcanvas", function (event) {
-            const triggerElement = event.relatedTarget;
-
-            // 取得標題和分類的文字
-            const newTitle = triggerElement.getAttribute("data-title");
-            const newCategory = triggerElement.getAttribute("data-category");
-
-            // 取得子選單的標題 h5 元素
-            const subMenuTitle = document.getElementById("sharedSubMenuLabel");
-            // 取得子選單中的分類 h3 元素
-            const categoryTitle = document.getElementById("categoryTitle");
-
-            if (subMenuTitle) {
-              // 更新主標題
-              subMenuTitle.textContent = newTitle;
-            }
-
-            if (categoryTitle) {
-              // 更新分類標題
-              categoryTitle.textContent = newCategory;
-            }
-          });
-        }
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {

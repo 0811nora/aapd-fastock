@@ -25,3 +25,33 @@ document.querySelectorAll(".inCardFav").forEach((button) => {
     this.classList.toggle("is-active");
   });
 });
+
+// offcanvas submenu
+document.addEventListener("DOMContentLoaded", function () {
+  const sharedSubMenu = document.getElementById("sharedSubMenu");
+
+  if (sharedSubMenu) {
+    sharedSubMenu.addEventListener("show.bs.offcanvas", function (event) {
+      const triggerElement = event.relatedTarget;
+
+      // 取得標題和分類的文字
+      const newTitle = triggerElement.getAttribute("data-title");
+      const newCategory = triggerElement.getAttribute("data-category");
+
+      // 取得子選單的標題 h5 元素
+      const subMenuTitle = document.getElementById("sharedSubMenuLabel");
+      // 取得子選單中的分類 h3 元素
+      const categoryTitle = document.getElementById("categoryTitle");
+
+      if (subMenuTitle) {
+        // 更新主標題
+        subMenuTitle.textContent = newTitle;
+      }
+
+      if (categoryTitle) {
+        // 更新分類標題
+        categoryTitle.textContent = newCategory;
+      }
+    });
+  }
+});

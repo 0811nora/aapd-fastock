@@ -31,6 +31,22 @@ header .search-bar-btn {
 header .dropdown-toggle::after {
   display: none;
 }
+// 強制固定搜尋欄「全部」dropdown寬度 避免滿版設定的影響
+
+.search-dropdown .dropdown-menu {
+  width: 85px !important;
+  min-width: 85px !important;
+  max-width: 85px !important;
+  padding: 12px 8px;
+  li {
+    text-align: center;
+    border-radius: 4px;
+    &:hover {
+      color: $black;
+      background-color: neutral-100;
+    }
+  }
+}
 
 // 下拉選單 再加設計稿的icon
 header .dropdown-toggle {
@@ -117,11 +133,11 @@ header .input-group {
   }
 }
 // input的全部dropdown
-header .input-group .dropdown {
-  .dropdown-menu .show {
-    width: 80px;
-  }
-}
+// header .input-group .dropdown {
+//   .dropdown-menu .show {
+//     width: 80px;
+//   }
+// }
 header ul.dropdown-menu.show {
   display: inline-block;
 }
@@ -305,6 +321,7 @@ header .navbar-toggler {
       @include icon-hover-style($secondary-100);
     }
     &:focus {
+      @include icon-size($px-sz: 24px, $w-sz: 84px);
       @include icon-border($secondary-900);
       box-shadow: none;
     }

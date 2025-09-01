@@ -21,7 +21,7 @@
       </a>
       <!-- pc search-bar -->
       <form class="d-flex mx-auto d-none d-lg-block">
-        <div class="input-group btn-select">
+        <div class="input-group search-dropdown">
           <!-- 下拉式搜尋 -->
           <button
             class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
@@ -31,15 +31,42 @@
           >
             全部
           </button>
-          <ul class="dropdown-menu text-start" style="width: 25%">
+          <ul class="dropdown-menu text-center">
             <li>
-              <a class="dropdown-item" href="#">人氣</a>
+              <a class="dropdown-item" href="#">字型</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">促銷</a>
+              <a class="dropdown-item" href="#">範本</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">每周免費</a>
+              <a class="dropdown-item" href="#">相片</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">主題</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">圖形</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">影片</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">音效</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">插畫</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">圖標</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">模板</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">筆刷</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">3D</a>
             </li>
           </ul>
           <span class="divider d-none d-lg-block"></span>
@@ -134,263 +161,85 @@
       <img src="/assets/images/icon/icon-Category.svg" alt="icon-Category" />
     </button>
     <!-- PC內容 -->
+    <% const menuItems = [ { name: '字型', id: 'font', categories: [ { title:
+    "字型類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "範本", id: "template",
+    categories: [ { title: "範本類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "相片", id: "photo", categories: [ { title: "相片類型", items: ["動物",
+    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
+    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "主題", id: "theme", categories: [ { title:
+    "主題類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "圖形", id: "graphics",
+    categories: [ { title: "圖形類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "影片", id: "video", categories: [ { title: "影片類型", items: ["動物",
+    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
+    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "音效", id: "audio", categories: [ { title:
+    "音效類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "插畫", id:
+    "illustration", categories: [ { title: "插畫類型", items: ["動物", "風景",
+    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
+    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
+    }, { name: "圖標", id: "icon", categories: [ { title: "圖標類型", items:
+    ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items:
+    ["現代", "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "模板", id: "mockup", categories: [ { title:
+    "模板類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "筆刷", id: "brush",
+    categories: [ { title: "筆刷類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "3D", id: "3d", categories: [ { title: "3D類型", items: ["動物", "風景",
+    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
+    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
+    } ]; const tabsData = [ { id: "popular", name: "人氣", images: ["card1.png",
+    "card2.png", "card3.png", "card4.png", "card5.png", "card6.png"] }, { id:
+    "sale", name: "促銷", images: ["card7.png", "card8.png", "card9.png",
+    "card10.png", "card11.png", "card12.png"] }, { id: "free", name: "每週免費",
+    images: ["card13.png", "card14.png", "card1.png", "card2.png", "card3.png",
+    "card4.png"] } ]; %>
+
     <div
       class="collapse navbar-collapse d-none d-lg-flex justify-content-lg-center position-relative px-3 px-md-3 px-lg-0 pt-0 pb-6px"
       id="navbarSupportedContent"
     >
-      <%
-// 定義選單資料
-const menuItems = [
-  {
-    name: '字型',
-    id: 'font',
-    categories: [
-      {
-        title: '字型類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '範本',
-    id: 'template',
-    categories: [
-      {
-        title: '範本類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '相片',
-    id: 'photo',
-    categories: [
-      {
-        title: '相片類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '主題',
-    id: 'theme',
-    categories: [
-      {
-        title: '主題類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '圖形',
-    id: 'graphics',
-    categories: [
-      {
-        title: '圖形類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '影片',
-    id: 'video',
-    categories: [
-      {
-        title: '影片類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '音效',
-    id: 'audio',
-    categories: [
-      {
-        title: '音效類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '插畫',
-    id: 'illustration',
-    categories: [
-      {
-        title: '插畫類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '圖標',
-    id: 'icon',
-    categories: [
-      {
-        title: '圖標類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '模板',
-    id: 'mockup',
-    categories: [
-      {
-        title: '模板類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '筆刷',
-    id: 'brush',
-    categories: [
-      {
-        title: '筆刷類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  },
-  {
-    name: '3D',
-    id: '3d',
-    categories: [
-      {
-        title: '3D類型',
-        items: ['動物', '風景', '產品', '3D', '簽名', '文字']
-      },
-      {
-        title: '風格',
-        items: ['現代', '復古', '華麗']
-      },
-      {
-        title: '用途',
-        items: ['海報', '影音', '傳單', '社群貼文']
-      }
-    ]
-  }
-];
+      <ul
+        class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center"
+      >
+        <% menuItems.forEach((menuItem, index) => { %>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu<%= index %>"
+            aria-expanded="false"
+            ><%= menuItem.name %></a
+          >
 
-const tabsData = [
-  { id: 'popular', name: '人氣', images: ['card 1.png', 'card 2.png', 'card 3.png', 'card 4.png', 'card 5.png', 'card 6.png'] },
-  { id: 'sale', name: '促銷', images: ['card 7.png', 'card 8.png', 'card 9.png', 'card 10.png', 'card 11.png', 'card 12.png'] },
-  { id: 'free', name: '每週免費', images: ['card 13.png', 'card 14.png', 'card 1.png', 'card 2.png', 'card 3.png', 'card 4.png'] }
-];
-%>
-
-<ul class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center">
-  <% menuItems.forEach((menuItem, index) => { %>
-    <li class="nav-item nav-item-dropdown" style="position: initial">
-      <a
-        href="#"
-        class="nav-link dropdown sub-nav-btn mb-6p"
-        role="button"
-        id="dropdownCateMenu<%= index %>"
-        aria-expanded="false"
-      ><%= menuItem.name %></a>
-      
-      <% if (menuItem.categories && menuItem.categories.length > 0) { %>
-        <section
-          class="dropdown-menu p-0"
-          style="width: 100%"
-          aria-labelledby="dropdownCateMenu<%= index %>"
-        >
-          <div class="d-flex">
-            <div class="list-left bg-neutral-100">
-              <ul
-                class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
-                id="pills-tab-<%= menuItem.id %>"
-                role="tablist"
-              >
-                <% tabsData.forEach((tab, tabIndex) => { %>
+          <% if (menuItem.categories && menuItem.categories.length > 0) { %>
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu<%= index %>"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab-<%= menuItem.id %>"
+                  role="tablist"
+                >
+                  <% tabsData.forEach((tab, tabIndex) => { %>
                   <li class="nav-item" role="presentation">
                     <button
                       class="list-left-pills-btn <%= tabIndex === 0 ? 'active' : '' %>"
@@ -405,11 +254,14 @@ const tabsData = [
                       <%= tab.name %>
                     </button>
                   </li>
-                <% }); %>
-              </ul>
+                  <% }); %>
+                </ul>
 
-              <div class="tab-content" id="pills-tabContent-<%= menuItem.id %>">
-                <% tabsData.forEach((tab, tabIndex) => { %>
+                <div
+                  class="tab-content"
+                  id="pills-tabContent-<%= menuItem.id %>"
+                >
+                  <% tabsData.forEach((tab, tabIndex) => { %>
                   <div
                     class="tab-pane fade <%= tabIndex === 0 ? 'show active' : '' %>"
                     id="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
@@ -418,45 +270,47 @@ const tabsData = [
                   >
                     <div class="d-flex gap-2 flex-wrap">
                       <% tab.images.forEach(image => { %>
-                        <img
-                          class="pills-img"
-                          src="/assets/images/Homepage/<%= image %>"
-                          alt="<%= image %>"
-                        />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/<%= image %>"
+                        alt="<%= image %>"
+                      />
                       <% }); %>
                     </div>
                   </div>
-                <% }); %>
+                  <% }); %>
+                </div>
               </div>
-            </div>
 
-            <div class="list-right bg-white">
-              <ul class="list-unstyled d-flex align-items-center">
-                <% menuItem.categories.forEach((category, categoryIndex) => { %>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <% menuItem.categories.forEach((category, categoryIndex) => {
+                  %>
                   <li class="pb-0 mb-0">
-                    <ul class="list-unstyled list-group d-flex flex-column gap-3">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
                       <li>
                         <h3 class="fs-5 fw-bold"><%= category.title %></h3>
                       </li>
                       <% category.items.forEach(item => { %>
-                        <li>
-                          <a class="list-group-item" href="#"><%= item %></a>
-                        </li>
+                      <li>
+                        <a class="list-group-item" href="#"><%= item %></a>
+                      </li>
                       <% }); %>
                     </ul>
                   </li>
                   <% if (categoryIndex < menuItem.categories.length - 1) { %>
-                    <li class="divider-box"></li>
-                  <% } %>
-                <% }); %>
-              </ul>
+                  <li class="divider-box"></li>
+                  <% } %> <% }); %>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
-      <% } %>
-    </li>
-  <% }); %>
-</ul>
+          </section>
+          <% } %>
+        </li>
+        <% }); %>
+      </ul>
     </div>
 
     <!-- 手機板按鈕 -->
@@ -711,7 +565,7 @@ const tabsData = [
       <div class="offcanvas-body">
         <a
           class="btn btn-pr-outline d-block text-primary mb-4"
-          href="#"
+          href="./product-list.html"
           role="button"
           ><span class="fs-md fw-medium letter-spacing-sm">查看全部</span></a
         >
