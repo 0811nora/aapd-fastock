@@ -1,190 +1,705 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/logo icon.svg"
-    />
-    <title>結帳 | 快素 Fastock</title>
-  </head>
-  <body>
-    <main>
-      <nav
-        class="navbar navbar-light bg-white border-bottom shadow position-relative d-none d-lg-block"
-      >
-        <div class="container position-relative">
-          <a class="navbar-brand py-5" href="index.html">
-            <img src="/assets/images/logo-desktop.svg" alt="" />
-          </a>
-          <h3 class="fs-6 position-absolute top-50 start-50 translate-middle">
-            確認結帳內容
-          </h3>
-        </div>
-      </nav>
-
-      <div class="container px-6 checkout-pages">
-        <div class="py-6 back-btn">
-          <a
-            href="product-details.html"
-            class="text-black fw-bold fs-lg align-middle"
+<header>
+  <!-- 首頁nav-bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-5"
+  >
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <!-- 首頁logo -->
+      <a class="navbar-brand" href="index.html"
+        ><img
+          class="d-none d-lg-block"
+          src="/assets/images/logo-desktop.svg"
+          alt="logo-desktop"
+        />
+        <img
+          class="d-lg-none"
+          src="/assets/images/logo-mobile.svg"
+          alt="logo-mobile"
+        />
+      </a>
+      <!-- pc search-bar -->
+      <form class="d-flex mx-auto d-none d-lg-block">
+        <div class="input-group search-dropdown">
+          <!-- 下拉式搜尋 -->
+          <button
+            class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-            <img
-              src="/assets/images/icon/icon-left.svg"
-              class="p-1 me-lg-2"
-              alt=""
-            />
-            返回
-          </a>
+            全部
+          </button>
+          <ul class="dropdown-menu text-center">
+            <li>
+              <a class="dropdown-item" href="#">字型</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">範本</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">相片</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">主題</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">圖形</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">影片</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">音效</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">插畫</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">圖標</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">模板</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">筆刷</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">3D</a>
+            </li>
+          </ul>
+          <span class="divider d-none d-lg-block"></span>
+          <!-- 輸入關鍵字搜尋 -->
+          <input
+            class="form-control"
+            type="search"
+            placeholder="搜尋數百萬創意資源"
+            aria-label="Search"
+          />
+          <!-- 圖搜圖的圖示 -->
+          <button
+            class="search-bar-btn btn-image-search pe-6"
+            type="button"
+          ></button>
         </div>
-
-        <div class="d-lg-none mb-2">
-          <h3 class="fs-lg bg-primary-50 py-3 text-center rounded-5">
-            確認結帳內容
-          </h3>
-        </div>
-
-        <div
-          class="py-lg-8 py-3 d-lg-flex justify-content-between gap-4 mb-5 mb-lg-0"
+      </form>
+      <!-- login-bar -->
+      <ul class="list-unstyled mb-0 d-flex align-items-center gap-2">
+        <li class="nav-item">
+          <a
+            class="nav-login-btn icon-primary-fill fs-sm fw-medium"
+            href="#"
+            role="button"
+            >登入</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-login-btn icon-secondary-outline fs-sm fw-medium"
+            href="#"
+            role="button"
+            >註冊</a
+          >
+        </li>
+        <li class="nav-item">
+          <button class="icon-S icon-secondary-outline" type="button">
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- 分類nav-bar -->
+  <div
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
+  >
+    <!-- mobile search-bar -->
+    <form class="d-lg-none d-flex mb-6p">
+      <div class="input-group">
+        <!-- 下拉式搜尋 -->
+        <button
+          class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
         >
-          <div class="w-lg-728px">
-            <div class="d-none d-lg-block">
-              <h3 class="fs-lg mb-6">訂單內容</h3>
-              <p class="text-secondary-700 mb-6">
-                我們提供的授權範圍
-                <img
-                  src="/assets/images/icon/icon-info-gray.svg"
-                  class="align-middle"
-                  alt="info"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto ipsam repudiandae. "
-                />
-              </p>
-            </div>
+          全部
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">人氣</a></li>
+          <li><a class="dropdown-item" href="#">促銷</a></li>
+          <li><a class="dropdown-item" href="#">每周免費</a></li>
+        </ul>
+        <span class="divider d-none d-lg-block"></span>
+        <!-- 輸入關鍵字搜尋 -->
+        <input
+          class="form-control"
+          type="search"
+          placeholder="搜尋數百萬創意資源"
+          aria-label="Search"
+        />
+        <!-- 圖搜圖的圖示 -->
+        <button
+          class="search-bar-btn btn-image-search pe-6"
+          type="button"
+        ></button>
+      </div>
+    </form>
 
-            <div class="d-flex mb-4 mb-lg-0">
-              <div class="w-lg-220px w-sm-50 flex-shrink-0">
-                <img
-                  src="/assets/images/Homepage/card1.png"
-                  class="rounded-5 w-100"
-                  alt=""
-                />
-              </div>
+    <!-- 分類區 -->
+    <!-- PC版按鈕 整個隱藏 -->
+    <button
+      class="navbar-toggler border-none d-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <img src="/assets/images/icon/icon-Category.svg" alt="icon-Category" />
+    </button>
+    <!-- PC內容 -->
+    <% const menuItems = [ { name: '字型', id: 'font', categories: [ { title:
+    "字型類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "範本", id: "template",
+    categories: [ { title: "範本類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "相片", id: "photo", categories: [ { title: "相片類型", items: ["動物",
+    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
+    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "主題", id: "theme", categories: [ { title:
+    "主題類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "圖形", id: "graphics",
+    categories: [ { title: "圖形類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "影片", id: "video", categories: [ { title: "影片類型", items: ["動物",
+    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
+    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "音效", id: "audio", categories: [ { title:
+    "音效類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "插畫", id:
+    "illustration", categories: [ { title: "插畫類型", items: ["動物", "風景",
+    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
+    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
+    }, { name: "圖標", id: "icon", categories: [ { title: "圖標類型", items:
+    ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items:
+    ["現代", "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+    "社群貼文"] } ] }, { name: "模板", id: "mockup", categories: [ { title:
+    "模板類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "筆刷", id: "brush",
+    categories: [ { title: "筆刷類型", items: ["動物", "風景", "產品", "3D",
+    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+    "3D", id: "3d", categories: [ { title: "3D類型", items: ["動物", "風景",
+    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
+    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
+    } ]; const tabsData = [ { id: "popular", name: "人氣", images: ["card1.png",
+    "card2.png", "card3.png", "card4.png", "card5.png", "card6.png"] }, { id:
+    "sale", name: "促銷", images: ["card7.png", "card8.png", "card9.png",
+    "card10.png", "card11.png", "card12.png"] }, { id: "free", name: "每週免費",
+    images: ["card13.png", "card14.png", "card1.png", "card2.png", "card3.png",
+    "card4.png"] } ]; %>
 
-              <div class="py-lg-3 ps-4 d-flex flex-column">
-                <h3 class="fs-lg mb-1">貓咪家庭</h3>
-                <p class="line-clamp-2">
-                  四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。
-                </p>
-                <div
-                  class="d-flex justify-content-between align-items-end d-lg-none mt-3 mt-lg-0"
+    <div
+      class="collapse navbar-collapse d-none d-lg-flex justify-content-lg-center position-relative px-3 px-md-3 px-lg-0 pt-0 pb-6px"
+      id="navbarSupportedContent"
+    >
+      <ul
+        class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center"
+      >
+        <% menuItems.forEach((menuItem, index) => { %>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu<%= index %>"
+            aria-expanded="false"
+            ><%= menuItem.name %></a
+          >
+
+          <% if (menuItem.categories && menuItem.categories.length > 0) { %>
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu<%= index %>"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab-<%= menuItem.id %>"
+                  role="tablist"
                 >
-                  <p class="mt-auto">
-                    <del class="text-neutral-500 me-1">120</del> $100
-                  </p>
-                  <button
-                    class="btn border-0 p-0 flex-shrink-0 align-self-end pb-lg-3"
+                  <% tabsData.forEach((tab, tabIndex) => { %>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn <%= tabIndex === 0 ? 'active' : '' %>"
+                      id="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                      aria-selected="<%= tabIndex === 0 ? 'true' : 'false' %>"
+                    >
+                      <%= tab.name %>
+                    </button>
+                  </li>
+                  <% }); %>
+                </ul>
+
+                <div
+                  class="tab-content"
+                  id="pills-tabContent-<%= menuItem.id %>"
+                >
+                  <% tabsData.forEach((tab, tabIndex) => { %>
+                  <div
+                    class="tab-pane fade <%= tabIndex === 0 ? 'show active' : '' %>"
+                    id="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
                   >
-                    <img
-                      src="/assets/images/icon/icon-bin.svg"
-                      class="w-28px"
-                      alt=""
-                    />
-                  </button>
+                    <div class="d-flex gap-2 flex-wrap">
+                      <% tab.images.forEach(image => { %>
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/<%= image %>"
+                        alt="<%= image %>"
+                      />
+                      <% }); %>
+                    </div>
+                  </div>
+                  <% }); %>
                 </div>
               </div>
 
-              <button
-                class="btn border-0 p-0 flex-shrink-0 d-none d-lg-block align-self-end pb-3"
-              >
-                <img
-                  src="/assets/images/icon/icon-bin.svg"
-                  class="w-28px"
-                  alt=""
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="w-lg-512px">
-            <div class="card rounded-5">
-              <div class="card-body p-6">
-                <h3 class="fs-lg mb-3">使用者資訊</h3>
-                <ul class="border-bottom pb-6">
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>信用卡</p>
-                    <p class="credit-card-info">1234-1234-1234-1234</p>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <% menuItem.categories.forEach((category, categoryIndex) => {
+                  %>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold"><%= category.title %></h3>
+                      </li>
+                      <% category.items.forEach(item => { %>
+                      <li>
+                        <a class="list-group-item" href="#"><%= item %></a>
+                      </li>
+                      <% }); %>
+                    </ul>
                   </li>
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>寄送Email</p>
-                    <p class="email-info">xiaoming123@gmail.com</p>
-                  </li>
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>電子發票</p>
-                    <p class="">
-                      <button
-                        type="button"
-                        class="border-0 btn fw-normal p-0 align-baseline me-3 text-neutral-500"
-                      >
-                        變更
-                      </button>
-                      二聯是發票(個人)
-                    </p>
-                  </li>
+                  <% if (categoryIndex < menuItem.categories.length - 1) { %>
+                  <li class="divider-box"></li>
+                  <% } %> <% }); %>
                 </ul>
-                <ul class="border-bottom pb-6">
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>小計</p>
-                    <p>$ 100</p>
-                  </li>
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>折扣</p>
-                    <p>-$ 0</p>
-                  </li>
-                </ul>
-                <ul>
-                  <li class="py-2 d-flex justify-content-between">
-                    <p>合計（含稅）</p>
-                    <p class="fw-bold">＄100</p>
-                  </li>
-                </ul>
-                <a href="order-complete.html" class="btn btn-pr w-100 mt-6"
-                  >確認付款</a
-                >
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+          <% } %>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+
+    <!-- 手機板按鈕 -->
+    <button
+      class="navbar-toggler border-none d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mainMenu"
+      aria-controls="mainMenu"
+      aria-label="Toggle navigation"
+    >
+      <img src="/assets/images/icon/icon-Category.svg" alt="icon-Category" />
+    </button>
+    <!-- 手機版內容 -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-full d-lg-none offcanvas-mainmenu"
+      tabindex="-1"
+      id="mainMenu"
+      aria-labelledby="mainMenuLabel"
+    >
+      <div class="offcanvas-header shadow">
+        <h5 class="offcanvas-title" id="mainMenuLabel">
+          <img src="/assets/images/logo-mobile.svg" alt="logo-mobile.svg" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close icon-secondary-outline icon-S"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <img
+            src="/assets/images/icon/icon-close-primary.svg"
+            alt="btn-close"
+          />
+        </button>
       </div>
-    </main>
-
-    <%- include('./layout/footer'); -%>
-
-    <script type="module" src="../main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      // info顯示
-      document.addEventListener("DOMContentLoaded", () => {
-        const tooltipTriggerList = document.querySelectorAll(
-          '[data-bs-toggle="tooltip"]'
-        );
-        tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
-      });
-
-      // 使用者資料
-      const email = localStorage.getItem("checkout_email");
-      const card = localStorage.getItem("checkout_card");
-
-      const creditCardInfo = document.querySelector(".credit-card-info");
-      const emailInfo = document.querySelector(".email-info");
-      creditCardInfo.textContent = card || "未填寫信用卡";
-      emailInfo.textContent = email || "未填寫Email";
-    </script>
-  </body>
-</html>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled p-4 d-flex flex-column gap-4">
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="字型"
+              data-category="字型類型"
+            >
+              <p>字型</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="範本"
+              data-category="範本類型"
+            >
+              <p>範本</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="相片"
+              data-category="相片類型"
+            >
+              <p>相片</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="主題"
+              data-category="主題類型"
+            >
+              <p>主題</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="圖形"
+              data-category="圖形類型"
+            >
+              <p>圖形</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="影片"
+              data-category="影片類型"
+            >
+              <p>影片</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="音效"
+              data-category="音效類型"
+            >
+              <p>音效</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="插畫"
+              data-category="插畫類型"
+            >
+              <p>插畫</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="圖標"
+              data-category="圖標類型"
+            >
+              <p>圖標</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="模板"
+              data-category="模板類型"
+            >
+              <p>模板</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="筆刷"
+              data-category="筆刷類型"
+            >
+              <p>筆刷</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-black d-flex justify-content-between align-items-center mb-4 pe-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sharedSubMenu"
+              data-title="3D"
+              data-category="3D類型"
+            >
+              <p>3D</p>
+              <img
+                src="/assets/images/icon/icon-right.svg"
+                alt="rigth-chevron"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="offcanvas offcanvas-end offcanvas-full d-lg-none offcanvas-submenu"
+      tabindex="-1"
+      id="sharedSubMenu"
+      aria-labelledby="sharedSubMenuLabel"
+    >
+      <div
+        class="offcanvas-header d-flex justify-content-between align-items-center shadow"
+      >
+        <button
+          type="button"
+          class="btn btn-link text-decoration-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mainMenu"
+        >
+          <img src="/assets/images/icon/icon-left.svg" alt="left-chevron" />
+        </button>
+        <h5 class="offcanvas-title" id="sharedSubMenuLabel"></h5>
+        <button
+          type="button"
+          class="btn-close icon-secondary-outline icon-S"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <img
+            src="/assets/images/icon/icon-close-primary.svg"
+            alt="btn-close"
+          />
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <a
+          class="btn btn-pr-outline d-block text-primary mb-4"
+          href="./product-list.html"
+          role="button"
+          ><span class="fs-md fw-medium letter-spacing-sm">查看全部</span></a
+        >
+        <ul class="list-unstyled">
+          <li
+            class="d-flex flex-column gap-3 pb-6 mb-6 border-bottom border-secondary-400 border-3"
+          >
+            <ul class="list-unstyled list-group d-flex flex-column gap-3">
+              <li>
+                <h3
+                  class="fs-lg fw-bold list-group-item"
+                  id="categoryTitle"
+                ></h3>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>動物</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>風景</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>產品</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>3D</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>簽名</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>文字</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="d-flex flex-column gap-3 pb-6 mb-6 border-bottom border-secondary-400 border-3"
+          >
+            <ul class="list-unstyled list-group d-flex flex-column gap-3">
+              <li><h3 class="fs-lg fw-bold list-group-item">風格</h3></li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>現代</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>復古</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>華麗</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+            </ul>
+          </li>
+          <li class="d-flex flex-column gap-3">
+            <ul class="list-unstyled list-group d-flex flex-column gap-3">
+              <li><h3 class="fs-lg fw-bold list-group-item">用途</h3></li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>海報</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>影音</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>傳單</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+              <li>
+                <a class="list-group-item" href="#"
+                  ><p>社群貼文</p>
+                  <img
+                    src="/assets/images/icon/icon-right.svg"
+                    alt="rigth-chevron"
+                /></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
