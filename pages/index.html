@@ -1115,39 +1115,43 @@
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        freeMode: false,
-
-        navigation: {
-          nextEl: ".my-next-btn",
-          prevEl: ".my-prev-btn",
-        },
-
-        breakpoints: {
-          375: {
-            slidesPerView: 2,
-            spaceBetween: 12,
+      document.querySelectorAll('.mySwiper').forEach((swiperElement) => {
+      // 找到這個 swiper 所屬的容器
+        const container = swiperElement.closest('.container');
+            
+        new Swiper(swiperElement, {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          freeMode: false,
+          navigation: {
+            // 使用相對選擇器，只在當前容器內尋找按鈕
+            nextEl: container.querySelector('.my-next-btn'),
+            prevEl: container.querySelector('.my-prev-btn'),
           },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 16,
+          breakpoints: {
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
           },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+          effect: "slide",
+          mousewheel: {
+            revert: true,
           },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        },
-        effect: "slide",
-        mousewheel: {
-          revert: true,
-        },
-        speed: 400,
+          speed: 400,
+        });
       });
     </script>
   </body>
