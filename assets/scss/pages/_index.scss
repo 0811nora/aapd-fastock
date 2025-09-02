@@ -7,7 +7,7 @@
   background-size: fill;
   background-position: right 8vw center;
   background-repeat: no-repeat;
-  @media (max-width: 992px) {
+  @media (max-width: 992px){
     padding-left: 5%;
     min-height: 340px;
     background-position: right 0 center;
@@ -146,7 +146,6 @@
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
   transition: background-color 0.3s, transform 0.3s;
   overflow: hidden;
   &::before {
@@ -172,7 +171,7 @@
   left: 10%;
   z-index: 5;
   @media (max-width: 992px) {
-    position: static;
+    left: 5%;
   }
 }
 .cta-img {
@@ -183,7 +182,59 @@
     z-index: 3;
   }
 }
+@media (max-width: 992px) {
+    .c-cta {
+        margin-left: -12px; 
+        margin-right: -12px;
+        width: calc(100% + 24px);
+        height: auto;
+        padding: 0;
+        background-color: $secondary-100;
+        &::before {
+        display: none; 
+      }
+    }
+    .cta-text {
+        position: static;
+        width: 100%;
+        transform: none;
+        padding: 24px 40px;
+        z-index: 1;
+    }
 
+    .cta-img {
+        width: 100%;
+        position: relative;
+        margin: 0 auto ;
+        object-position: center;
+        padding-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+}
+@media (max-width: 576px) {
+      .c-cta {
+          margin-left: -12px;
+          margin-right: -12px;
+          width: calc(100% + 24px);
+          border-radius: 0;
+      }
+      .cta-img img {
+        position: static;
+        width: 100%;
+        max-width: 304px;
+        height: auto;
+       
+        
+    }
+  }
 .join-btn {
   @include icon-size(12px, 24px, 16px, 200px);
   @include icon-color;
@@ -197,7 +248,12 @@
     @include icon-border($primary-800);
     box-shadow: 0px 0px 0px 2px $primary-50;
   }
-}
+    @media (max-width:576px) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
 
 // membership cta
 .m-cta {
@@ -208,7 +264,7 @@
   background-repeat: no-repeat;
   border-radius: 20px;
   overflow: hidden;
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     background-image: url(/assets/images/Homepage/section-3-mob.png);
   }
 }
