@@ -11,6 +11,23 @@ img {
   box-sizing: border-box;
   // outline: 1px solid red;
 }
+
+// 移除 Bootstrap 預設樣式
+header .navbar-nav .nav-link,
+header .nav-login-btn,
+header .search-bar-btn,
+header .btn{
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+}
+
 // 先調整 搜尋框按鈕 (取代原本的 .btn)
 header .search-bar-btn {
   display: inline-block;
@@ -34,18 +51,22 @@ header .dropdown-toggle::after {
 // 強制固定搜尋欄「全部」dropdown寬度 避免滿版設定的影響
 
 .search-dropdown .dropdown-menu {
-  width: 85px !important;
-  min-width: 85px !important;
-  max-width: 85px !important;
+  width: 119px !important;
+  min-width: 119px !important;
+  max-width: 119px !important;
   padding: 12px 8px;
   li {
-    text-align: center;
+    text-align: start;
     border-radius: 4px;
-    &:hover {
+    &:hover, &:active, &:focus {
       color: $black;
-      background-color: neutral-100;
+      background-color: $neutral-100;
     }
   }
+  --bs-dropdown-link-active-color: $black;
+  --bs-dropdown-link-active-bg:$neutral-100;
+    
+  
 }
 
 // 下拉選單 再加設計稿的icon
@@ -54,10 +75,26 @@ header .dropdown-toggle {
     display: none;
   }
   padding-right: 32px;
-  background-image: url("data:image/svg+xml,%3Csvg class='icon-down' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.65 8.24079C19.0693 8.60021 19.1178 9.23064 18.7584 9.64997L12.7584 16.65C12.5684 16.8716 12.2915 16.9996 11.9996 16.9996C11.7077 16.9996 11.4308 16.8716 11.2408 16.65L5.24079 9.64997C4.88137 9.23064 4.92986 8.60021 5.34919 8.24079C5.76851 7.88137 6.39895 7.92986 6.75837 8.34919L11.9996 14.4634L17.2408 8.34919C17.6002 7.92986 18.2306 7.88137 18.65 8.24079Z' fill='%23262626' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 24px 24px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg class='icon-down' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.65 8.24079C19.0693 8.60021 19.1178 9.23064 18.7584 9.64997L12.7584 16.65C12.5684 16.8716 12.2915 16.9996 11.9996 16.9996C11.7077 16.9996 11.4308 16.8716 11.2408 16.65L5.24079 9.64997C4.88137 9.23064 4.92986 8.60021 5.34919 8.24079C5.76851 7.88137 6.39895 7.92986 6.75837 8.34919L11.9996 14.4634L17.2408 8.34919C17.6002 7.92986 18.2306 7.88137 18.65 8.24079Z' fill='%23262626' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  &[aria-expanded="true"]::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 
 // 搜尋框輸入時
@@ -99,6 +136,7 @@ header .input-group {
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
   box-shadow: none;
+  
   @media (max-width: 992px) {
     width: 365px;
   }
@@ -112,6 +150,13 @@ header .input-group {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent !important;
+    
+    // 重要：移除所有子元素的 focus 樣式，讓父容器統一控制
+    &:focus {
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important; // 移除瀏覽器預設的 outline
+    }
   }
 
   &:hover {
@@ -121,8 +166,7 @@ header .input-group {
     }
   }
 
-  // 用within統一focus效果
-  // 參考https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within
+  // 用 :focus-within 統一控制 focus 效果
   &:focus-within {
     border-color: $neutral-500;
     border-width: 2px;
@@ -132,6 +176,51 @@ header .input-group {
     }
   }
 }
+
+// 針對下拉選單按鈕的 focus 狀態特別處理
+header .search-bar-btn {
+  // 移除瀏覽器預設 focus 樣式
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  // 如果你想要按鈕本身有 focus 樣式，可以這樣設定：
+  // &:focus-visible {
+  //   outline: 2px solid $primary;
+  //   outline-offset: 2px;
+  // }
+}
+
+// 如果想要更精確的控制，可以分別處理不同狀態
+header .input-group {
+  // 當搜尋輸入框被 focus 時
+  .form-control:focus ~ & {
+    border-color: $neutral-500;
+    border-width: 2px;
+    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+  }
+  
+  // 當下拉按鈕被 focus 時
+  .search-bar-btn:focus ~ & {
+    border-color: $neutral-500;
+    border-width: 2px;
+  }
+}
+
+header .input-group {
+  // 明顯版
+  &:focus-visible {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  }
+  // 輕微版
+  &:focus:not(:focus-visible) {
+    border-color: $neutral-500;
+    box-shadow: 0 0 0 0.125rem rgba(140, 140, 140, 0.15);
+  }
+}
+
 // input的全部dropdown
 // header .input-group .dropdown {
 //   .dropdown-menu .show {
@@ -151,6 +240,38 @@ header .nav-login-btn {
     $w-sz: 61px,
     $h-sz: 40px
   );
+}
+header .nav-login-btn.icon-primary-fill {
+  &:focus,
+  &:active {
+    @include icon-color;
+    @include icon-border($primary-800);
+    box-shadow: 0px 0px 0px 2px $primary-50 !important; 
+  }
+  
+  &:focus-visible {
+    box-shadow: 0px 0px 0px 2px $primary-50, 0 0 0 4px rgba($primary, 0.2) !important;
+  }
+}
+
+header .nav-login-btn.icon-secondary-outline {
+  &:focus,
+  &:active {
+    box-shadow: 0px 0px 0px 2px $secondary-400 !important;
+  }
+  
+  &:focus-visible {
+    box-shadow: 0px 0px 0px 2px $secondary-400, 0 0 0 4px rgba($secondary, 0.2) !important;
+  }
+}
+
+header .nav-login-btn {
+  transition: all 0.2s ease-in-out;
+  
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $primary-50 !important;
+    border-color: $primary-800 !important;
+  }
 }
 
 // 分類下拉選單--------------
@@ -366,3 +487,5 @@ header .navbar-toggler {
     align-items: center;
   }
 }
+
+
