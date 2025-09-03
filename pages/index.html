@@ -1151,12 +1151,7 @@
             nextEl: container.querySelector(".my-next-btn"),
             prevEl: container.querySelector(".my-prev-btn"),
           },
-          effect: "slide",
-          mousewheel: {
-            enabled: false,
-          },
-          speed: 400,
-          // 修改斷點滑鼠功能
+
           breakpoints: {
             375: {
               slidesPerView: 2,
@@ -1175,6 +1170,11 @@
               spaceBetween: 20,
             },
           },
+          effect: "slide",
+          mousewheel: {
+            enabled: false,
+          },
+          speed: 400,
         });
       });
     </script>
