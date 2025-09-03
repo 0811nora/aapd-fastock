@@ -1,0 +1,143 @@
+<!-- PC內容 -->
+<% const menuItems = [ { name: '字型', id: 'font', categories: [ { title:
+"字型類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title:
+"風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items: ["海報",
+"影音", "傳單", "社群貼文"] } ] }, { name: "範本", id: "template", categories: [
+{ title: "範本類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "相片", id: "photo",
+categories: [ { title: "相片類型", items: ["動物", "風景", "產品", "3D", "簽名",
+"文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途",
+items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "主題", id: "theme",
+categories: [ { title: "主題類型", items: ["動物", "風景", "產品", "3D", "簽名",
+"文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途",
+items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "圖形", id:
+"graphics", categories: [ { title: "圖形類型", items: ["動物", "風景", "產品",
+"3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
+title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
+"影片", id: "video", categories: [ { title: "影片類型", items: ["動物", "風景",
+"產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
+"華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, {
+name: "音效", id: "audio", categories: [ { title: "音效類型", items: ["動物",
+"風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
+"復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"]
+} ] }, { name: "插畫", id: "illustration", categories: [ { title: "插畫類型",
+items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items:
+["現代", "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
+"社群貼文"] } ] }, { name: "圖標", id: "icon", categories: [ { title:
+"圖標類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title:
+"風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items: ["海報",
+"影音", "傳單", "社群貼文"] } ] }, { name: "模板", id: "mockup", categories: [ {
+title: "模板類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
+title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
+["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "筆刷", id: "brush",
+categories: [ { title: "筆刷類型", items: ["動物", "風景", "產品", "3D", "簽名",
+"文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途",
+items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "3D", id: "3d",
+categories: [ { title: "3D類型", items: ["動物", "風景", "產品", "3D", "簽名",
+"文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途",
+items: ["海報", "影音", "傳單", "社群貼文"] } ] } ]; const tabsData = [ { id:
+"popular", name: "人氣", images: ["card1.png", "card2.png", "card3.png",
+"card4.png", "card5.png", "card6.png"] }, { id: "sale", name: "促銷", images:
+["card7.png", "card8.png", "card9.png", "card10.png", "card11.png",
+"card12.png"] }, { id: "free", name: "每週免費", images: ["card13.png",
+"card14.png", "card1.png", "card2.png", "card3.png", "card4.png"] } ]; %>
+
+<div
+  class="collapse navbar-collapse d-none d-lg-flex justify-content-lg-center position-relative px-3 px-md-3 px-lg-0 pt-0 pb-6px"
+  id="navbarSupportedContent"
+>
+  <ul
+    class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center"
+  >
+    <% menuItems.forEach((menuItem, index) => { %>
+    <li class="nav-item nav-item-dropdown" style="position: initial">
+      <a
+        href="#"
+        class="nav-link dropdown sub-nav-btn mb-6p"
+        role="button"
+        id="dropdownCateMenu<%= index %>"
+        aria-expanded="false"
+        ><%= menuItem.name %></a
+      >
+
+      <% if (menuItem.categories && menuItem.categories.length > 0) { %>
+      <section
+        class="dropdown-menu p-0"
+        style="width: 100%"
+        aria-labelledby="dropdownCateMenu<%= index %>"
+      >
+        <div class="d-flex">
+          <div class="list-left bg-neutral-100">
+            <ul
+              class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+              id="pills-tab-<%= menuItem.id %>"
+              role="tablist"
+            >
+              <% tabsData.forEach((tab, tabIndex) => { %>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="list-left-pills-btn <%= tabIndex === 0 ? 'active' : '' %>"
+                  id="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
+                  data-bs-toggle="pill"
+                  data-bs-target="#sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                  type="button"
+                  role="tab"
+                  aria-controls="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                  aria-selected="<%= tabIndex === 0 ? 'true' : 'false' %>"
+                >
+                  <%= tab.name %>
+                </button>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent-<%= menuItem.id %>">
+              <% tabsData.forEach((tab, tabIndex) => { %>
+              <div
+                class="tab-pane fade <%= tabIndex === 0 ? 'show active' : '' %>"
+                id="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
+                role="tabpanel"
+                aria-labelledby="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
+              >
+                <div class="d-flex gap-2 flex-wrap">
+                  <% tab.images.forEach(image => { %>
+                  <img
+                    class="pills-img"
+                    src="/assets/images/Homepage/<%= image %>"
+                    alt="<%= image %>"
+                  />
+                  <% }); %>
+                </div>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+
+          <div class="list-right bg-white">
+            <ul class="list-unstyled d-flex align-items-center">
+              <% menuItem.categories.forEach((category, categoryIndex) => { %>
+              <li class="pb-0 mb-0">
+                <ul class="list-unstyled list-group d-flex flex-column gap-3">
+                  <li>
+                    <h3 class="fs-5 fw-bold"><%= category.title %></h3>
+                  </li>
+                  <% category.items.forEach(item => { %>
+                  <li>
+                    <a class="list-group-item" href="#"><%= item %></a>
+                  </li>
+                  <% }); %>
+                </ul>
+              </li>
+              <% if (categoryIndex < menuItem.categories.length - 1) { %>
+              <li class="divider-box"></li>
+              <% } %> <% }); %>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <% } %>
+    </li>
+    <% }); %>
+  </ul>
+</div>

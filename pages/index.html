@@ -24,7 +24,7 @@
     <section
       class="hero container-fluid position-relative d-lg-flex justify-content-center justify-content-lg-start align-items-lg-center"
     >
-      <div class="d-flex flex-column pt-7 pt-lg-0 d-inline-block">
+      <div class="d-flex flex-column pt-7 pt-lg-0">
         <h2 class="fs-3 fw-bold mb-6p mb-lg-1">靈感從這裡開始。</h2>
         <div class="d-flex flex-column flex-lg-row">
           <h2 class="fs-3 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
@@ -106,7 +106,7 @@
           aria-labelledby="pills-popular-tab"
         >
           <!-- 精選區 -->
-          <div class="container px-4 px-md-0 my-md-3">
+          <div class="container px-1 px-md-0 my-md-3">
             <div
               class="swiper-header d-flex justify-content-between align-items-center mb-3"
             >
@@ -322,7 +322,7 @@
             </div>
           </div>
           <!-- 字型區 -->
-          <div class="container px-4 px-md-0 my-md-3">
+          <div class="container px-1 px-md-0 my-md-3">
             <div
               class="swiper-header d-flex justify-content-between align-items-center mb-3"
             >
@@ -524,6 +524,7 @@
             </div>
           </div>
           <!-- 成為創作者CTA -->
+          <!-- PC版 -->
           <section
             class="c-cta d-none d-md-flex justify-content-center align-items-center rounded-6"
           >
@@ -547,25 +548,30 @@
               />
             </div>
           </section>
-          <section class="c-cta m--12  d-md-none d-flex flex-column">
-            
-              <div class="cta-img">
-                <img src="/assets/images/Homepage/section-2.png" alt="section-2"/>
-              </div>
-              <div class="cta-text bg-secondary-100 w-100 py-6 px-8">
+          <!-- 手機板 -->
+          <section class="c-cta m--12 d-md-none d-flex flex-column">
+            <div class="cta-img">
+              <img
+                src="/assets/images/Homepage/section-2.png"
+                alt="section-2"
+              />
+            </div>
+            <div class="cta-text bg-secondary-100 w-100 py-6 px-8">
               <h2 class="fs-3 fw-bold mb-5">成為創作者</h2>
               <p class="mb-5">
                 在 Fastock 銷售您的設計，觸及千萬買家，或是在 Fastock
                 上推廣其他藝術家來賺取現金！
               </p>
-              <button type="button" class="fs-md fw-medium letter-spacing-sm join-btn">
+              <button
+                type="button"
+                class="fs-md fw-medium letter-spacing-sm join-btn"
+              >
                 立即加入
               </button>
             </div>
-            
           </section>
           <!-- 範本區 -->
-          <div class="container px-4 px-md-0 my-md-3">
+          <div class="container px-1 px-md-0 my-md-3">
             <div
               class="swiper-header d-flex justify-content-between align-items-center mb-3"
             >
@@ -821,7 +827,7 @@
             </div>
           </div>
           <!-- 相片區 -->
-          <div class="container px-4 px-md-0 my-md-3">
+          <div class="container px-1 px-md-0 my-md-3">
             <div
               class="swiper-header d-flex justify-content-between align-items-center mb-3"
             >
@@ -1132,19 +1138,25 @@
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      document.querySelectorAll('.mySwiper').forEach((swiperElement) => {
-      // 找到這個 swiper 所屬的容器
-        const container = swiperElement.closest('.container');
-            
+      document.querySelectorAll(".mySwiper").forEach((swiperElement) => {
+        // 找到這個 swiper 所屬的容器
+        const container = swiperElement.closest(".container");
+
         new Swiper(swiperElement, {
           slidesPerView: "auto",
           spaceBetween: 20,
           freeMode: false,
           navigation: {
             // 使用相對選擇器，只在當前容器內尋找按鈕
-            nextEl: container.querySelector('.my-next-btn'),
-            prevEl: container.querySelector('.my-prev-btn'),
+            nextEl: container.querySelector(".my-next-btn"),
+            prevEl: container.querySelector(".my-prev-btn"),
           },
+          effect: "slide",
+          mousewheel: {
+            enabled: false,
+          },
+          speed: 400,
+          // 修改斷點滑鼠功能
           breakpoints: {
             375: {
               slidesPerView: 2,
@@ -1163,11 +1175,6 @@
               spaceBetween: 20,
             },
           },
-          effect: "slide",
-          mousewheel: {
-            revert: true,
-          },
-          speed: 400,
         });
       });
     </script>

@@ -55,3 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// 登入狀態切換
+document.addEventListener("DOMContentLoaded", function () {
+  const loginBtn = document.getElementById("loginBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const loggedOut = document.getElementById("loggedOut");
+  const loggedIn = document.getElementById("loggedIn");
+
+  // click登入
+  loginBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    loggedOut.style.display = "none";
+    loggedIn.style.display = "flex";
+  });
+
+  // click登出
+  logoutBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    loggedIn.style.display = "none";
+    loggedOut.style.display = "flex";
+  });
+});

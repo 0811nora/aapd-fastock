@@ -9,14 +9,14 @@ img {
 *:before,
 *:after {
   box-sizing: border-box;
-  // outline: 1px solid red;
+  outline: 1px solid red;
 }
 
 // 移除 Bootstrap 預設樣式
 header .navbar-nav .nav-link,
 header .nav-login-btn,
 header .search-bar-btn,
-header .btn{
+header .btn {
   &:focus {
     box-shadow: none !important;
     outline: none !important;
@@ -58,15 +58,15 @@ header .dropdown-toggle::after {
   li {
     text-align: start;
     border-radius: 4px;
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       color: $black;
       background-color: $neutral-100;
     }
   }
   --bs-dropdown-link-active-color: $black;
-  --bs-dropdown-link-active-bg:$neutral-100;
-    
-  
+  --bs-dropdown-link-active-bg: $neutral-100;
 }
 
 // 下拉選單 再加設計稿的icon
@@ -76,7 +76,7 @@ header .dropdown-toggle {
   }
   padding-right: 32px;
   position: relative;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -91,7 +91,7 @@ header .dropdown-toggle {
     transform: translateY(-50%);
     transition: transform 0.3s ease;
   }
-  
+
   &[aria-expanded="true"]::before {
     transform: translateY(-50%) rotate(180deg);
   }
@@ -136,7 +136,7 @@ header .input-group {
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
   box-shadow: none;
-  
+
   @media (max-width: 992px) {
     width: 365px;
   }
@@ -150,7 +150,7 @@ header .input-group {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent !important;
-    
+
     // 重要：移除所有子元素的 focus 樣式，讓父容器統一控制
     &:focus {
       border: none !important;
@@ -184,7 +184,7 @@ header .search-bar-btn {
     outline: none !important;
     box-shadow: none !important;
   }
-  
+
   // 如果你想要按鈕本身有 focus 樣式，可以這樣設定：
   // &:focus-visible {
   //   outline: 2px solid $primary;
@@ -200,7 +200,7 @@ header .input-group {
     border-width: 2px;
     box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
   }
-  
+
   // 當下拉按鈕被 focus 時
   .search-bar-btn:focus ~ & {
     border-color: $neutral-500;
@@ -246,9 +246,9 @@ header .nav-login-btn.icon-primary-fill {
   &:active {
     @include icon-color;
     @include icon-border($primary-800);
-    box-shadow: 0px 0px 0px 2px $primary-50 !important; 
+    box-shadow: 0px 0px 0px 2px $primary-50 !important;
   }
-  
+
   &:focus-visible {
     box-shadow: 0px 0px 0px 2px $primary-50, 0 0 0 4px rgba($primary, 0.2) !important;
   }
@@ -259,7 +259,7 @@ header .nav-login-btn.icon-secondary-outline {
   &:active {
     box-shadow: 0px 0px 0px 2px $secondary-400 !important;
   }
-  
+
   &:focus-visible {
     box-shadow: 0px 0px 0px 2px $secondary-400, 0 0 0 4px rgba($secondary, 0.2) !important;
   }
@@ -267,11 +267,37 @@ header .nav-login-btn.icon-secondary-outline {
 
 header .nav-login-btn {
   transition: all 0.2s ease-in-out;
-  
+
   &:focus {
     box-shadow: 0px 0px 0px 2px $primary-50 !important;
     border-color: $primary-800 !important;
   }
+}
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.avatar-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* 增加過渡效果，讓漸層出現更平滑 */
+}
+
+.avatar-container:hover::after {
+  opacity: 1;
 }
 
 // 分類下拉選單--------------
@@ -487,5 +513,3 @@ header .navbar-toggler {
     align-items: center;
   }
 }
-
-
