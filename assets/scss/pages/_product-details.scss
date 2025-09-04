@@ -120,6 +120,25 @@
     overflow: hidden; /* 超出文字隱藏 */
     text-overflow: ellipsis; /* 文字截斷加省略號 */
   }
+  .btn.btn-pr-outline{
+    border: 1px solid $primary-600;
+    color: $primary-600;
+    &:focus{
+        box-shadow: 0 0 2px 2px $primary-200;
+    }
+  }
+  .btn.icon-primary-outline{
+    border: 1px solid $primary-600;
+    &:hover {
+      color: $primary;
+    }
+    &:focus,
+    &:active {
+      box-shadow: 0px 0px 0px 2px #c7d1fe;
+    }
+  }
+
+
 }
 
 @include size-lg {
@@ -172,6 +191,11 @@
     }
     .modal-dialog-try {
       margin: 0 auto;
+    }
+    .btn.btn-sm {
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }
