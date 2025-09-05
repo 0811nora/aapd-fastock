@@ -74,6 +74,7 @@
                   </div>
 
                   <!-- 試用鈕 - 互動樣式展開內容 -->
+                  
                   <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
                       <div class="modal-content">
@@ -191,7 +192,7 @@
 
                     <!-- Modal -->
                     <div class="modal fade" id="checkoutBtn" tabindex="-1" aria-labelledby="checkoutBtnLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-right modal-dialog-cart">
+                      <div class="modal-dialog modal-dialog-cart">
                         <div class="modal-content">
                           <div class="modal-body p-0 rounded-5 overflow-hidden">
                             <div class="d-flex">
@@ -200,7 +201,7 @@
                                 <div class="p-4">
                                   <div class="h-195px position-relative">
                                     <img src="/assets/images/Homepage/card1.png" class="h-100 rounded-5" alt="">
-                                    <div class="tag-s tag-yellow"></div>
+                                    <div class="tag-lg-s tag-yellow"></div>
                                   </div>
                                   <div class="p-2">
                                     <h4 class="fs-lg">貓咪家庭</h4>
@@ -220,10 +221,8 @@
                                   </div>
 
                                   <form  class="needs-validation" novalidate>
-                                    <!-- 輸入mail -->
-                                    <div class="form-floating mb-4">
-                                      <input type="email" class="form-control rounded-6 border" id="checkput-mail" placeholder="" required>
-                                      <label for="checkput-mail">請輸入Email</label>
+                                    <div class="mb-4">
+                                      <input type="email" class="form-control py-3 px-4 rounded-5" id="checkput-mail" aria-describedby="emailHelp" placeholder="請輸入Email" required>
                                       <div class="invalid-feedback">
                                         必填
                                       </div>
@@ -234,38 +233,39 @@
                                       <div class="card rounded-6 overflow-hidden " >
                                         <ul class="list-group list-group-flush">
                                           <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                            <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-name" placeholder="" required>
-                                              <label for="checkput-credit-name">信用卡持有者</label>
-                                            </div>
-                                            <div class="invalid-feedback">
-                                              必填
+
+                                            <div class="w-100 p-2p">
+                                              <input type="text" class="form-control checkput-credit-name py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-name"  placeholder="信用卡持有者" required>
+                                              <div class="invalid-feedback">
+                                                必填
+                                              </div>
                                             </div>
                                           </li>
 
                                           <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                            <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-number" placeholder="" required>
-                                              <label for="checkput-credit-number">xxxx-xxxx-xxxx-xxxx</label>
+
+                                            <div class="w-100 p-2p">
+                                              <input type="text" class="form-control checkput-credit-number py-3 px-4 rounded-5 border-0 w-100 position-relative" id="checkput-credit-number" placeholder="xxxx-xxxx-xxxx-xxxx"  required>
+                                              <div class="me-4 position-absolute top-50 end-0 translate-middle-y">
+                                                <img src="/assets/images/icon/icon-credit-card-gray.svg"  alt="">
+                                              </div>
                                               <div class="invalid-feedback">
                                                 必填
                                               </div>
                                             </div>
-                                            <div class="me-4 ">
-                                              <img src="/assets/images/icon/icon-credit-card-gray.svg"  alt="">
-                                            </div>
+                                            
                                           </li>
                                           <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                            <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-date" placeholder="" required>
-                                              <label for="checkput-credit-date">MM / YY</label>
+
+                                            <div class="w-100 p-2p">
+                                              <input type="text" class="form-control checkput-credit-date py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-date"  placeholder="MM / YY" required>
                                               <div class="invalid-feedback">
                                                 必填
                                               </div>
                                             </div>
-                                            <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-three" placeholder="" required>
-                                              <label for="checkput-credit-three">CVC</label>
+
+                                            <div class="w-100 p-2p">
+                                              <input type="text" class="form-control checkput-credit-three py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-three"  placeholder="CVC" required>
                                               <div class="invalid-feedback">
                                                 必填
                                               </div>
@@ -276,23 +276,23 @@
                                     </div>
 
                                     <div class="py-4">
-                                      <p class="fw-bold text-center mb-3">共計 1 項產品｜付款總金額:$100元</p>
+                                      <p class="text-center mb-3">共計 1 項產品｜付款總金額:$ <span class="fw-bold ">100元</span> </p>
                                       <div class="form-check mb-1">
                                         <input class="form-check-input " type="checkbox" value="" id="invalidCheck" required>
                                         <label class="form-check-label align-middle ms-1 fs-12px" for="invalidCheck">
                                           我同意 <a href="#" class="text-decoration-underline">服務條款</a>和 <a href="#" class="text-decoration-underline">隱私權政策</a>。 *
                                         </label>
                                         <div class="invalid-feedback">
-                                          必須勾選同意條款
+                                          * 必須勾選同意條款
                                         </div>
                                       </div>
                                       <div class="form-check mb-3">
-                                        <input class="form-check-input " type="checkbox" value="" id="invalidCheck">
-                                        <label class="form-check-label align-middle ms-1 fs-12px" for="invalidCheck">
+                                        <input class="form-check-input  " type="checkbox" value="" id="subscribeCheck">
+                                        <label class="form-check-label  align-middle ms-1 fs-12px" for="subscribeCheck">
                                           我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
                                         </label>
                                       </div>
-                                      <button class="btn btn-pr w-100" type="submit">結帳</button>
+                                      <button class="btn btn-pr w-100 " type="submit" disabled>結帳</button>
                                     </div>
                                   </form>
                                 </div>
@@ -318,7 +318,7 @@
                         <div class="d-flex mb-3">
                           
                           <div class="w-50">
-                            <img src="/assets/images/Homepage/card 1.png" class="rounded-5 w-100" alt="">
+                            <img src="/assets/images/Homepage/card1.png" class="rounded-5 w-100" alt="">
                           </div>
 
                           <div class="w-50">
@@ -336,10 +336,8 @@
                         </div>
 
                         <form  class="needs-validation" novalidate>
-                          <!-- 輸入mail -->
-                          <div class="form-floating mb-4">
-                            <input type="email" class="form-control rounded-6 border" id="checkput-mail" placeholder="" required>
-                            <label for="checkput-mail-sm">請輸入Email</label>
+                          <div class="mb-4">
+                            <input type="email" class="form-control py-3 px-4 rounded-5" id="checkput-mail" aria-describedby="emailHelp" placeholder="請輸入Email" required>
                             <div class="invalid-feedback">
                               必填
                             </div>
@@ -350,38 +348,41 @@
                             <div class="card rounded-6 overflow-hidden " >
                               <ul class="list-group list-group-flush">
                                 <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                  <div class="form-floating w-100">
-                                    <input type="text" class="form-control border-0 " id="checkput-credit-name" placeholder="" required>
-                                    <label for="checkput-credit-name">信用卡持有者</label>
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    必填
+
+                                  <div class="w-100 p-2p">
+                                    <input type="text" class="form-control checkput-credit-name py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-name"  placeholder="信用卡持有者" required>
+                                    <div class="invalid-feedback">
+                                      必填
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                  <div class="form-floating w-100">
-                                    <input type="text" class="form-control border-0 " id="checkput-credit-number" placeholder="" required>
-                                    <label for="checkput-credit-numbe">xxxx-xxxx-xxxx-xxxx</label>
+
+                                  <div class="w-100 p-2p">
+                                    <input type="text" class="form-control checkput-credit-number py-3 px-4 rounded-5 border-0 w-100 position-relative" id="checkput-credit-number" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                                    <div class="me-4 position-absolute top-50 end-0 translate-middle-y">
+                                      <img src="/assets/images/icon/icon-credit-card-gray.svg"  alt="">
+                                    </div>
                                     <div class="invalid-feedback">
                                       必填
                                     </div>
-                                  </div>
-                                  <div class="me-4 ">
-                                    <img src="/assets/images/icon/icon-credit-card-gray.svg"  alt="">
                                   </div>
                                 </li>
+
                                 <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
-                                  <div class="form-floating w-100">
-                                    <input type="text" class="form-control border-0 " id="checkput-credit-date" placeholder="" required>
-                                    <label for="checkput-credit-date">MM / YY</label>
+
+
+                                  <div class="w-100 p-2p">
+                                    <input type="text" class="form-control checkput-credit-date py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-date"  placeholder="MM / YY" required>
                                     <div class="invalid-feedback">
                                       必填
                                     </div>
                                   </div>
-                                  <div class="form-floating w-100">
-                                    <input type="text" class="form-control border-0 " id="checkput-credit-three" placeholder="" required>
-                                    <label for="checkput-credit-three">CVC</label>
+
+
+                                  <div class="w-100 p-2p">
+                                    <input type="text" class="form-control checkput-credit-three py-3 px-4 rounded-5 border-0 w-100" id="checkput-credit-three"  placeholder="CVC" required>
                                     <div class="invalid-feedback">
                                       必填
                                     </div>
@@ -403,12 +404,12 @@
                               </div>
                             </div>
                             <div class="form-check mb-3">
-                              <input class="form-check-input " type="checkbox" value="" id="invalidCheck">
-                              <label class="form-check-label align-middle ms-1 fs-12px" for="invalidCheck">
+                              <input class="form-check-input " type="checkbox" value="" id="subscribeCheck">
+                              <label class="form-check-label align-middle ms-1 fs-12px" for="subscribeCheck">
                                 我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
                               </label>
                             </div>
-                            <button class="btn btn-pr w-100" type="submit">結帳</button>
+                            <button class="btn btn-pr w-100" type="submit" disabled>結帳</button>
                           </div>
                         </form>
                       </div>
@@ -902,15 +903,47 @@
       })();
 
 
+
       const forms = document.querySelectorAll(".needs-validation");
 
       forms.forEach(form => {
+        const submitBtn = form.querySelector("button[type='submit']");
+        submitBtn.disabled = true;
+
+        const inputs = form.querySelectorAll("input[required], textarea[required], select[required]");
+
+        inputs.forEach(input => {
+          const validate = () => {
+            if (input.checkValidity()) {
+              input.classList.add("is-valid");
+              input.classList.remove("is-invalid");
+            } else {
+              input.classList.add("is-invalid");
+              input.classList.remove("is-valid");
+            }
+            // 檢查整個 form 狀態
+            submitBtn.disabled = !form.checkValidity();
+          };
+
+          // 即時驗證
+          input.addEventListener("input", validate);
+          // blur 也驗證
+          input.addEventListener("blur", validate);
+        });
+
+        // 攔截送出事件
         form.addEventListener("submit", function (event) {
           event.preventDefault();
           if (!form.checkValidity()) {
-            form.classList.add("was-validated");
+            inputs.forEach(input => {
+              if (!input.checkValidity()) {
+                input.classList.add("is-invalid");
+              }
+            });
             return;
           }
+
+          // 驗證通過
           const email = form.querySelector("input[type='email']").value.trim();
           const cardNumber = form.querySelector("input[id*='credit-number']").value.trim();
           localStorage.setItem("checkout_email", email);
@@ -918,6 +951,11 @@
           window.location.href = "checkout.html";
         });
       });
+
+
+
+
+
 
 
       const chooseCutBtn = document.querySelector(".choose-cut-btn");

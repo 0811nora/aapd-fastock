@@ -23,12 +23,28 @@
     bottom: 0;
     left: 0;
   }
+  .order-light{
+    position: absolute;
+    top: 65px;
+    left: 10px;
+  }
   .btn.btn-pr:hover {
     color: $white;
   }
   .btn.btn-pr:disabled {
-    background-color: $secondary-900;
+    background-color: #ADADAD;
     color: $white;
+  }
+  .btn.btn-pr-outline:hover{
+    color: $primary;
+    border: 1px solid $primary;    
+  }
+  .form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #8c8c8c;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(140, 140, 140);
   }
 }
 
