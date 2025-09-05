@@ -52,8 +52,10 @@ items: ["海報", "影音", "傳單", "社群貼文"] } ] } ]; const tabsData = 
   >
     <% menuItems.forEach((menuItem, index) => { %>
     <li class="nav-item nav-item-dropdown" style="position: initial">
+      <% let linkHref = '#'; %>       <% if (menuItem.id === 'photo') { %>      
+        <% linkHref = '.product-list.html'; %>       <% } %>
       <a
-        href="#"
+        href="<%= linkHref %>"
         class="nav-link dropdown sub-nav-btn mb-6p"
         role="button"
         id="dropdownCateMenu<%= index %>"
@@ -120,7 +122,9 @@ items: ["海報", "影音", "傳單", "社群貼文"] } ] } ]; const tabsData = 
               <li class="pb-0 mb-0">
                 <ul class="list-unstyled list-group d-flex flex-column gap-3">
                   <li>
-                    <h3 class="fs-5 fw-bold"><%= category.title %></h3>
+                    <h3 class="fs-5 fw-bold py-1 px-2">
+                      <%= category.title %>
+                    </h3>
                   </li>
                   <% category.items.forEach(item => { %>
                   <li>
