@@ -12,7 +12,7 @@ img {
   // outline: 1px solid red;
 }
 
-// 移除 Bootstrap 預設樣式
+// 移除 Bootstrap 預設focus樣式
 header .navbar-nav .nav-link,
 header .nav-login-btn,
 header .search-bar-btn,
@@ -500,10 +500,13 @@ header .navbar-toggler {
 .offcanvas li a {
   cursor: pointer;
 }
+.offcanvas-body {
+  padding: 0;
+}
 
 // offcanvas submenu
 .offcanvas-submenu {
-  .btn-close {
+  sc .btn-close {
     margin-left: 0;
   }
   .list-group-item {
@@ -511,5 +514,9 @@ header .navbar-toggler {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
