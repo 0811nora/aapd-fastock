@@ -302,6 +302,12 @@
     @include icon-size(8px, 16px, 12px, 295px);
     width: 100%;
   }
+  &:disabled {
+    @include disabled-style;
+    &:hover {
+      background-color: rgba($primary-600, 100%);
+    }
+  }
 }
 
 // membership cta

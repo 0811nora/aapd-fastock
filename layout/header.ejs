@@ -72,7 +72,7 @@
           <span class="divider d-none d-lg-block"></span>
           <!-- 輸入關鍵字搜尋 -->
           <input
-            class="form-control"
+            class="form-control search-bar"
             type="search"
             placeholder="搜尋數百萬創意資源"
             aria-label="Search"
@@ -84,6 +84,7 @@
           ></button>
         </div>
       </form>
+      <!-- login bar -->
       <ul class="list-unstyled mb-0 d-flex align-items-center gap-2">
         <!-- 未登入狀態default -->
         <div id="loggedOut">
@@ -107,7 +108,6 @@
             </li>
           </div>
         </div>
-
         <!-- 已登入狀態 點擊切換 -->
         <div id="loggedIn" style="display: none">
           <li class="nav-item">
@@ -125,18 +125,267 @@
             /></a>
           </li>
         </div>
+        <!-- 購物車icon 可切結帳視窗 -->
         <li class="nav-item">
-          <a
-            href="checkout.html"
-            role="button"
-            class="icon-S icon-secondary-outline"
-            ><img src="/assets/images/icon/icon-cart-outline.svg" alt="cart"
-          /></a>
+          <!-- 結帳視窗 -->
+          <!-- 連結結帳modal -->
+          <button
+            type="button"
+            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#headerPcCheckout"
+          >
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+          </button>
+          <!-- 電腦版結帳modal -->
+          <div
+            class="modal fade"
+            id="headerPcCheckout"
+            tabindex="-1"
+            aria-labelledby="headerCheckoutLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog position-absolute">
+              <div class="modal-content">
+                <div class="d-flex">
+                  <!-- 購物車商品 -->
+                  <div class="card pe-none border-0 modal-item-card">
+                    <!-- 卡片圖片區 -->
+                    <div class="position-relative overflow-hidden rounded-4">
+                      <!-- <div class="d-none d-sm-block tag-m tag-yellow"></div> -->
+                      <div class="tag-yellow"></div>
+                      <img
+                        src="/assets/images/Homepage/card1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
+                        alt="貓咪家庭"
+                      />
+                    </div>
+                    <!-- 卡片描述區 -->
+                    <div class="card-body">
+                      <h5 class="card-title fs-md fs-md-lg fw-bold">
+                        <a
+                          href="./product-details.html"
+                          class="stretched-link text-black"
+                        >
+                          貓咪家庭</a
+                        >
+                      </h5>
+                      <div class="card-text d-flex justify-content-between">
+                        <p>相片</p>
+                        <p class="fs-md fs-md-lg text-notice">
+                          <span class="fs-sm text-neutral-600"
+                            ><del>120</del></span
+                          >
+                          $<span class="fs-md fs-md-lg fw-bold">100</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 結帳輸入 -->
+                  <div
+                    class="modal-body d-flex flex-column gap-4 modal-item-checkout"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="headerCheckoutLabel"
+                      >
+                        訪客快速結帳
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          src="/assets/images/icon/icon-close.svg"
+                          alt="close"
+                        />
+                      </button>
+                    </div>
+                    <!-- 填寫資料 -->
+                    <form class="needs-validation" novalidate>
+                      <div class="form-floating mb-4 has-validation">
+                        <input
+                          type="email"
+                          class="form-control rounded-5"
+                          id="floatingInput"
+                          placeholder="請輸入Email"
+                          required
+                        />
+                        <label for="floatingInput">請輸入Email</label>
+                        <div class="invalid-feedback">請輸入有效電子信箱</div>
+                      </div>
+
+                      <div class="form-floating mb-0 w-100 has-validation">
+                        <input
+                          type="text"
+                          class="form-control rounded-top-5"
+                          id="cardholderInput"
+                          placeholder="信用卡持有者"
+                          required
+                        />
+                        <label for="cardholderInput">信用卡持有者</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div
+                        class="form-floating mb-0 position-relative has-validation"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumberInput"
+                          placeholder="xxxx-xxxx-xxxx-xxxx"
+                          maxlength="19"
+                          inputmode="numeric"
+                          required
+                        /><span class="credit-card-icon-wrapper">
+                          <img
+                            src="/assets/images/icon/icon-credit-card-gray.svg"
+                            alt="credit-card icon"
+                          />
+                        </span>
+                        <label for="cardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div class="d-flex">
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="expiryDateInput"
+                            placeholder="MM / YY"
+                            maxlength="5"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="expiryDateInput">MM / YY</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cvvInput"
+                            placeholder="CVV"
+                            maxlength="3"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="cvvInput">CVC</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                      </div>
+                      <!-- 打勾驗證+送出區 -->
+                      <div class="d-flex flex-column mt-4 py-4 gap-3">
+                        <p class="mb-3 text-center w-100">
+                          共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                            class="fw-bold"
+                            >&nbsp;100&nbsp;</span
+                          >元
+                        </p>
+                        <div>
+                          <div class="form-check mb-1 has-validation">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="agree"
+                              id="agreePolicy"
+                              required
+                            />
+                            <label class="form-check-label" for="agreePolicy">
+                              我同意<a href="#" class="text-black"
+                                ><u>服務條款</u></a
+                              >和<a href="#" class="text-black"
+                                ><u>隱私權政策</u></a
+                              >。 *
+                            </label>
+                            <div class="invalid-feedback">
+                              * 必須勾選同意條款
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="send"
+                              id="receivePromoMail"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="receivePromoMail"
+                            >
+                              我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                            </label>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          id="goToCheckout"
+                          class="join-btn w-100"
+                          disabled
+                        >
+                          結帳
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 手機板結帳offcanvas -->
+          <button
+            type="button"
+            class="d-md-none icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#headerMobCheckout"
+            aria-controls="offcanvasBottom"
+          >
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+          </button>
+          <div
+            class="offcanvas offcanvas-bottom"
+            tabindex="-1"
+            style="height: 635px"
+            id="headerMobCheckout"
+            aria-labelledby="offcanvasBottomLabel"
+          >
+            <div class="offcanvas-header flex-column justify-content-start">
+              <button
+                type="button"
+                class="btn-close mb-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img
+                  width="24"
+                  height="24"
+                  src="/assets/images/icon/icon-close.svg"
+                  alt="close"
+                />
+              </button>
+              <h5 class="fs-lg fw-bold me-auto">訪客快速結帳</h5>
+            </div>
+            <div class="offcanvas-body small">
+              <div></div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- 分類nav-bar -->
   <div
     class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
   >
