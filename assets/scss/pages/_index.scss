@@ -153,6 +153,12 @@
 }
 .card:hover .card-img-wrapper::after {
   opacity: 1;
+  @media (max-width:768px) {
+    // 手機版隱藏overlay
+    &{
+      opacity: 0;
+  }
+  }
 }
 
 .card .inCardBtnGroup {

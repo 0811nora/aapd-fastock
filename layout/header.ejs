@@ -356,30 +356,170 @@
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
           </button>
           <div
-            class="offcanvas offcanvas-bottom"
+            class="d-md-none offcanvas offcanvas-bottom"
             tabindex="-1"
             style="height: 635px"
             id="headerMobCheckout"
             aria-labelledby="offcanvasBottomLabel"
           >
-            <div class="offcanvas-header flex-column justify-content-start">
-              <button
+          <div class="offcanvas-body small">
+              <div class="flex-column justify-content-start p-0">
+                <button
                 type="button"
                 class="btn-close mb-3"
-                data-bs-dismiss="modal"
+                data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                <img
-                  width="24"
-                  height="24"
-                  src="/assets/images/icon/icon-close.svg"
-                  alt="close"
-                />
               </button>
-              <h5 class="fs-lg fw-bold me-auto">訪客快速結帳</h5>
-            </div>
-            <div class="offcanvas-body small">
-              <div></div>
+              <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+              </div>
+              <div class="d-flex gap-3 mb-5">
+                <img class="card-img-top rounded-5" src="/assets/images/Homepage/card1.png" alt="貓咪家庭" style="width: 50%;">
+                <div class="offcanvas-card-text d-flex flex-column justify-content-between"  style="width: 50%;">
+                  <div class="card-text">
+                    <h6 class="fs-lg fw-bold">貓咪家庭</h6>
+                    <p>
+                      四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。
+                    </p>
+                  </div> 
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p>
+                      <del>120</del>
+                      $<span class="fw-bold">100</span>
+                    </p>
+                    <a href="#" role="button">
+                      <img src="/assets/images/icon/icon-bin.svg" alt="bin icon">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 填寫資料 -->
+               <form class="needs-validation" novalidate>
+                <div class="form-floating mb-4 has-validation">
+                  <input
+                    type="email"
+                    class="form-control rounded-5"
+                    id="mobFloatingInput"
+                    placeholder="請輸入Email"
+                    required
+                  />
+                  <label for="mobFloatingInput">請輸入Email</label>
+                  <div class="invalid-feedback">請輸入有效電子信箱</div>
+                </div>
+
+                <div class="form-floating mb-0 w-100 has-validation">
+                  <input
+                    type="text"
+                    class="form-control rounded-top-5"
+                    id="mobCardholderInput"
+                    placeholder="信用卡持有者"
+                    required
+                  />
+                  <label for="mobCardholderInput">信用卡持有者</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div class="form-floating mb-0 position-relative has-validation">
+                  <input type="text" class="form-control" id="mobCardNumberInput"
+                    placeholder="xxxx-xxxx-xxxx-xxxx"
+                    maxlength="19"
+                    inputmode="numeric"
+                    required
+                  /><span class="credit-card-icon-wrapper">
+                    <img
+                      src="/assets/images/icon/icon-credit-card-gray.svg"
+                      alt="credit-card icon"
+                    />
+                  </span>
+                  <label for="mobCardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div class="d-flex">
+                  <div
+                    class="form-floating has-validation"
+                    style="width: 50%"
+                  >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobExpiryDateInput"
+                      placeholder="MM / YY"
+                      maxlength="5"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobExpiryDateInput">MM / YY</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <div
+                    class="form-floating has-validation"
+                    style="width: 50%"
+                  >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobCvvInput"
+                      placeholder="CVV"
+                      maxlength="3"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobCvvInput">CVC</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                </div>
+                <!-- 打勾驗證+送出區 -->
+                <div class="d-flex flex-column mt-4 py-4 gap-3">
+                  <p class="mb-3 text-center text-black w-100">
+                    共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                      class="fw-bold"
+                      >&nbsp;100&nbsp;</span
+                    >元
+                  </p>
+                  <div>
+                    <div class="form-check mb-1 has-validation">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="agree"
+                        id="mobAgreePolicy"
+                        required
+                      />
+                      <label class="form-check-label" for="mobAgreePolicy">
+                        我同意<a href="#" class="text-black"
+                          ><u>服務條款</u></a
+                        >和<a href="#" class="text-black"
+                          ><u>隱私權政策</u></a
+                        >。 *
+                      </label>
+                      <div class="invalid-feedback">
+                        * 必須勾選同意條款
+                      </div>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="send"
+                        id="mobReceivePromoMail"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="mobReceivePromoMail"
+                      >
+                        我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    id="goToCheckout"
+                    class="join-btn w-100"
+                    disabled
+                  >
+                    結帳
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </li>
