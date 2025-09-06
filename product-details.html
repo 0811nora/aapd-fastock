@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <link rel="icon" type="image/png" sizes="32x32" href="/aapd-fastock/assets/logo%20icon-CYodmLSN.svg"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/aapd-fastock/assets/logo%20icon-CyIOzHpx.svg"/>
     <title>貓咪家庭 ｜ 相片 | 快素 Fastock</title>
-    <script type="module" crossorigin src="/aapd-fastock/assets/main-BufLd_bE.js"></script>
-    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-Yp2-NrxE.css">
+    <script type="module" crossorigin src="/aapd-fastock/assets/main-CJIRkWl2.js"></script>
+    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-De4KFugR.css">
   </head>
   <body>
     <header>
@@ -24,12 +24,12 @@
       <a class="navbar-brand" href="index.html"
         ><img
           class="d-none d-lg-block"
-          src="/aapd-fastock/assets/logo-desktop-BcjNIg1L.svg"
+          src="/aapd-fastock/assets/logo-desktop-BJaVMyFn.svg"
           alt="logo-desktop"
         />
         <img
           class="d-lg-none"
-          src="/aapd-fastock/assets/logo-mobile-ELEScDCN.svg"
+          src="/aapd-fastock/assets/logo-mobile-XwOfFSbw.svg"
           alt="logo-mobile"
         />
       </a>
@@ -86,10 +86,11 @@
           <span class="divider d-none d-lg-block"></span>
           <!-- 輸入關鍵字搜尋 -->
           <input
-            class="form-control"
+            class="form-control search-bar"
             type="search"
             placeholder="搜尋數百萬創意資源"
             aria-label="Search"
+            id="headerSearchBar"
           />
           <!-- 圖搜圖的圖示 -->
           <button
@@ -98,6 +99,7 @@
           ></button>
         </div>
       </form>
+      <!-- login bar -->
       <ul class="list-unstyled mb-0 d-flex align-items-center gap-2">
         <!-- 未登入狀態default -->
         <div id="loggedOut">
@@ -121,7 +123,6 @@
             </li>
           </div>
         </div>
-
         <!-- 已登入狀態 點擊切換 -->
         <div id="loggedIn" style="display: none">
           <li class="nav-item">
@@ -131,7 +132,7 @@
               id="logoutBtn"
               class="avatar-container rounded-circle"
               ><img
-                src="/aapd-fastock/assets/Avatar-Bsnajy6J.svg"
+                src="/aapd-fastock/assets/Avatar-DAdlVL3d.svg"
                 alt="avatar"
                 class="rounded-circle"
                 width="36"
@@ -139,18 +140,411 @@
             /></a>
           </li>
         </div>
+        <!-- 購物車icon 可切結帳視窗 -->
         <li class="nav-item">
-          <a
-            href="checkout.html"
-            role="button"
-            class="icon-S icon-secondary-outline"
-            ><img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart"
-          /></a>
+          <!-- 結帳視窗 -->
+          <!-- 連結結帳modal -->
+          <button
+            type="button"
+            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#headerPcCheckout"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+          </button>
+          <!-- 電腦版結帳modal -->
+          <div
+            class="modal fade"
+            id="headerPcCheckout"
+            tabindex="-1"
+            aria-labelledby="headerCheckoutLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog position-absolute">
+              <div class="modal-content">
+                <div class="d-flex">
+                  <!-- 購物車商品 -->
+                  <div class="card pe-none border-0 modal-item-card">
+                    <!-- 卡片圖片區 -->
+                    <div class="position-relative overflow-hidden rounded-4">
+                      <!-- <div class="d-none d-sm-block tag-m tag-yellow"></div> -->
+                      <div class="tag-yellow"></div>
+                      <img
+                        src="/aapd-fastock/assets/card1-CVejxxmw.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
+                        alt="貓咪家庭"
+                      />
+                    </div>
+                    <!-- 卡片描述區 -->
+                    <div class="card-body">
+                      <h5 class="card-title fs-md fs-md-lg fw-bold">
+                        <a
+                          href="./product-details.html"
+                          class="stretched-link text-black"
+                        >
+                          貓咪家庭</a
+                        >
+                      </h5>
+                      <div class="card-text d-flex justify-content-between">
+                        <p>相片</p>
+                        <p class="fs-md fs-md-lg text-notice">
+                          <span class="fs-sm text-neutral-600"
+                            ><del>120</del></span
+                          >
+                          $<span class="fs-md fs-md-lg fw-bold">100</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 結帳輸入 -->
+                  <div
+                    class="modal-body d-flex flex-column gap-4 modal-item-checkout"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="headerCheckoutLabel"
+                      >
+                        訪客快速結帳
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z'%20fill='%23262626'/%3e%3c/svg%3e"
+                          alt="close"
+                        />
+                      </button>
+                    </div>
+                    <!-- 填寫資料 -->
+                    <form class="needs-validation" novalidate>
+                      <div class="form-floating mb-4 has-validation">
+                        <input
+                          type="email"
+                          class="form-control rounded-5"
+                          id="floatingInput"
+                          placeholder="請輸入Email"
+                          required
+                        />
+                        <label for="floatingInput">請輸入Email</label>
+                        <div class="invalid-feedback">請輸入有效電子信箱</div>
+                      </div>
+
+                      <div class="form-floating mb-0 w-100 has-validation">
+                        <input
+                          type="text"
+                          class="form-control rounded-top-5"
+                          id="cardholderInput"
+                          placeholder="信用卡持有者"
+                          required
+                        />
+                        <label for="cardholderInput">信用卡持有者</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div
+                        class="form-floating mb-0 position-relative has-validation"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumberInput"
+                          placeholder="xxxx-xxxx-xxxx-xxxx"
+                          maxlength="19"
+                          inputmode="numeric"
+                          required
+                        /><span class="credit-card-icon-wrapper">
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.4'%3e%3cpath%20d='M22%206V18C22%2018.55%2021.8043%2019.021%2021.413%2019.413C21.0217%2019.805%2020.5507%2020.0007%2020%2020H4C3.45%2020%202.97933%2019.8043%202.588%2019.413C2.19667%2019.0217%202.00067%2018.5507%202%2018V6C2%205.45%202.196%204.97933%202.588%204.588C2.98%204.19667%203.45067%204.00067%204%204H20C20.55%204%2021.021%204.196%2021.413%204.588C21.805%204.98%2022.0007%205.45067%2022%206ZM4%208H20V6H4V8ZM4%2012V18H20V12H4Z'%20fill='%23262626'/%3e%3c/g%3e%3c/svg%3e"
+                            alt="credit-card icon"
+                          />
+                        </span>
+                        <label for="cardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div class="d-flex">
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="expiryDateInput"
+                            placeholder="MM / YY"
+                            maxlength="5"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="expiryDateInput">MM / YY</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cvvInput"
+                            placeholder="CVV"
+                            maxlength="3"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="cvvInput">CVC</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                      </div>
+                      <!-- 打勾驗證+送出區 -->
+                      <div class="d-flex flex-column mt-4 py-4 gap-3">
+                        <p class="mb-3 text-center w-100">
+                          共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                            class="fw-bold"
+                            >&nbsp;100&nbsp;</span
+                          >元
+                        </p>
+                        <div>
+                          <div class="form-check mb-1 has-validation">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="agree"
+                              id="agreePolicy"
+                              required
+                            />
+                            <label class="form-check-label" for="agreePolicy">
+                              我同意<a href="#" class="text-black"
+                                ><u>服務條款</u></a
+                              >和<a href="#" class="text-black"
+                                ><u>隱私權政策</u></a
+                              >。 *
+                            </label>
+                            <div class="invalid-feedback">
+                              * 必須勾選同意條款
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="send"
+                              id="receivePromoMail"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="receivePromoMail"
+                            >
+                              我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                            </label>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          id="goToCheckout"
+                          class="join-btn w-100"
+                          disabled
+                        >
+                          結帳
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 手機板結帳offcanvas -->
+          <button
+            type="button"
+            class="d-md-none icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#headerMobCheckout"
+            aria-controls="offcanvasBottom"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+          </button>
+          <div
+            class="d-md-none offcanvas offcanvas-bottom"
+            tabindex="-1"
+            style="height: 635px"
+            id="headerMobCheckout"
+            aria-labelledby="offcanvasBottomLabel"
+          >
+            <div class="offcanvas-body small">
+              <div class="flex-column justify-content-start p-0">
+                <button
+                  type="button"
+                  class="btn-close mb-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+                <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+              </div>
+              <div class="d-flex gap-3 mb-5">
+                <img
+                  class="card-img-top rounded-5"
+                  src="/aapd-fastock/assets/card1-CVejxxmw.png"
+                  alt="貓咪家庭"
+                  style="width: 50%"
+                />
+                <div
+                  class="offcanvas-card-text d-flex flex-column justify-content-between"
+                  style="width: 50%"
+                >
+                  <div class="card-text">
+                    <h6 class="fs-lg fw-bold">貓咪家庭</h6>
+                    <p>
+                      四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p>
+                      <del>120</del>
+                      $<span class="fw-bold">100</span>
+                    </p>
+                    <a href="#" role="button">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10%2010C10.5523%2010%2011%2010.4477%2011%2011V17C11%2017.5523%2010.5523%2018%2010%2018C9.44772%2018%209%2017.5523%209%2017V11C9%2010.4477%209.44772%2010%2010%2010Z'%20fill='%23262626'/%3e%3cpath%20d='M14%2010C14.5523%2010%2015%2010.4477%2015%2011V17C15%2017.5523%2014.5523%2018%2014%2018C13.4477%2018%2013%2017.5523%2013%2017V11C13%2010.4477%2013.4477%2010%2014%2010Z'%20fill='%23262626'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.2041%202.01074C15.2128%202.113%2016%202.96435%2016%204V5.5H21C21.5523%205.5%2022%205.94772%2022%206.5C22%207.05228%2021.5523%207.5%2021%207.5H19.9336L19.1582%2018.7412C19.0314%2020.5762%2017.5054%2022%2015.666%2022H8.33398C6.49458%2022%204.96856%2020.5762%204.8418%2018.7412L4.06641%207.5H3C2.44772%207.5%202%207.05228%202%206.5C2%205.94772%202.44772%205.5%203%205.5H8V4C8%202.89543%208.89543%202%2010%202H14L14.2041%202.01074ZM6.83691%2018.6035C6.8913%2019.3899%207.54571%2020%208.33398%2020H15.666C16.4543%2020%2017.1087%2019.3899%2017.1631%2018.6035L17.9287%207.5H6.07129L6.83691%2018.6035ZM10%205.5H14V4H10V5.5Z'%20fill='%23262626'/%3e%3c/svg%3e"
+                        alt="bin icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- 填寫資料 -->
+              <form class="needs-validation" novalidate>
+                <div class="form-floating mb-4 has-validation">
+                  <input
+                    type="email"
+                    class="form-control rounded-5"
+                    id="mobFloatingInput"
+                    placeholder="請輸入Email"
+                    required
+                  />
+                  <label for="mobFloatingInput">請輸入Email</label>
+                  <div class="invalid-feedback">請輸入有效電子信箱</div>
+                </div>
+
+                <div class="form-floating mb-0 w-100 has-validation">
+                  <input
+                    type="text"
+                    class="form-control rounded-top-5"
+                    id="mobCardholderInput"
+                    placeholder="信用卡持有者"
+                    required
+                  />
+                  <label for="mobCardholderInput">信用卡持有者</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div
+                  class="form-floating mb-0 position-relative has-validation"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="mobCardNumberInput"
+                    placeholder="xxxx-xxxx-xxxx-xxxx"
+                    maxlength="19"
+                    inputmode="numeric"
+                    required
+                  /><span class="credit-card-icon-wrapper">
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.4'%3e%3cpath%20d='M22%206V18C22%2018.55%2021.8043%2019.021%2021.413%2019.413C21.0217%2019.805%2020.5507%2020.0007%2020%2020H4C3.45%2020%202.97933%2019.8043%202.588%2019.413C2.19667%2019.0217%202.00067%2018.5507%202%2018V6C2%205.45%202.196%204.97933%202.588%204.588C2.98%204.19667%203.45067%204.00067%204%204H20C20.55%204%2021.021%204.196%2021.413%204.588C21.805%204.98%2022.0007%205.45067%2022%206ZM4%208H20V6H4V8ZM4%2012V18H20V12H4Z'%20fill='%23262626'/%3e%3c/g%3e%3c/svg%3e"
+                      alt="credit-card icon"
+                    />
+                  </span>
+                  <label for="mobCardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div class="d-flex">
+                  <div class="form-floating has-validation" style="width: 50%">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobExpiryDateInput"
+                      placeholder="MM / YY"
+                      maxlength="5"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobExpiryDateInput">MM / YY</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <div class="form-floating has-validation" style="width: 50%">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobCvvInput"
+                      placeholder="CVV"
+                      maxlength="3"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobCvvInput">CVC</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                </div>
+                <!-- 打勾驗證+送出區 -->
+                <div class="d-flex flex-column mt-4 py-4 gap-3">
+                  <p class="mb-3 text-center text-black w-100">
+                    共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                      class="fw-bold"
+                      >&nbsp;100&nbsp;</span
+                    >元
+                  </p>
+                  <div>
+                    <div class="form-check mb-1 has-validation">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="agree"
+                        id="mobAgreePolicy"
+                        required
+                      />
+                      <label class="form-check-label" for="mobAgreePolicy">
+                        我同意<a href="#" class="text-black"><u>服務條款</u></a
+                        >和<a href="#" class="text-black"><u>隱私權政策</u></a
+                        >。 *
+                      </label>
+                      <div class="invalid-feedback">* 必須勾選同意條款</div>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="send"
+                        id="mobReceivePromoMail"
+                      />
+                      <label class="form-check-label" for="mobReceivePromoMail">
+                        我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    id="goToCheckout"
+                    class="join-btn w-100"
+                    disabled
+                  >
+                    結帳
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- 分類nav-bar -->
   <div
     class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
   >
@@ -174,10 +568,11 @@
         <span class="divider d-none d-lg-block"></span>
         <!-- 輸入關鍵字搜尋 -->
         <input
-          class="form-control"
+          class="form-control search-bar"
           type="search"
           placeholder="搜尋數百萬創意資源"
           aria-label="Search"
+          id="headerSearchBar"
         />
         <!-- 圖搜圖的圖示 -->
         <button
@@ -850,7 +1245,7 @@
                    
                
       <a
-        href=".product-list.html"
+        href="product-list.html"
         class="nav-link dropdown sub-nav-btn mb-6p"
         role="button"
         id="dropdownCateMenu2"
@@ -4039,7 +4434,7 @@
     >
       <div class="offcanvas-header shadow">
         <h5 class="offcanvas-title" id="mainMenuLabel">
-          <img src="/aapd-fastock/assets/logo-mobile-ELEScDCN.svg" alt="logo-mobile.svg" />
+          <img src="/aapd-fastock/assets/logo-mobile-XwOfFSbw.svg" alt="logo-mobile.svg" />
         </h5>
         <button
           type="button"
@@ -5786,7 +6181,7 @@
     <div class="d-flex flex-column flex-md-row justify-content-md-between pb-0 pb-mb-8 gap-8 border-bottom border-1 border-neutral-400">
         <div class="footer-title d-flex flex-column gap-6">
             <div class="footer-img">
-                <img src="/aapd-fastock/assets/logo-desktop-BcjNIg1L.svg" alt="Fastock-logo">
+                <img src="/aapd-fastock/assets/logo-desktop-BJaVMyFn.svg" alt="Fastock-logo">
             </div>
             <p class="fs-md text-neutral">
                 靈感從這裡開始，<br>
@@ -5799,7 +6194,7 @@
             </ul>
         </div>
         <div class="footer-content">
-            <ul class="list-unstyled text-neutral d-flex flex-row flex-wrap flex-lg-nowrap gap-3 px-2 mb-0 mb-lg-4">
+            <ul class="list-unstyled text-neutral d-flex flex-row flex-wrap flex-lg-nowrap gap-3 px-lg-2 mb-0 mb-lg-4">
                 <li class="footer-content-item mb-8 mb-lg-0">
                     <h6 class="fs-lg fw-bold mb-3 px-2 py-1">成為創作者</h6>
                     <ul class="list-unstyled fs-md footer-link">
@@ -5864,7 +6259,7 @@
 </footer>  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
 
-
+
     <script>
 
       var swiper = new Swiper(".mySwiper", {
