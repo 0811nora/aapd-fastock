@@ -48,8 +48,7 @@ header .search-bar-btn {
 header .dropdown-toggle::after {
   display: none;
 }
-// 強制固定搜尋欄「全部」dropdown寬度 避免滿版設定的影響
-
+// 強制搜尋欄dropdown寬度
 .search-dropdown .dropdown-menu {
   width: 119px !important;
   min-width: 119px !important;
@@ -100,7 +99,7 @@ header .dropdown-toggle {
 // 搜尋框輸入時
 header .search-bar {
   padding-left: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg class='icon-search' width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 2.5C15.1944 2.5 19 6.30558 19 11C19 12.9868 18.316 14.8125 17.1738 16.2598L21.707 20.793L21.7754 20.8691C22.0957 21.2619 22.0731 21.8409 21.707 22.207C21.3409 22.5731 20.7619 22.5957 20.3691 22.2754L20.293 22.207L15.7598 17.6738C14.3125 18.816 12.4868 19.5 10.5 19.5C5.80558 19.5 2 15.6944 2 11C2 6.30558 5.80558 2.5 10.5 2.5ZM10.5 4.5C6.91015 4.5 4 7.41015 4 11C4 14.5899 6.91015 17.5 10.5 17.5C14.0899 17.5 17 14.5899 17 11C17 7.41015 14.0899 4.5 10.5 4.5Z' fill='var(--ui6-sys-color-neutral-on-surface-def, %23262626)' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg class='icon-search' width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 2.5C15.1944 2.5 19 6.30558 19 11C19 12.9868 18.316 14.8125 17.1738 16.2598L21.707 20.793L21.7754 20.8691C22.0957 21.2619 22.0731 21.8409 21.707 22.207C21.3409 22.5731 20.7619 22.5957 20.3691 22.2754L20.293 22.207L15.7598 17.6738C14.3125 18.816 12.4868 19.5 10.5 19.5C5.80558 19.5 2 15.6944 2 11C2 6.30558 5.80558 2.5 10.5 2.5ZM10.5 4.5C6.91015 4.5 4 7.41015 4 11C4 14.5899 6.91015 17.5 10.5 17.5C14.0899 17.5 17 14.5899 17 11C17 7.41015 14.0899 4.5 10.5 4.5Z' fill='var(--ui6-sys-color-neutral-on-surface-def, %23262626)' /%3E%3C/svg%3E") !important;
   background-repeat: no-repeat;
   background-position: 8px center;
   background-size: 24px 24px;
@@ -185,7 +184,7 @@ header .search-bar-btn {
     box-shadow: none !important;
   }
 
-  // 如果你想要按鈕本身有 focus 樣式，可以這樣設定：
+  // 想要按鈕本身有 focus 樣式，可以這樣設定：
   // &:focus-visible {
   //   outline: 2px solid $primary;
   //   outline-offset: 2px;
@@ -267,6 +266,7 @@ header .nav-login-btn {
     border-color: $primary-800 !important;
   }
 }
+// 登入圖示
 .avatar-container {
   position: relative;
   display: inline-block;
@@ -345,7 +345,8 @@ header .modal .card {
   padding: 12px 16px;
 }
 
-header .modal-body input, header .offcanvas-bottom input {
+header .modal-body input,
+header .offcanvas-bottom input {
   // &[type="email"],
   // &[type="text"] {
   //   // background-image: none;
@@ -361,7 +362,8 @@ header .modal-body input, header .offcanvas-bottom input {
     opacity: 0.4;
   }
 }
-header .modal-body .form-control, header .offcanvas-bottom .form-control {
+header .modal-body .form-control,
+header .offcanvas-bottom .form-control {
   border-radius: 0;
 }
 
@@ -378,14 +380,17 @@ header .modal-body .form-control, header .offcanvas-bottom .form-control {
 }
 
 // 用id的權重去做圓角...
-input#expiryDateInput, input#mobExpiryDateInput {
+input#expiryDateInput,
+input#mobExpiryDateInput {
   border-bottom-left-radius: 16px;
 }
-input#cvvInput, input#mobCvvInput {
+input#cvvInput,
+input#mobCvvInput {
   border-bottom-right-radius: 16px;
 }
 
-header .modal-body .form-check-input, header .offcanvas-bottom .form-check-input{
+header .modal-body .form-check-input,
+header .offcanvas-bottom .form-check-input {
   width: 15px;
   height: 15px;
   border: 1px solid $secondary-900;
@@ -398,7 +403,7 @@ header .modal-body .form-check-input, header .offcanvas-bottom .form-check-input
   }
 }
 // 修改checkbox樣式
-header .modal-body .form-check-input:checked[type="checkbox"], 
+header .modal-body .form-check-input:checked[type="checkbox"],
 header .offcanvas-bottom .form-check-input:checked[type="checkbox"] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3Csvg class='vector-stroke' width='11' height='9' viewBox='-3 -4 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.78164 0.53376C10.0025 0.288058 10.3825 0.265949 10.631 0.484351C10.8794 0.702752 10.9018 1.0786 10.6809 1.3243L4.26141 8.4671C4.14959 8.5915 3.99004 8.66418 3.82176 8.66706C3.65347 8.66992 3.49173 8.60275 3.37565 8.48221L0.165311 5.14914L1.03755 4.32779L3.7959 7.19293L9.78164 0.53376ZM0.18647 4.30744C0.427179 4.08081 0.808332 4.08976 1.03755 4.32779L0.165311 5.14914C-0.063851 4.91108 -0.0542067 4.53413 0.18647 4.30744Z' fill='white' /%3E%3C/svg%3E");
   background-position: center;
@@ -441,7 +446,8 @@ header .was-validated .form-check-input:valid ~ .form-check-label,
 // 信用卡旁的打勾位置
 .was-validated .form-control#cardNumberInput:valid,
 .form-control#cardNumberInput.is-valid
-.was-validated .form-control#mobCardNumberInput:valid,
+  .was-validated
+  .form-control#mobCardNumberInput:valid,
 .form-control#mobCardNumberInput.is-valid {
   border-color: var(--bs-form-valid-border-color);
   padding-right: calc(1.5em + 0.75rem + 16px);
@@ -469,13 +475,13 @@ header .offcanvas-header .btn-close {
   margin-left: 0;
   margin-right: auto;
 }
-header .offcanvas-body .card-text p{
+header .offcanvas-body .card-text p {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-header .offcanvas-body del{
+header .offcanvas-body del {
   font-size: 12px;
   color: $neutral-600;
   line-height: 1.4;

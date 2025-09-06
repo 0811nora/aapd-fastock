@@ -153,11 +153,11 @@
 }
 .card:hover .card-img-wrapper::after {
   opacity: 1;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     // 手機版隱藏overlay
-    &{
+    & {
       opacity: 0;
-  }
+    }
   }
 }
 
@@ -179,7 +179,7 @@
   .card-title {
     margin-bottom: 4px;
     color: var(--bs-card-title-color);
-}
+  }
 }
 
 // CTA
