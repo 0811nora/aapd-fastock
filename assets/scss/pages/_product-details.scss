@@ -73,9 +73,9 @@
   .btn.br:hover {
     color: $white;
   }
-  .btn:hover {
-    color: $white;
-  }
+  // .btn:hover {
+  //   color: $white;
+  // }
   .card-img {
     width: 100%;
     height: 302px;
@@ -226,6 +226,10 @@
     .w-lg-15 {
       width: 12.5%;
     }
+    .icon-M {
+  @include icon-size;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -245,6 +249,15 @@
     }
     .modal-dialog-try {
       margin: 0 auto;
+    }
+    .icon-S {
+        @include icon-size(
+            $py-sz: 8px,
+            $px-sz: 8px,
+            $bdrs-sz: 12px,
+            $w-sz: 40px,
+            $h-sz: 40px
+        );
     }
   }
 }
