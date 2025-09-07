@@ -6,7 +6,8 @@
 
 .product-list-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* 黑色 40% 疊層 */ url("/assets/images/產品列表頁/banner.png");
+    /* 黑色 40% 疊層 */
+    url("/assets/images/產品列表頁/banner.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -44,18 +45,21 @@
   }
 }
 
-.pl-banner-btn::before {
-  content: "";
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 2a8 8 0 015.29 13.71l5 5a1 1 0 01-1.42 1.42l-5-5A8 8 0 1110 2z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+// .pl-banner-btn::before {
+//   content: "";
+//   position: absolute;
+//   left: 0.75rem;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 20px;
+//   height: 20px;
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill=''%3E%3Cpath d='M10 2a8 8 0 015.29 13.71l5 5a1 1 0 01-1.42 1.42l-5-5A8 8 0 1110 2z'/%3E%3C/svg%3E");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: contain;
+// }
+.pl-banner-btn img {
+  color: #fff;
 }
 
 .pl-main {

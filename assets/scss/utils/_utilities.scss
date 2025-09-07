@@ -1,27 +1,44 @@
 $utilities: map-merge(
-    $utilities,
-    (
-        "rounded": (
-            property: border-radius,
-            class: rounded,
-            values: (
-                null: $border-radius,  // 6
-                0: 0,
-                1: $border-radius-sm,    // 4
-                2: $border-radius,       // 6
-                3: $border-radius-md,  // 8
-                4: $border-radius-lg,    // 12
-                5: $border-radius-xl,    // 16
-                6: $border-radius-xxl,   // 20
-                7: $border-radius-3xl,   // 9999
-                circle: 50%,
-                pill: var(--#{$prefix}border-radius-pill)
-            )
-        ),
-        
-        "font-size": map-merge(
-            map-get($utilities, "font-size"),
-            ( responsive: true ),
-        ),
-    )
+  $utilities,
+  (
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        // 6
+        0: 0,
+        1: $border-radius-sm,
+        // 4
+        2: $border-radius,
+        // 6
+        3: $border-radius-md,
+        // 8
+        4: $border-radius-lg,
+        // 12
+        5: $border-radius-xl,
+        // 16
+        6: $border-radius-xxl,
+        // 20
+        7: $border-radius-3xl,
+        // 9999
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+      ),
+    ),
+    "rounded-bottom": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (
+        null: $border-radius,
+      ),
+    ),
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
 );

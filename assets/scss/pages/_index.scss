@@ -72,7 +72,7 @@
   width: 113px;
   @media (max-width: 576px) {
     width: 92px;
-    padding: 8px 16px;
+    padding: 12px;
   }
 }
 // swiper nav btn 先隱藏swiper原始按鈕
@@ -153,6 +153,12 @@
 }
 .card:hover .card-img-wrapper::after {
   opacity: 1;
+  @media (max-width: 768px) {
+    // 手機版隱藏overlay
+    & {
+      opacity: 0;
+    }
+  }
 }
 
 .card .inCardBtnGroup {
@@ -169,6 +175,10 @@
   padding: 12px;
   @media (max-width: 768px) {
     padding: 8px;
+  }
+  .card-title {
+    margin-bottom: 4px;
+    color: var(--bs-card-title-color);
   }
 }
 
@@ -301,6 +311,12 @@
     display: inline-block;
     @include icon-size(8px, 16px, 12px, 295px);
     width: 100%;
+  }
+  &:disabled {
+    @include disabled-style;
+    &:hover {
+      background-color: rgba($primary-600, 100%);
+    }
   }
 }
 
