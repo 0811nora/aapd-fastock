@@ -53,7 +53,7 @@ items: ["海報", "影音", "傳單", "社群貼文"] } ] } ]; const tabsData = 
     <% menuItems.forEach((menuItem, index) => { %>
     <li class="nav-item nav-item-dropdown" style="position: initial">
       <% let linkHref = '#'; %>       <% if (menuItem.id === 'photo') { %>      
-        <% linkHref = '.product-list.html'; %>       <% } %>
+        <% linkHref = 'product-list.html'; %>       <% } %>
       <a
         href="<%= linkHref %>"
         class="nav-link dropdown sub-nav-btn mb-6p"
