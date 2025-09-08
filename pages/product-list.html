@@ -17,25 +17,25 @@
         <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
         <div class="pd-list-container searchtag d-flex justify-content-start">
           <div class="searchteag px-12" id="bannerTags" role="group" aria-label="快速篩選標籤">
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="背景" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="背景" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">背景
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="壁紙" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="壁紙" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">壁紙
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="風景" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="風景" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">風景
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="商業" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="商業" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">商業
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="室內設計" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="室內設計" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">室內設計
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn me-4" data-tag="動物" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="動物" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">動物
             </button>
-            <button type="button" class="btn-sm pl-banner-btn tag-btn" data-tag="城市" aria-pressed="false">
+            <button type="button" class="lil-btn pl-banner-btn tag-btn" data-tag="城市" aria-pressed="false">
               <img src="/assets/images/icon/icon-search-white.svg" alt="">城市
             </button>
           </div>
@@ -46,14 +46,13 @@
           <label for="toggleFilter" class="btn btn-sec-noline me-auto"><img src="/assets/images/icon/icon-filter.svg"
               alt="">隱藏篩選器</label>
           <input type="checkbox" id="toggleFilter">
-          <label for="toggleFilter" class="btn btn-sec-noline text-secondary-800">按<span
+          <label for="#" class="btn btn-sec-noline text-secondary-800 pd-list-dropdown">按<span
               class="text-black">最新</span>排序<img src="/assets/images/icon/icon-down.svg" alt=""></label>
           <input type="checkbox" id="newestFilter">
         </div>
-
         <div class="row-pd-list">
           <!-- 篩選器區 -->
-          <aside id="filter-panel" class="sidebar pe-3">
+          <div id="filter-panel" class="pd-list-sidebar me-12 sidebar pe-3 align-self-start">
             <form class="vstack">
               <fieldset class="border-top border-bottom px-6 py-4">
                 <legend class="fs-6 d-none">類別</legend>
@@ -73,7 +72,7 @@
                 </div>
               </fieldset>
               <fieldset class="border-bottom px-6 py-4">
-                <legend class="fs-6">人數</legend>
+                <legend class="fs-md fw-medium">人數</legend>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="photo" id="cat-photo">
                   <label class="form-check-label mb-3" for="cat-photo">0人</label>
@@ -92,7 +91,7 @@
                 </div>
               </fieldset>
               <fieldset class="border-bottom px-6 py-4">
-                <legend class="fs-6 mb-2">顏色</legend>
+                <legend class="fs-md fw-medium mb-2">顏色</legend>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="color-dot" style="--c:#F44336;"></span>
                   <span class="color-dot" style="--c:#FF9800; border-color:#eee; opacity:.4;"></span>
@@ -108,31 +107,34 @@
                 </div>
               </fieldset>
               <fieldset class="px-6 py-4">
-                <legend class="fs-6">比例</legend>
-                <div class="form-check border py-3 rounded-3 mb-3">
+                <legend class="fs-md fw-medium">比例</legend>
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
+                  style="place-content:center;padding-left:0px;">
                   <input class="form-check-input" type="checkbox" value="photo" id="vertical">
-                  <label class="form-check-label fw-medium" for="cat-photo"><img
+                  <label class="form-check-label fw-medium" for="cat-photo"><img class="pe-1"
                       src="/assets/images/icon/icon-vertical.svg" alt="">垂直</label>
                 </div>
-                <div class="form-check border py-3 rounded-3 mb-3">
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
+                  style="place-content:center;padding-left:0px;">
                   <input class="form-check-input" type="checkbox" value="template" id="horizontal">
-                  <label class="form-check-label fw-medium" for="cat-template"><img
+                  <label class="form-check-label fw-medium" for="cat-template"><img class="pe-1"
                       src="/assets/images/icon/icon-horizontal.svg" alt="">水平</label>
                 </div>
-                <div class="form-check border py-3 rounded-3">
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3"
+                  style="place-content:center;padding-left:0px;">
                   <input class="form-check-input" type="checkbox" value="template" id="icon-square">
-                  <label class="form-check-label fw-medium" for="cat-template"><img
+                  <label class="form-check-label fw-medium" for="cat-template"><img class="pe-1"
                       src="/assets/images/icon/icon-square.svg" alt="">正方</label>
                 </div>
               </fieldset>
             </form>
-          </aside>
+          </div>
 
           <!-- 卡片區 -->
-          <main id="card-area" class="content">
-            <div class="d-flex flex-wrap g-4">
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+          <main id="card-area" class="pd-list-content content">
+            <div class="d-flex flex-wrap gap-6">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -153,8 +155,8 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-blue"></div>
@@ -176,8 +178,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -195,10 +197,9 @@
                     </div>
                   </div>
                 </div>
-
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -218,10 +219,9 @@
                     </div>
                   </div>
                 </div>
-
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -239,10 +239,9 @@
                     </div>
                   </div>
                 </div>
-
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-pink"></div>
@@ -264,8 +263,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-blue"></div>
@@ -287,8 +286,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -308,8 +307,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -329,8 +328,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -352,8 +351,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -372,8 +371,8 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -393,8 +392,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-pink"></div>
@@ -416,8 +415,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -439,8 +438,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -462,8 +461,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -483,8 +482,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <%- include('./layout/inCardBtn.ejs'); -%>
@@ -504,8 +503,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -527,8 +526,8 @@
                 </div>
 
               </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0 position-relative" style="width: 18rem;">
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
@@ -545,6 +544,121 @@
                     <div class="card-text d-flex justify-content-between">
                       <p>相片</p>
                       <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card2.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="雪山日出空拍景觀圖">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      雪山日出空拍景觀圖
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-21.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="極簡山丘風景照">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      極簡山丘風景照
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card14.png"
+                        class="card-img-top img-fluid card-img object-position-top rounded-4 oveflow-hidden"
+                        alt="綠眼長毛貓側臉寫真">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      綠眼長毛貓側臉寫真
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品詳細頁/card-2.png"
+                        class="card-img-top img-fluid card-img object-position-right-15 rounded-4 oveflow-hidden"
+                        alt="酷貓戴墨鏡幽默圖像">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      酷貓戴墨鏡幽默圖像
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="h-100 mb-6">
+                <div class="card border-0 position-relative" style="width: 19rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品詳細頁/card-3.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden object-position-center-25"
+                        alt="驚訝表情白貓特寫照">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      驚訝表情白貓特寫照
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
                     </div>
                   </div>
                 </div>
