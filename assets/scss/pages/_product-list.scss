@@ -4,6 +4,17 @@
   margin-right: auto;
 }
 
+.pd-list-sidebar {
+
+  @include size-sm {
+    display: none;
+  }
+}
+
+.pd-list-cardbox {
+  @include size-sm {}
+}
+
 .product-list-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     /* 黑色 40% 疊層 */
@@ -13,6 +24,46 @@
   background-repeat: no-repeat;
   height: 278px;
   width: 100%;
+
+  @include size-sm {
+    height: 320px;
+
+    button {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.searchteag {
+  @include size-sm {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+
+.pd-list-cardbox {
+  @include size-sm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+}
+
+.pd-list-content {
+  @include size-sm {}
+}
+
+@media (min-width:767px) {
+  .pd-list-md-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (min-width:767px) {
+  .pd-list-md-col-6 {}
 }
 
 .pl-banner-btn {
