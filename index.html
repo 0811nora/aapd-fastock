@@ -15,14 +15,14 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>首頁 | 快素 Fastock</title>
-    <script type="module" crossorigin src="/aapd-fastock/assets/main-BNN6qAak.js"></script>
-    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-CiMsI7mv.css">
+    <script type="module" crossorigin src="/aapd-fastock/assets/main-BGMgxFGd.js"></script>
+    <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-DdqGxMgV.css">
   </head>
   <body>
     <header>
   <!-- 首頁nav-bar -->
   <nav
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-5"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-4 py-lg-5"
   >
     <div
       class="container-fluid d-flex justify-content-between align-items-center"
@@ -42,7 +42,7 @@
       </a>
       <!-- pc search-bar -->
       <form class="d-flex mx-auto d-none d-lg-block">
-        <div class="input-group search-dropdown">
+        <div class="input-group search-dropdown" id="textSearchWrapper">
           <!-- 下拉式搜尋 -->
           <button
             class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
@@ -60,7 +60,7 @@
               <a class="dropdown-item" href="#">範本</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">相片</a>
+              <a class="dropdown-item" href="product-list.html">相片</a>
             </li>
             <li>
               <a class="dropdown-item" href="#">主題</a>
@@ -103,7 +103,48 @@
           <button
             class="search-bar-btn btn-image-search pe-6"
             type="button"
+            id="toggleToImageSearchBtn"
           ></button>
+        </div>
+        <div
+          class="input-group d-flex align-items-center d-none"
+          id="imageSearchWrapper"
+        >
+          <!-- 圖搜圖的圖示 -->
+          <button
+            class="search-bar-btn btn-image-search ps-3 pe-6"
+            type="button"
+            style="height: 24px"
+            id="imageSearchBtn"
+          ></button
+          ><!-- 圖搜圖樣式 -->
+          <input
+            class="form-control d-none"
+            type="file"
+            accept="image/*"
+            placeholder="上傳圖片搜尋"
+            id="imageUpload"
+          />
+          <label
+            for="imageUpload"
+            class="me-auto py-2"
+            style="width: calc(100% - 72px); cursor: pointer"
+            ><span>上傳圖片搜尋</span></label
+          >
+          <button
+            type="button"
+            class="btn-close pe-1"
+            id="closeImageSearchBtn"
+            aria-label="Close"
+            style="box-shadow: none"
+          >
+            <img
+              width="24"
+              height="24"
+              src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z'%20fill='%23262626'/%3e%3c/svg%3e"
+              alt="close"
+            />
+          </button>
         </div>
       </form>
       <!-- login bar -->
@@ -153,11 +194,16 @@
           <!-- 連結結帳modal -->
           <button
             type="button"
-            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-none d-md-flex icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="modal"
             data-bs-target="#headerPcCheckout"
           >
             <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='5'%20cy='5'%20r='5'%20fill='%23DA1E28'/%3e%3c/svg%3e"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <!-- 電腦版結帳modal -->
           <div
@@ -215,6 +261,14 @@
                         id="headerCheckoutLabel"
                       >
                         訪客快速結帳
+                      </h5>
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="loggedInCheckoutLabel"
+                        style="display: none"
+                      >
+                          做得好<span id="mobCustomerName"></span
+                        >！距離完成購買只差一步！
                       </h5>
                       <button
                         type="button"
@@ -370,12 +424,17 @@
           <!-- 手機板結帳offcanvas -->
           <button
             type="button"
-            class="d-md-none icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-md-none icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="offcanvas"
             data-bs-target="#headerMobCheckout"
             aria-controls="offcanvasBottom"
           >
             <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='5'%20cy='5'%20r='5'%20fill='%23DA1E28'/%3e%3c/svg%3e"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <div
             class="d-md-none offcanvas offcanvas-bottom"
@@ -392,7 +451,20 @@
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
-                <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobGuestCheckoutLabel"
+                >
+                  訪客快速結帳
+                </h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobLoggedInCheckoutLabel"
+                  style="display: none"
+                >
+                  做得好<span id="mobCustomerName"></span
+                  >！距離完成購買只差一步！
+                </h5>
               </div>
               <div class="d-flex gap-3 mb-5">
                 <img
@@ -553,39 +625,66 @@
     </div>
   </nav>
   <div
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 py-0"
   >
     <!-- mobile search-bar -->
     <form class="d-lg-none d-flex mb-4">
-      <div class="input-group">
-        <!-- 下拉式搜尋 -->
-        <button
-          class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          全部
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">人氣</a></li>
-          <li><a class="dropdown-item" href="#">促銷</a></li>
-          <li><a class="dropdown-item" href="#">每周免費</a></li>
-        </ul>
-        <span class="divider d-none d-lg-block"></span>
+      <div class="input-group search-dropdown" id="mobileTextSearchWrapper">
         <!-- 輸入關鍵字搜尋 -->
         <input
           class="form-control search-bar"
           type="search"
           placeholder="搜尋數百萬創意資源"
           aria-label="Search"
-          id="headerSearchBar"
+          id="mobileHeaderSearchBar"
         />
         <!-- 圖搜圖的圖示 -->
         <button
           class="search-bar-btn btn-image-search pe-6"
           type="button"
+          id="mobileToggleToImageSearchBtn"
         ></button>
+      </div>
+      <div
+        class="input-group d-flex align-items-center d-none"
+        id="mobileImageSearchWrapper"
+      >
+        <!-- 圖搜圖的圖示 -->
+        <button
+          class="search-bar-btn btn-image-search ps-3 pe-6"
+          type="button"
+          style="height: 24px"
+          id="mobileImageSearchBtn"
+        ></button>
+        <!-- 圖搜圖樣式 -->
+        <input
+          class="form-control d-none"
+          type="file"
+          accept="image/*"
+          placeholder="上傳圖片搜尋"
+          id="mobileImageUpload"
+        />
+        <label
+          for="mobileImageUpload"
+          class="me-auto py-2"
+          style="width: calc(100% - 72px); cursor: pointer"
+        >
+          <span>上傳圖片搜尋</span>
+        </label>
+        <button
+          type="button"
+          class="btn-close pe-1"
+          id="mobileCloseImageSearchBtn"
+          aria-label="Close"
+          style="box-shadow: none"
+        >
+          <img
+            width="24"
+            height="24"
+            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z'%20fill='%23262626'/%3e%3c/svg%3e"
+            alt="close"
+          />
+        </button>
       </div>
     </form>
 
@@ -4830,7 +4929,7 @@
     <!-- category main area -->
     <main class="category container px-4 px-md-3 mx-auto">
       <ul
-        class="text-center nav nav-pills bg-secondary-100 d-flex justify-content-center align-items-center my-7 mt-md-8 mb-md-2 mx-0 mx-md-auto p-2 gap-2"
+        class="text-center nav nav-pills bg-secondary-100 d-flex justify-content-center align-items-center my-7 mt-md-8 mb-md-2 mx-auto p-2 gap-2"
         id="pills-tab"
         role="tablist"
       >
@@ -4879,7 +4978,7 @@
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div
-          class="tab-pane fade show active d-flex flex-column gap-4 gap-md-2"
+          class="tab-pane fade show active d-flex flex-column gap-7 gap-md-2"
           id="pills-popular"
           role="tabpanel"
           aria-labelledby="pills-popular-tab"
@@ -4930,7 +5029,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5009,7 +5108,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5088,7 +5187,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5166,7 +5265,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5244,7 +5343,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5320,7 +5419,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5396,7 +5495,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5472,7 +5571,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5588,7 +5687,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5664,7 +5763,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5740,7 +5839,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5816,7 +5915,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5892,7 +5991,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5968,7 +6067,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6044,7 +6143,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6120,7 +6219,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6283,7 +6382,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6359,7 +6458,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6435,7 +6534,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6511,7 +6610,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6587,7 +6686,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6666,7 +6765,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6745,7 +6844,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6823,7 +6922,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6941,7 +7040,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7017,7 +7116,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7093,7 +7192,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7169,7 +7268,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7245,7 +7344,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7321,7 +7420,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7397,7 +7496,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7473,7 +7572,7 @@
                       <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -7543,35 +7642,37 @@
               </div>
             </div>
           </div>
-          <!-- 查看更多 -->
-          <div class="d-flex justify-content-center my-0 my-md-8">
-            <a
-              href="./product-list.html"
-              role="button"
-              class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm py-3 px-6 rounded-5"
-              >查看更多</a
-            >
-            <a
-              href="./product-list.html"
-              role="button"
-              class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm py-2 px-4 rounded-4"
-              >查看更多</a
-            >
-          </div>
-          <!-- 加入會員CTA -->
-          <section class="m-cta py-8 mt-2 mb-8">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mx-auto text-center px-6"
-            >
-              <h2 class="fs-3 fw-bold mb-5">
-                加入會員，<br />獲得更優惠價格素材
-              </h2>
-              <button
-                type="button"
-                class="fs-md fw-medium letter-spacing-sm join-btn"
+          <section>
+            <!-- 查看更多 -->
+            <div class="d-flex justify-content-center my-0 my-md-8">
+              <a
+                href="./product-list.html"
+                role="button"
+                class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm py-3 px-6 rounded-5"
+                >查看更多</a
               >
-                立即加入
-              </button>
+              <a
+                href="./product-list.html"
+                role="button"
+                class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm py-2 px-4 rounded-4"
+                >查看更多</a
+              >
+            </div>
+            <!-- 加入會員CTA -->
+            <div class="m-cta py-8 my-4 mt-lg-2 mb-lg-8">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center mx-auto text-center px-6"
+              >
+                <h2 class="fs-3 fw-bold mb-5">
+                  加入會員，<br />獲得更優惠價格素材
+                </h2>
+                <button
+                  type="button"
+                  class="fs-md fw-medium letter-spacing-sm join-btn"
+                >
+                  立即加入
+                </button>
+              </div>
             </div>
           </section>
         </div>
@@ -7588,9 +7689,7 @@
         role="tabpanel"
         aria-labelledby="pills-free-tab"
       >
-        <div class="container">
-          <p>free</p>
-        </div>
+        <div class="container"></div>
       </div>
     </main>
 

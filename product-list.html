@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="/aapd-fastock/assets/logo%20icon-CyIOzHpx.svg" />
   <title>相片 | 快素 Fastock</title>
-  <script type="module" crossorigin src="/aapd-fastock/assets/main-BNN6qAak.js"></script>
-  <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-CiMsI7mv.css">
+  <script type="module" crossorigin src="/aapd-fastock/assets/main-BGMgxFGd.js"></script>
+  <link rel="stylesheet" crossorigin href="/aapd-fastock/assets/main-DdqGxMgV.css">
 </head>
 
 <body>
   <header>
   <!-- 首頁nav-bar -->
   <nav
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-5"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-4 py-lg-5"
   >
     <div
       class="container-fluid d-flex justify-content-between align-items-center"
@@ -35,7 +35,7 @@
       </a>
       <!-- pc search-bar -->
       <form class="d-flex mx-auto d-none d-lg-block">
-        <div class="input-group search-dropdown">
+        <div class="input-group search-dropdown" id="textSearchWrapper">
           <!-- 下拉式搜尋 -->
           <button
             class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
@@ -53,7 +53,7 @@
               <a class="dropdown-item" href="#">範本</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">相片</a>
+              <a class="dropdown-item" href="product-list.html">相片</a>
             </li>
             <li>
               <a class="dropdown-item" href="#">主題</a>
@@ -96,7 +96,48 @@
           <button
             class="search-bar-btn btn-image-search pe-6"
             type="button"
+            id="toggleToImageSearchBtn"
           ></button>
+        </div>
+        <div
+          class="input-group d-flex align-items-center d-none"
+          id="imageSearchWrapper"
+        >
+          <!-- 圖搜圖的圖示 -->
+          <button
+            class="search-bar-btn btn-image-search ps-3 pe-6"
+            type="button"
+            style="height: 24px"
+            id="imageSearchBtn"
+          ></button
+          ><!-- 圖搜圖樣式 -->
+          <input
+            class="form-control d-none"
+            type="file"
+            accept="image/*"
+            placeholder="上傳圖片搜尋"
+            id="imageUpload"
+          />
+          <label
+            for="imageUpload"
+            class="me-auto py-2"
+            style="width: calc(100% - 72px); cursor: pointer"
+            ><span>上傳圖片搜尋</span></label
+          >
+          <button
+            type="button"
+            class="btn-close pe-1"
+            id="closeImageSearchBtn"
+            aria-label="Close"
+            style="box-shadow: none"
+          >
+            <img
+              width="24"
+              height="24"
+              src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z'%20fill='%23262626'/%3e%3c/svg%3e"
+              alt="close"
+            />
+          </button>
         </div>
       </form>
       <!-- login bar -->
@@ -146,11 +187,16 @@
           <!-- 連結結帳modal -->
           <button
             type="button"
-            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-none d-md-flex icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="modal"
             data-bs-target="#headerPcCheckout"
           >
             <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='5'%20cy='5'%20r='5'%20fill='%23DA1E28'/%3e%3c/svg%3e"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <!-- 電腦版結帳modal -->
           <div
@@ -208,6 +254,14 @@
                         id="headerCheckoutLabel"
                       >
                         訪客快速結帳
+                      </h5>
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="loggedInCheckoutLabel"
+                        style="display: none"
+                      >
+                          做得好<span id="mobCustomerName"></span
+                        >！距離完成購買只差一步！
                       </h5>
                       <button
                         type="button"
@@ -363,12 +417,17 @@
           <!-- 手機板結帳offcanvas -->
           <button
             type="button"
-            class="d-md-none icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-md-none icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="offcanvas"
             data-bs-target="#headerMobCheckout"
             aria-controls="offcanvasBottom"
           >
             <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.0978%202.00462L3.19965%202.01926L5.52668%202.48314C6.02844%202.58321%206.41577%202.9761%206.51194%203.47048L6.52663%203.57106L6.90957%206.99987H20.7454C21.5416%206.99987%2022.1366%207.73076%2021.9725%208.50772L20.0725%2017.508C19.9502%2018.0861%2019.438%2018.5002%2018.8454%2018.5002H7.23962C6.59841%2018.4999%206.06113%2018.0169%205.99384%2017.381L5.01446%208.10927L4.59332%204.33573L2.80594%203.98026L2.70702%203.95486C2.22112%203.80589%201.9178%203.3112%202.01949%202.80347C2.1214%202.29589%202.59194%201.95601%203.0978%202.00462ZM7.91736%2016.5001H18.2352L19.8189%208.99992H7.12504L7.91736%2016.5001Z'%20fill='%23262626'/%3e%3cpath%20d='M9.02021%2020.5C9.02021%2021.3284%208.3467%2022%207.51588%2022C6.68506%2022%206.01154%2021.3284%206.01154%2020.5C6.01154%2019.6715%206.68506%2018.9999%207.51588%2018.9999C8.3467%2018.9999%209.02021%2019.6715%209.02021%2020.5Z'%20fill='%23262626'/%3e%3cpath%20d='M20.052%2020.5C20.052%2021.3284%2019.3785%2022%2018.5477%2022C17.7168%2022%2017.0433%2021.3284%2017.0433%2020.5C17.0433%2019.6715%2017.7168%2018.9999%2018.5477%2018.9999C19.3785%2018.9999%2020.052%2019.6715%2020.052%2020.5Z'%20fill='%23262626'/%3e%3c/svg%3e" alt="cart" />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='5'%20cy='5'%20r='5'%20fill='%23DA1E28'/%3e%3c/svg%3e"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <div
             class="d-md-none offcanvas offcanvas-bottom"
@@ -385,7 +444,20 @@
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
-                <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobGuestCheckoutLabel"
+                >
+                  訪客快速結帳
+                </h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobLoggedInCheckoutLabel"
+                  style="display: none"
+                >
+                  做得好<span id="mobCustomerName"></span
+                  >！距離完成購買只差一步！
+                </h5>
               </div>
               <div class="d-flex gap-3 mb-5">
                 <img
@@ -546,39 +618,66 @@
     </div>
   </nav>
   <div
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 py-0"
   >
     <!-- mobile search-bar -->
     <form class="d-lg-none d-flex mb-4">
-      <div class="input-group">
-        <!-- 下拉式搜尋 -->
-        <button
-          class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          全部
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">人氣</a></li>
-          <li><a class="dropdown-item" href="#">促銷</a></li>
-          <li><a class="dropdown-item" href="#">每周免費</a></li>
-        </ul>
-        <span class="divider d-none d-lg-block"></span>
+      <div class="input-group search-dropdown" id="mobileTextSearchWrapper">
         <!-- 輸入關鍵字搜尋 -->
         <input
           class="form-control search-bar"
           type="search"
           placeholder="搜尋數百萬創意資源"
           aria-label="Search"
-          id="headerSearchBar"
+          id="mobileHeaderSearchBar"
         />
         <!-- 圖搜圖的圖示 -->
         <button
           class="search-bar-btn btn-image-search pe-6"
           type="button"
+          id="mobileToggleToImageSearchBtn"
         ></button>
+      </div>
+      <div
+        class="input-group d-flex align-items-center d-none"
+        id="mobileImageSearchWrapper"
+      >
+        <!-- 圖搜圖的圖示 -->
+        <button
+          class="search-bar-btn btn-image-search ps-3 pe-6"
+          type="button"
+          style="height: 24px"
+          id="mobileImageSearchBtn"
+        ></button>
+        <!-- 圖搜圖樣式 -->
+        <input
+          class="form-control d-none"
+          type="file"
+          accept="image/*"
+          placeholder="上傳圖片搜尋"
+          id="mobileImageUpload"
+        />
+        <label
+          for="mobileImageUpload"
+          class="me-auto py-2"
+          style="width: calc(100% - 72px); cursor: pointer"
+        >
+          <span>上傳圖片搜尋</span>
+        </label>
+        <button
+          type="button"
+          class="btn-close pe-1"
+          id="mobileCloseImageSearchBtn"
+          aria-label="Close"
+          style="box-shadow: none"
+        >
+          <img
+            width="24"
+            height="24"
+            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z'%20fill='%23262626'/%3e%3c/svg%3e"
+            alt="close"
+          />
+        </button>
       </div>
     </form>
 
@@ -4807,7 +4906,7 @@
     <div class="scroll-top-btn "></div>      <div class="product-list-banner pt-12 text-center">
         <h3 class="mb-2 h4 text-white">相片</h3>
         <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
-        <div class="pd-list-container searchtag d-flex justify-content-start">
+        <div class="pd-list-container d-flex justify-content-start justify-content-md-center">
           <div class="searchteag px-12" id="bannerTags" role="group" aria-label="快速篩選標籤">
             <button type="button" class="lil-btn pl-banner-btn tag-btn me-4" data-tag="背景" aria-pressed="false">
               <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M8.7513%201.6665C12.6633%201.6665%2015.8346%204.83782%2015.8346%208.74984C15.8346%2010.4055%2015.2646%2011.9269%2014.3128%2013.133L18.0905%2016.9106L18.1475%2016.9741C18.4144%2017.3014%2018.3956%2017.7839%2018.0905%2018.089C17.7854%2018.3941%2017.3029%2018.4129%2016.9756%2018.146L16.9121%2018.089L13.1344%2014.3114C11.9284%2015.2632%2010.407%2015.8332%208.7513%2015.8332C4.83929%2015.8332%201.66797%2012.6619%201.66797%208.74984C1.66797%204.83782%204.83929%201.6665%208.7513%201.6665ZM8.7513%203.33317C5.75976%203.33317%203.33464%205.7583%203.33464%208.74984C3.33464%2011.7414%205.75976%2014.1665%208.7513%2014.1665C11.7428%2014.1665%2014.168%2011.7414%2014.168%208.74984C14.168%205.7583%2011.7428%203.33317%208.7513%203.33317Z'%20fill='%23FAFAFA'/%3e%3c/svg%3e" alt="">背景
@@ -4833,7 +4932,7 @@
           </div>
         </div>
       </div>
-      <div class="pd-list-container layout py-8 px-12">
+      <div class="pd-list-container layout py-8 px-12 px-md-4">
         <div class="d-flex">
           <label for="toggleFilter" class="btn btn-sec-noline me-auto"><img src="data:image/svg+xml,%3csvg%20width='25'%20height='24'%20viewBox='0%200%2025%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.5%204C10.2399%204%2010.8845%204.40267%2011.2305%205H19.5C20.0523%205%2020.5%205.44772%2020.5%206C20.5%206.55228%2020.0523%207%2019.5%207H11.2305C10.8845%207.59733%2010.2399%208%209.5%208C8.76007%208%208.11546%207.59733%207.76953%207H5.5C4.94772%207%204.5%206.55228%204.5%206C4.5%205.44772%204.94772%205%205.5%205H7.76953C8.11546%204.40267%208.76007%204%209.5%204Z'%20fill='%23262626'/%3e%3cpath%20d='M15.5%2010C16.2399%2010%2016.8845%2010.4027%2017.2305%2011H19.5C20.0523%2011%2020.5%2011.4477%2020.5%2012C20.5%2012.5523%2020.0523%2013%2019.5%2013H17.2305C16.8845%2013.5973%2016.2399%2014%2015.5%2014C14.7601%2014%2014.1155%2013.5973%2013.7695%2013H5.5C4.94772%2013%204.5%2012.5523%204.5%2012C4.5%2011.4477%204.94772%2011%205.5%2011H13.7695C14.1155%2010.4027%2014.7601%2010%2015.5%2010Z'%20fill='%23262626'/%3e%3cpath%20d='M9.5%2016C10.2399%2016%2010.8845%2016.4027%2011.2305%2017H19.5C20.0523%2017%2020.5%2017.4477%2020.5%2018C20.5%2018.5523%2020.0523%2019%2019.5%2019H11.2305C10.8845%2019.5973%2010.2399%2020%209.5%2020C8.76007%2020%208.11546%2019.5973%207.76953%2019H5.5C4.94772%2019%204.5%2018.5523%204.5%2018C4.5%2017.4477%204.94772%2017%205.5%2017H7.76953C8.11546%2016.4027%208.76007%2016%209.5%2016Z'%20fill='%23262626'/%3e%3c/svg%3e"
               alt="">隱藏篩選器</label>
@@ -4924,8 +5023,8 @@
 
           <!-- 卡片區 -->
           <main id="card-area" class="pd-list-content content">
-            <div class="d-flex flex-wrap gap-6">
-              <div class="h-100 mb-6">
+            <div class="d-flex flex-wrap gap-6 pd-list-cardbox">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -4934,7 +5033,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -4994,7 +5093,7 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5003,7 +5102,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5064,14 +5163,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5131,7 +5230,7 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5140,7 +5239,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5200,14 +5299,14 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5267,7 +5366,7 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5276,7 +5375,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5337,7 +5436,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5346,7 +5445,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5407,14 +5506,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5475,14 +5574,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5543,7 +5642,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5552,7 +5651,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5613,14 +5712,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5680,14 +5779,14 @@
                   </div>
                 </div>
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5748,7 +5847,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5757,7 +5856,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5818,7 +5917,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5827,7 +5926,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5888,7 +5987,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -5897,7 +5996,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -5958,14 +6057,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6026,14 +6125,14 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6094,7 +6193,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6103,7 +6202,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6164,7 +6263,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6173,7 +6272,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6234,7 +6333,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6242,7 +6341,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6303,7 +6402,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6311,7 +6410,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6372,7 +6471,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6381,7 +6480,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6443,7 +6542,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6451,7 +6550,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
@@ -6513,7 +6612,7 @@
                 </div>
 
               </div>
-              <div class="h-100 mb-6">
+              <div class="h-100 pd-list-md-col-6 mb-6">
                 <div class="card border-0 position-relative" style="width: 19rem;">
                   <!-- 卡片圖片區 -->
                   <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -6522,7 +6621,7 @@
                     <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
 <!-- 購物車+愛心 -->
 <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-  <button type="button" class="inCardCart icon-M shadow">
+  <button type="button" class="add-to-cart-btn inCardCart icon-M shadow">
     <svg
       class="icon-cart-outline"
       width="24"
