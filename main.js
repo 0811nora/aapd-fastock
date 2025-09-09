@@ -184,8 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 定義搜尋關鍵字對應的頁面
   const searchPages = {
-    貓: "cat-search-result.html",
-    cat: "cat-search-result.html",
+    貓: "keyword-search.html",
+    cat: "keyword-search.html",
   };
 
   // 預設的搜尋失敗頁面
