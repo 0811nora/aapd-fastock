@@ -1,0 +1,17 @@
+.no-search-container {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.no-search-img {
+    position: absolute;
+    width: 322px;
+    height: 248px;
+    bottom: 0;
+    right: calc(50% + 162px);
+
+    @include size-sm {
+        display: none;
+    }
+}
