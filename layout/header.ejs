@@ -1,7 +1,7 @@
 <header>
   <!-- 首頁nav-bar -->
   <nav
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-5"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-0 mx-md-9 mx-lg-12 py-4 py-lg-5"
   >
     <div
       class="container-fluid d-flex justify-content-between align-items-center"
@@ -21,7 +21,7 @@
       </a>
       <!-- pc search-bar -->
       <form class="d-flex mx-auto d-none d-lg-block">
-        <div class="input-group search-dropdown">
+        <div class="input-group search-dropdown" id="textSearchWrapper">
           <!-- 下拉式搜尋 -->
           <button
             class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
@@ -39,7 +39,7 @@
               <a class="dropdown-item" href="#">範本</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">相片</a>
+              <a class="dropdown-item" href="product-list.html">相片</a>
             </li>
             <li>
               <a class="dropdown-item" href="#">主題</a>
@@ -82,7 +82,48 @@
           <button
             class="search-bar-btn btn-image-search pe-6"
             type="button"
+            id="toggleToImageSearchBtn"
           ></button>
+        </div>
+        <div
+          class="input-group d-flex align-items-center d-none"
+          id="imageSearchWrapper"
+        >
+          <!-- 圖搜圖的圖示 -->
+          <button
+            class="search-bar-btn btn-image-search ps-3 pe-6"
+            type="button"
+            style="height: 24px"
+            id="imageSearchBtn"
+          ></button
+          ><!-- 圖搜圖樣式 -->
+          <input
+            class="form-control d-none"
+            type="file"
+            accept="image/*"
+            placeholder="上傳圖片搜尋"
+            id="imageUpload"
+          />
+          <label
+            for="imageUpload"
+            class="me-auto py-2"
+            style="width: calc(100% - 72px); cursor: pointer"
+            ><span>上傳圖片搜尋</span></label
+          >
+          <button
+            type="button"
+            class="btn-close pe-1"
+            id="closeImageSearchBtn"
+            aria-label="Close"
+            style="box-shadow: none"
+          >
+            <img
+              width="24"
+              height="24"
+              src="/assets/images/icon/icon-close.svg"
+              alt="close"
+            />
+          </button>
         </div>
       </form>
       <!-- login bar -->
@@ -132,11 +173,16 @@
           <!-- 連結結帳modal -->
           <button
             type="button"
-            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-none d-md-flex icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="modal"
             data-bs-target="#headerPcCheckout"
           >
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+            <img
+              src="/assets/images/icon/icon-cart-badge.svg"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <!-- 電腦版結帳modal -->
           <div
@@ -194,6 +240,14 @@
                         id="headerCheckoutLabel"
                       >
                         訪客快速結帳
+                      </h5>
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="loggedInCheckoutLabel"
+                        style="display: none"
+                      >
+                          做得好<span id="mobCustomerName"></span
+                        >！距離完成購買只差一步！
                       </h5>
                       <button
                         type="button"
@@ -349,12 +403,17 @@
           <!-- 手機板結帳offcanvas -->
           <button
             type="button"
-            class="d-md-none icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-md-none icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="offcanvas"
             data-bs-target="#headerMobCheckout"
             aria-controls="offcanvasBottom"
           >
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+            <img
+              src="/assets/images/icon/icon-cart-badge.svg"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <div
             class="d-md-none offcanvas offcanvas-bottom"
@@ -371,7 +430,20 @@
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
-                <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobGuestCheckoutLabel"
+                >
+                  訪客快速結帳
+                </h5>
+                <h5
+                  class="fs-lg fw-bold me-auto mb-3"
+                  id="mobLoggedInCheckoutLabel"
+                  style="display: none"
+                >
+                  做得好<span id="mobCustomerName"></span
+                  >！距離完成購買只差一步！
+                </h5>
               </div>
               <div class="d-flex gap-3 mb-5">
                 <img
@@ -532,39 +604,66 @@
     </div>
   </nav>
   <div
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 py-0"
   >
     <!-- mobile search-bar -->
     <form class="d-lg-none d-flex mb-4">
-      <div class="input-group">
-        <!-- 下拉式搜尋 -->
-        <button
-          class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          全部
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">人氣</a></li>
-          <li><a class="dropdown-item" href="#">促銷</a></li>
-          <li><a class="dropdown-item" href="#">每周免費</a></li>
-        </ul>
-        <span class="divider d-none d-lg-block"></span>
+      <div class="input-group search-dropdown" id="mobileTextSearchWrapper">
         <!-- 輸入關鍵字搜尋 -->
         <input
           class="form-control search-bar"
           type="search"
           placeholder="搜尋數百萬創意資源"
           aria-label="Search"
-          id="headerSearchBar"
+          id="mobileHeaderSearchBar"
         />
         <!-- 圖搜圖的圖示 -->
         <button
           class="search-bar-btn btn-image-search pe-6"
           type="button"
+          id="mobileToggleToImageSearchBtn"
         ></button>
+      </div>
+      <div
+        class="input-group d-flex align-items-center d-none"
+        id="mobileImageSearchWrapper"
+      >
+        <!-- 圖搜圖的圖示 -->
+        <button
+          class="search-bar-btn btn-image-search ps-3 pe-6"
+          type="button"
+          style="height: 24px"
+          id="mobileImageSearchBtn"
+        ></button>
+        <!-- 圖搜圖樣式 -->
+        <input
+          class="form-control d-none"
+          type="file"
+          accept="image/*"
+          placeholder="上傳圖片搜尋"
+          id="mobileImageUpload"
+        />
+        <label
+          for="mobileImageUpload"
+          class="me-auto py-2"
+          style="width: calc(100% - 72px); cursor: pointer"
+        >
+          <span>上傳圖片搜尋</span>
+        </label>
+        <button
+          type="button"
+          class="btn-close pe-1"
+          id="mobileCloseImageSearchBtn"
+          aria-label="Close"
+          style="box-shadow: none"
+        >
+          <img
+            width="24"
+            height="24"
+            src="/assets/images/icon/icon-close.svg"
+            alt="close"
+          />
+        </button>
       </div>
     </form>
 
