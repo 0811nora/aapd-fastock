@@ -1,1360 +1,1037 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/logo icon.svg"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>首頁 | 快素 Fastock</title>
-  </head>
-  <body>
-    <%- include('./layout/header.ejs'); -%> <%-
-    include('./layout/scroll-top-btn.ejs'); -%>
 
-    <!-- hero section -->
-    <section
-      class="hero container-fluid position-relative d-lg-flex justify-content-center justify-content-lg-start align-items-lg-center"
-    >
-      <div class="d-flex flex-column pt-7 pt-lg-0">
-        <h2 class="fs-31 fw-bold mb-6p mb-lg-1">靈感從這裡開始。</h2>
-        <div class="d-flex flex-column flex-lg-row">
-          <h2 class="fs-31 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
-          <h2 class="fs-31 fw-bold">
-            <span class="color-block">隨選即用。</span>
-          </h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>首頁 | 快素 Fastock</title>
+</head>
+
+<body>
+  <%- include('./layout/header.ejs'); -%> <%- include('./layout/scroll-top-btn.ejs'); -%>
+
+      <!-- hero section -->
+      <section
+        class="hero container-fluid position-relative d-lg-flex justify-content-center justify-content-lg-start align-items-lg-center">
+        <div class="d-flex flex-column pt-7 pt-lg-0">
+          <h2 class="fs-31 fw-bold mb-6p mb-lg-1">靈感從這裡開始。</h2>
+          <div class="d-flex flex-column flex-lg-row">
+            <h2 class="fs-31 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
+            <h2 class="fs-31 fw-bold">
+              <span class="color-block">隨選即用。</span>
+            </h2>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- category main area -->
-    <main class="category container px-4 px-md-3 mx-auto">
-      <ul
-        class="text-center nav nav-pills bg-secondary-100 d-flex justify-content-center align-items-center my-7 mt-md-8 mb-md-2 mx-0 mx-md-auto p-2 gap-2"
-        id="pills-tab"
-        role="tablist"
-      >
-        <li class="nav-item active" role="presentation">
-          <button
-            class="nav-link active fs-sm fw-medium letter-spacing-sm"
-            id="pills-popular-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-popular"
-            type="button"
-            role="tab"
-            aria-controls="pills-popular"
-            aria-selected="true"
-          >
-            人氣
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link fs-sm fw-medium letter-spacing-sm"
-            id="pills-sale-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-sale"
-            type="button"
-            role="tab"
-            aria-controls="pills-sale"
-            aria-selected="false"
-          >
-            促銷
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link fs-sm fw-medium letter-spacing-sm"
-            id="pills-free-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-free"
-            type="button"
-            role="tab"
-            aria-controls="pills-free"
-            aria-selected="false"
-          >
-            每周免費
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div
-          class="tab-pane fade show active d-flex flex-column gap-4 gap-md-2"
-          id="pills-popular"
-          role="tabpanel"
-          aria-labelledby="pills-popular-tab"
-        >
-          <!-- 精選區 -->
-          <div class="container px-0 my-md-3">
-            <div
-              class="swiper-header d-flex justify-content-between align-items-center mb-3"
-            >
-              <h3 class="fs-5 fw-bold">精選</h3>
-              <div class="swiper-nav d-flex align-items-center gap-2">
-                <button
-                  type="button"
-                  class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-prev"
-                >
-                  <img
-                    src="/assets/images/icon/icon-left.svg"
-                    alt="icon-left"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-next"
-                >
-                  <img
-                    src="/assets/images/icon/icon-right.svg"
-                    alt="icon-right"
-                  />
-                </button>
-                <a
-                  href="./product-list.html"
-                  class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
-                  role="button"
-                  >查看更多</a
-                >
+      <!-- category main area -->
+      <main class="category container px-4 px-md-3 mx-auto">
+        <ul
+          class="text-center nav nav-pills bg-secondary-100 d-flex justify-content-center align-items-center my-7 mt-md-8 mb-md-2 mx-0 mx-md-auto p-2 gap-2"
+          id="pills-tab" role="tablist">
+          <li class="nav-item active" role="presentation">
+            <button class="nav-link active fs-sm fw-medium letter-spacing-sm" id="pills-popular-tab"
+              data-bs-toggle="pill" data-bs-target="#pills-popular" type="button" role="tab"
+              aria-controls="pills-popular" aria-selected="true">
+              人氣
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fs-sm fw-medium letter-spacing-sm" id="pills-sale-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-sale" type="button" role="tab" aria-controls="pills-sale" aria-selected="false">
+              促銷
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fs-sm fw-medium letter-spacing-sm" id="pills-free-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-free" type="button" role="tab" aria-controls="pills-free" aria-selected="false">
+              每周免費
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active d-flex flex-column gap-4 gap-md-2" id="pills-popular" role="tabpanel"
+            aria-labelledby="pills-popular-tab">
+            <!-- 精選區 -->
+            <div class="container px-0 my-md-3">
+              <div class="swiper-header d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-5 fw-bold">精選</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button type="button" class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-prev">
+                    <img src="/assets/images/icon/icon-left.svg" alt="icon-left" />
+                  </button>
+                  <button type="button" class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-next">
+                    <img src="/assets/images/icon/icon-right.svg" alt="icon-right" />
+                  </button>
+                  <a href="./product-list.html"
+                    class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button">查看更多</a>
+                </div>
               </div>
-            </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card1.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="貓咪家庭"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                        >
-                          貓咪家庭</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card1.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="貓咪家庭" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">
+                            貓咪家庭</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card2.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="雪山日出空拍景觀圖"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                        >
-                          雪山日出空拍景觀圖
-                        </a>
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card2.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="雪山日出空拍景觀圖" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">
+                            雪山日出空拍景觀圖
+                          </a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card3.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="商業品牌報告紙樣板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                          >商業品牌報告紙樣板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card3.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="商業品牌報告紙樣板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">商業品牌報告紙樣板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card4.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="抽象藝術"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                          >抽象藝術</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>圖形</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card4.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="抽象藝術" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">抽象藝術</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>圖形</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card9.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="紫色數位提案模擬稿"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >紫色數位提案模擬稿</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card9.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="紫色數位提案模擬稿" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">紫色數位提案模擬稿</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card3.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="商業品牌報告紙樣板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >商業品牌報告紙樣板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card3.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="商業品牌報告紙樣板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">商業品牌報告紙樣板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card10.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="質感名片展示模板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >質感名片展示模板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card10.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="質感名片展示模板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">質感名片展示模板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card11.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="撕貼風格貼紙樣機組"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >撕貼風格貼紙樣機組</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card11.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="撕貼風格貼紙樣機組" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">撕貼風格貼紙樣機組</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- 字型區 -->
-          <div class="container px-0 my-md-3">
-            <div
-              class="swiper-header d-flex justify-content-between align-items-center mb-3"
-            >
-              <h3 class="fs-5 fw-bold">字型</h3>
-              <div class="swiper-nav d-flex align-items-center gap-2">
-                <button
-                  type="button"
-                  class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-prev"
-                >
-                  <img
-                    src="/assets/images/icon/icon-left.svg"
-                    alt="icon-left"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-next"
-                >
-                  <img
-                    src="/assets/images/icon/icon-right.svg"
-                    alt="icon-right"
-                  />
-                </button>
-                <a
-                  href="./product-list.html"
-                  class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
-                  role="button"
-                  >查看更多</a
-                >
+            <!-- 字型區 -->
+            <div class="container px-0 my-md-3">
+              <div class="swiper-header d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-5 fw-bold">字型</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button type="button" class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-prev">
+                    <img src="/assets/images/icon/icon-left.svg" alt="icon-left" />
+                  </button>
+                  <button type="button" class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-next">
+                    <img src="/assets/images/icon/icon-right.svg" alt="icon-right" />
+                  </button>
+                  <a href="./product-list.html"
+                    class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button">查看更多</a>
+                </div>
               </div>
-            </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card5.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="優雅手寫風英文字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >優雅手寫風英文字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card5.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="優雅手寫風英文字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">優雅手寫風英文字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card6.png"
-                        class="card-img-top img-fluid rounded-4 oveflow-hidden card-img-start"
-                        alt="極簡幾何無襯線字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >極簡幾何無襯線字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card6.png"
+                            class="card-img-top img-fluid rounded-4 oveflow-hidden card-img-start" alt="極簡幾何無襯線字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">極簡幾何無襯線字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card7.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="粗體手繪感英文字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >粗體手繪感英文字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card7.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粗體手繪感英文字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">粗體手繪感英文字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card8.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="經典美式書寫體字型"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >經典美式書寫體字型</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card8.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="經典美式書寫體字型" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">經典美式書寫體字型</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card7.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="粗體手繪感英文字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >粗體手繪感英文字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card7.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粗體手繪感英文字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">粗體手繪感英文字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card8.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="經典美式書寫體字型"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >經典美式書寫體字型</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card8.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="經典美式書寫體字型" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">經典美式書寫體字型</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card5.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="優雅手寫風英文字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >優雅手寫風英文字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card5.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="優雅手寫風英文字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">優雅手寫風英文字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card6.png"
-                        class="card-img-top img-fluid rounded-4 oveflow-hidden card-img-start"
-                        alt="極簡幾何無襯線字體"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >極簡幾何無襯線字體</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>字型</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card6.png"
+                            class="card-img-top img-fluid rounded-4 oveflow-hidden card-img-start" alt="極簡幾何無襯線字體" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">極簡幾何無襯線字體</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- 成為創作者CTA -->
-          <!-- PC版 -->
-          <section
-            class="c-cta d-none d-md-flex justify-content-center align-items-center rounded-6"
-          >
-            <div class="cta-text">
-              <h2 class="fs-3 fw-bold mb-5">成為創作者</h2>
-              <p class="mb-5">
-                在 Fastock 銷售您的設計，觸及千萬買家，或是在 Fastock
-                上推廣其他藝術家來賺取現金！
-              </p>
-              <button
-                type="button"
-                class="fs-md fw-medium letter-spacing-sm join-btn"
-              >
-                立即加入
-              </button>
-            </div>
-            <div class="cta-img">
-              <img
-                src="/assets/images/Homepage/section-2.png"
-                alt="section-2"
-              />
-            </div>
-          </section>
-          <!-- 手機板 -->
-          <section class="c-cta m--12 d-md-none d-flex flex-column">
-            <div class="cta-img d-flex flex-column">
-              <img
-                src="/assets/images/Homepage/section-2.png"
-                alt="section-2"
-              />
-              <div class="cta-text w-100 py-6 px-8">
+            <!-- 成為創作者CTA -->
+            <!-- PC版 -->
+            <section class="c-cta d-none d-md-flex justify-content-center align-items-center rounded-6">
+              <div class="cta-text">
                 <h2 class="fs-3 fw-bold mb-5">成為創作者</h2>
                 <p class="mb-5">
                   在 Fastock 銷售您的設計，觸及千萬買家，或是在 Fastock
                   上推廣其他藝術家來賺取現金！
                 </p>
-                <button
-                  type="button"
-                  class="fs-md fw-medium letter-spacing-sm join-btn"
-                >
+                <button type="button" class="fs-md fw-medium letter-spacing-sm join-btn">
                   立即加入
                 </button>
               </div>
-            </div>
-          </section>
-          <!-- 範本區 -->
-          <div class="container px-0 my-md-3">
-            <div
-              class="swiper-header d-flex justify-content-between align-items-center mb-3"
-            >
-              <h3 class="fs-5 fw-bold">範本</h3>
-              <div class="swiper-nav d-flex align-items-center gap-2">
-                <button
-                  type="button"
-                  class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-prev"
-                >
-                  <img
-                    src="/assets/images/icon/icon-left.svg"
-                    alt="icon-left"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-next"
-                >
-                  <img
-                    src="/assets/images/icon/icon-right.svg"
-                    alt="icon-right"
-                  />
-                </button>
-                <a
-                  href="./product-list.html"
-                  class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
-                  role="button"
-                  >查看更多</a
-                >
+              <div class="cta-img">
+                <img src="/assets/images/Homepage/section-2.png" alt="section-2" />
               </div>
-            </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card9.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="紫色數位提案模擬稿"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >紫色數位提案模擬稿</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+            </section>
+            <!-- 手機板 -->
+            <section class="c-cta m--12 d-md-none d-flex flex-column">
+              <div class="cta-img d-flex flex-column">
+                <img src="/assets/images/Homepage/section-2.png" alt="section-2" />
+                <div class="cta-text w-100 py-6 px-8">
+                  <h2 class="fs-3 fw-bold mb-5">成為創作者</h2>
+                  <p class="mb-5">
+                    在 Fastock 銷售您的設計，觸及千萬買家，或是在 Fastock
+                    上推廣其他藝術家來賺取現金！
+                  </p>
+                  <button type="button" class="fs-md fw-medium letter-spacing-sm join-btn">
+                    立即加入
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- 範本區 -->
+            <div class="container px-0 my-md-3">
+              <div class="swiper-header d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-5 fw-bold">範本</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button type="button" class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-prev">
+                    <img src="/assets/images/icon/icon-left.svg" alt="icon-left" />
+                  </button>
+                  <button type="button" class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-next">
+                    <img src="/assets/images/icon/icon-right.svg" alt="icon-right" />
+                  </button>
+                  <a href="./product-list.html"
+                    class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button">查看更多</a>
+                </div>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card9.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="紫色數位提案模擬稿" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">紫色數位提案模擬稿</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card3.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="商業品牌報告紙樣板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >商業品牌報告紙樣板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card3.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="商業品牌報告紙樣板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">商業品牌報告紙樣板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card10.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="質感名片展示模板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >質感名片展示模板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card10.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="質感名片展示模板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">質感名片展示模板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card11.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="撕貼風格貼紙樣機組"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >撕貼風格貼紙樣機組</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card11.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="撕貼風格貼紙樣機組" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">撕貼風格貼紙樣機組</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card1.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="貓咪家庭"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                        >
-                          貓咪家庭</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card1.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="貓咪家庭" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">
+                            貓咪家庭</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card2.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="雪山日出空拍景觀圖"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                        >
-                          雪山日出空拍景觀圖
-                        </a>
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card2.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="雪山日出空拍景觀圖" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">
+                            雪山日出空拍景觀圖
+                          </a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card3.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="商業品牌報告紙樣板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                          >商業品牌報告紙樣板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card3.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="商業品牌報告紙樣板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">商業品牌報告紙樣板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card4.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="抽象藝術"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                          >抽象藝術</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>範本</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card4.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="抽象藝術" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="./product-details.html" class="stretched-link text-black">抽象藝術</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- 相片區 -->
+            <div class="container px-0 my-md-3">
+              <div class="swiper-header d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-5 fw-bold">相片</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button type="button" class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-prev">
+                    <img src="/assets/images/icon/icon-left.svg" alt="icon-left" />
+                  </button>
+                  <button type="button" class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex" id="my-next">
+                    <img src="/assets/images/icon/icon-right.svg" alt="icon-right" />
+                  </button>
+                  <a href="./product-list.html"
+                    class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button">查看更多</a>
+                </div>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card12.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="未來感藍球體藝術構圖" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">未來感藍球體藝術構圖</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card13.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="極簡山丘風景照" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">極簡山丘風景照</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card2.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="雪山日出空拍景觀圖" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">雪山日出空拍景觀圖</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card14.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="綠眼長毛貓側臉寫真" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">綠眼長毛貓側臉寫真</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card9.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="紫色數位提案模擬稿" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">紫色數位提案模擬稿</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card3.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="商業品牌報告紙樣板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">商業品牌報告紙樣板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card10.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="質感名片展示模板" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">質感名片展示模板</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card position-relative">
+                      <!-- 卡片圖片區 -->
+                      <div class="card-img-wrapper overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                          <img src="/assets/images/Homepage/card11.png"
+                            class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="撕貼風格貼紙樣機組" />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          <a href="#" class="stretched-link text-black">撕貼風格貼紙樣機組</a>
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p class="fs-md fs-md-lg">
+                            $<span class="fs-md fs-md-lg fw-bold">100</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 查看更多 -->
+            <div class="d-flex justify-content-center my-0 my-md-8">
+              <a href="./product-list.html" role="button"
+                class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm py-3 px-6 rounded-5">查看更多</a>
+              <a href="./product-list.html" role="button"
+                class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm py-2 px-4 rounded-4">查看更多</a>
+            </div>
+            <!-- 加入會員CTA -->
+            <section class="m-cta py-8 mt-2 mb-8">
+              <div class="d-flex flex-column justify-content-center align-items-center mx-auto text-center px-6">
+                <h2 class="fs-3 fw-bold mb-5">
+                  加入會員，<br />獲得更優惠價格素材
+                </h2>
+                <button type="button" class="fs-md fw-medium letter-spacing-sm join-btn">
+                  立即加入
+                </button>
+              </div>
+            </section>
           </div>
-          <!-- 相片區 -->
-          <div class="container px-0 my-md-3">
-            <div
-              class="swiper-header d-flex justify-content-between align-items-center mb-3"
-            >
-              <h3 class="fs-5 fw-bold">相片</h3>
-              <div class="swiper-nav d-flex align-items-center gap-2">
-                <button
-                  type="button"
-                  class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-prev"
-                >
-                  <img
-                    src="/assets/images/icon/icon-left.svg"
-                    alt="icon-left"
-                  />
-                </button>
-                <button
-                  type="button"
-                  class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
-                  id="my-next"
-                >
-                  <img
-                    src="/assets/images/icon/icon-right.svg"
-                    alt="icon-right"
-                  />
-                </button>
-                <a
-                  href="./product-list.html"
-                  class="fs-sm fs-md-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
-                  role="button"
-                  >查看更多</a
-                >
-              </div>
-            </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card12.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="未來感藍球體藝術構圖"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >未來感藍球體藝術構圖</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card13.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="極簡山丘風景照"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >極簡山丘風景照</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card2.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="雪山日出空拍景觀圖"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >雪山日出空拍景觀圖</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card14.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="綠眼長毛貓側臉寫真"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >綠眼長毛貓側臉寫真</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card9.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="紫色數位提案模擬稿"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >紫色數位提案模擬稿</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card3.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="商業品牌報告紙樣板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >商業品牌報告紙樣板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card10.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="質感名片展示模板"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >質感名片展示模板</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card position-relative">
-                    <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card11.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="撕貼風格貼紙樣機組"
-                      />
-                    </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a href="#" class="stretched-link text-black"
-                          >撕貼風格貼紙樣機組</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p class="fs-md fs-md-lg">
-                          $<span class="fs-md fs-md-lg fw-bold">100</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 查看更多 -->
-          <div class="d-flex justify-content-center my-0 my-md-8">
-            <a
-              href="./product-list.html"
-              role="button"
-              class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm py-3 px-6 rounded-5"
-              >查看更多</a
-            >
-            <a
-              href="./product-list.html"
-              role="button"
-              class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm py-2 px-4 rounded-4"
-              >查看更多</a
-            >
-          </div>
-          <!-- 加入會員CTA -->
-          <section class="m-cta py-8 mt-2 mb-8">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mx-auto text-center px-6"
-            >
-              <h2 class="fs-3 fw-bold mb-5">
-                加入會員，<br />獲得更優惠價格素材
-              </h2>
-              <button
-                type="button"
-                class="fs-md fw-medium letter-spacing-sm join-btn"
-              >
-                立即加入
-              </button>
-            </div>
-          </section>
         </div>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="pills-sale"
-        role="tabpanel"
-        aria-labelledby="pills-sale-tab"
-      ></div>
-      <div
-        class="tab-pane fade"
-        id="pills-free"
-        role="tabpanel"
-        aria-labelledby="pills-free-tab"
-      >
-        <div class="container">
-          <p>free</p>
+        <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab"></div>
+        <div class="tab-pane fade" id="pills-free" role="tabpanel" aria-labelledby="pills-free-tab">
+          <div class="container">
+            <p>free</p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <%- include('./layout/footer'); -%>
+      <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      document.querySelectorAll(".mySwiper").forEach((swiperElement) => {
-        // 找到這個 swiper 所屬的容器
-        const container = swiperElement.closest(".container");
+        <script type="module" src="../main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+          document.querySelectorAll(".mySwiper").forEach((swiperElement) => {
+            // 找到這個 swiper 所屬的容器
+            const container = swiperElement.closest(".container");
 
-        new Swiper(swiperElement, {
-          slidesPerView: "auto",
-          spaceBetween: 20,
-          freeMode: false,
-          navigation: {
-            // 使用相對選擇器，只在當前容器內尋找按鈕
-            nextEl: container.querySelector(".my-next-btn"),
-            prevEl: container.querySelector(".my-prev-btn"),
-          },
-
-          breakpoints: {
-            // 手機版
-            375: {
-              slidesPerView: 2,
-              spaceBetween: 12,
-              // 新增grid
-              grid: {
-                rows: 2,
-                fill: "row",
-              },
-            },
-            576: {
-              slidesPerView: 2,
-              spaceBetween: 16,
-              // 新增grid
-              grid: {
-                rows: 2,
-                fill: "row",
-              },
-            },
-            // 平板版
-            768: {
-              slidesPerView: 3,
+            new Swiper(swiperElement, {
+              slidesPerView: "auto",
               spaceBetween: 20,
-            },
-            // 電腦版
-            992: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-          },
-          effect: "slide",
-          mousewheel: {
-            enabled: false,
-          },
-          speed: 400,
-        });
-      });
-    </script>
-  </body>
+              freeMode: false,
+              navigation: {
+                // 使用相對選擇器，只在當前容器內尋找按鈕
+                nextEl: container.querySelector(".my-next-btn"),
+                prevEl: container.querySelector(".my-prev-btn"),
+              },
+
+              breakpoints: {
+                // 手機版
+                375: {
+                  slidesPerView: 2,
+                  spaceBetween: 12,
+                  // 新增grid
+                  grid: {
+                    rows: 2,
+                    fill: "row",
+                  },
+                },
+                576: {
+                  slidesPerView: 2,
+                  spaceBetween: 16,
+                  // 新增grid
+                  grid: {
+                    rows: 2,
+                    fill: "row",
+                  },
+                },
+                // 平板版
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                // 電腦版
+                992: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              },
+              effect: "slide",
+              mousewheel: {
+                enabled: false,
+              },
+              speed: 400,
+            });
+          });
+        </script>
+</body>
+
 </html>
