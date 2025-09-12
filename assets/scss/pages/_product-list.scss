@@ -1,25 +1,65 @@
 .pd-list-container {
-  max-width: 1440px;
+  max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.pd-list-sidebar {
+
+  @include size-sm {
+    display: none;
+  }
+}
+
+.pd-list-cardbox {
+  @include size-sm {}
+}
+
 .product-list-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* 黑色 40% 疊層 */ url("/assets/images/產品列表頁/banner.png");
+    /* 黑色 40% 疊層 */
+    url("/assets/images/產品列表頁/banner.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   height: 278px;
   width: 100%;
+
+  @include size-sm {
+    height: 320px;
+
+    button {
+      margin-bottom: 12px;
+    }
+  }
 }
+
+.searchteag {
+  @include size-sm {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+
+.pd-list-cardbox {
+  @include size-sm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+.pd-list-content {
+  @include size-sm {}
+}
+
+
 
 .pl-banner-btn {
   color: $white;
-
-  position: relative;
-  padding-left: 2.5rem;
-  /* 給 icon 騰位置 */
   color: #fff;
   border: 1px solid #fff;
   background: transparent;
@@ -44,18 +84,8 @@
   }
 }
 
-.pl-banner-btn::before {
-  content: "";
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 2a8 8 0 015.29 13.71l5 5a1 1 0 01-1.42 1.42l-5-5A8 8 0 1110 2z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.pd-list-dropdown {
+  padding-right: 0;
 }
 
 .pl-main {
@@ -100,11 +130,45 @@
 }
 
 .row-pd-list {
-  display: grid;
-  grid-template-columns: 25% 1fr;
-  /* 左 3 / 右 9 的概念 */
-  gap: 16px;
-  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pd-list-sidebar {
+  flex: 0 0 237px !important;
+  /* 以 237px 為基準，且不允許縮 */
+  width: 237px !important;
+  /* 與 flex-basis 一致，易讀 */
+  min-width: 237px;
+  /* 雙保險（有時套件會再改 flex）*/
+}
+
+.pd-list-content {
+  flex: 1 1 auto;
+  /* 右側吃剩餘寬 */
+  min-width: 0;
+  /* 避免內容撐爆把左欄擠縮 */
+}
+
+.object-position-top {
+  object-position: top;
+}
+
+.object-position-right {
+  object-position: right;
+}
+
+.object-position-right-15 {
+  object-position: right 15%;
+}
+
+.object-position-center-25 {
+  object-position: center 25%;
+}
+
+.object-position-bottom {
+  object-position: bottom;
 }
 
 .color-dot {

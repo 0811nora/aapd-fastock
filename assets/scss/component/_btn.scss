@@ -9,7 +9,7 @@
     background-color: $white;
 }
 
-@include size-sm{
+@include size-sm {
     .btn-sm {
         padding: 10px 16px;
         font-size: 14px;
@@ -19,6 +19,17 @@
         cursor: pointer;
         background-color: $white;
     }
+}
+
+.lil-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: $white;
+
 }
 
 

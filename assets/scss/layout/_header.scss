@@ -311,7 +311,8 @@ header .modal {
   padding: 16px;
   background-color: $primary-50;
 }
-header .modal .btn-close {
+header .modal .btn-close,
+header .input-group .btn-close {
   --bs-btn-close-bg: none;
   padding: 0;
   width: 24px;
@@ -443,6 +444,37 @@ header .was-validated .form-check-input:valid ~ .form-check-label,
   color: $black;
 }
 
+// 突出購物車icon
+.header-cart-btn.cart-active {
+  z-index: 1060 !important;
+  // modal的z-index:1050px
+  position: relative;
+}
+// 購物車預設狀態
+.cart-btn.cart-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cart-btn.cart-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+// badge
+.cart-badge-img {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+.cart-btn.cart-active .cart-badge-img {
+  display: block;
+}
+
 // 信用卡旁的打勾位置
 .was-validated .form-control#cardNumberInput:valid,
 .form-control#cardNumberInput.is-valid
@@ -464,12 +496,15 @@ header .form-check-input:valid:checked,
 }
 
 // login offcanvas
+header .offcanvas {
+  z-index: 1070 !important;
+}
 header .offcanvas-bottom {
   padding: 16px 24px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-header .offcanvas-header .btn-close {
+header .offcanvas-bottom .offcanvas-header .btn-close {
   padding-top: 16px;
   margin-top: 0;
   margin-left: 0;
