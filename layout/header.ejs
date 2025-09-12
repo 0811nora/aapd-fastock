@@ -72,12 +72,98 @@
           <span class="divider d-none d-lg-block"></span>
           <!-- 輸入關鍵字搜尋 -->
           <input
-            class="form-control search-bar"
+            class="form-control search-bar position-relative"
             type="search"
             placeholder="搜尋數百萬創意資源"
             aria-label="Search"
             id="headerSearchBar"
           />
+          <div class="search-reco py-2 rounded-5 shadow-lg mt-2">
+            <div class="d-flex flex-column gap-2 p-2">
+              <h6 class="fs-md fw-bold py-1 px-2">熱門搜尋</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li>
+                  <a href="keyword-search.html"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-search-gray.svg"
+                      alt="icon-search"
+                    />貓</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-search-gray.svg"
+                      alt="icon-search"
+                    />雪山日出</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-search-gray.svg"
+                      alt="icon-search"
+                    />商業模板</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-search-gray.svg"
+                      alt="icon-search"
+                    />抽象3D</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="input-divider"></div>
+            <div class="d-flex flex-column gap-2 p-2">
+              <h6 class="fs-md fw-bold py-1 px-2">歷史搜尋</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-history-gray.svg"
+                      alt="icon-history"
+                    />大衛</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-history-gray.svg"
+                      alt="icon-history"
+                    />名片</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-history-gray.svg"
+                      alt="icon-history"
+                    />背景</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="me-2"
+                      src="/assets/images/icon/icon-history-gray.svg"
+                      alt="icon-history"
+                    />手寫風</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <!-- 圖搜圖的圖示 -->
           <button
             class="search-bar-btn btn-image-search pe-6"
@@ -617,6 +703,91 @@
           aria-label="Search"
           id="mobileHeaderSearchBar"
         />
+        <div class="search-mob-reco py-2 rounded-5 shadow-lg mt-2">
+          <div class="d-flex flex-column gap-2 p-2">
+            <h6 class="fs-md fw-bold py-1 px-2">熱門搜尋</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="keyword-search.html"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-search-gray.svg"
+                    alt="icon-search"
+                  />貓</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-search-gray.svg"
+                    alt="icon-search"
+                  />雪山日出</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-search-gray.svg"
+                    alt="icon-search"
+                  />商業模板</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-search-gray.svg"
+                    alt="icon-search"
+                  />抽象3D</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="input-divider"></div>
+          <div class="d-flex flex-column gap-2 p-2">
+            <h6 class="fs-md fw-bold py-1 px-2">歷史搜尋</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-history-gray.svg"
+                    alt="icon-history"
+                  />大衛</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-history-gray.svg"
+                    alt="icon-history"
+                  />名片</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-history-gray.svg"
+                    alt="icon-history"
+                  />背景</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="me-2"
+                    src="/assets/images/icon/icon-history-gray.svg"
+                    alt="icon-history"
+                  />手寫風</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
         <!-- 圖搜圖的圖示 -->
         <button
           class="search-bar-btn btn-image-search pe-6"
@@ -939,9 +1110,7 @@
           ><span class="fs-md fw-medium letter-spacing-sm">查看全部</span></a
         >
         <ul class="list-unstyled">
-          <li
-            class="d-flex flex-column gap-3 pb-6 mb-6 border-bottom border-secondary-400 border-3"
-          >
+          <li class="d-flex flex-column">
             <ul class="list-unstyled list-group d-flex flex-column gap-3">
               <li>
                 <h3
@@ -998,10 +1167,9 @@
                 /></a>
               </li>
             </ul>
+            <div class="offcanvas-divider"></div>
           </li>
-          <li
-            class="d-flex flex-column gap-3 pb-6 mb-6 border-bottom border-secondary-400 border-3"
-          >
+          <li class="d-flex flex-column">
             <ul class="list-unstyled list-group d-flex flex-column gap-3">
               <li><h3 class="fs-lg fw-bold list-group-item">風格</h3></li>
               <li>
@@ -1029,8 +1197,9 @@
                 /></a>
               </li>
             </ul>
+            <div class="offcanvas-divider"></div>
           </li>
-          <li class="d-flex flex-column gap-3">
+          <li class="d-flex flex-column">
             <ul class="list-unstyled list-group d-flex flex-column gap-3">
               <li><h3 class="fs-lg fw-bold list-group-item">用途</h3></li>
               <li>

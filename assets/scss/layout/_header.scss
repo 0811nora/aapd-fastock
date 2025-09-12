@@ -224,6 +224,70 @@ header ul.dropdown-menu.show {
   display: inline-block;
 }
 
+.input-divider {
+  width: calc(100% - 16px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 12px 8px;
+}
+
+.search-reco {
+  position: absolute;
+  width: calc(100% - 76px);
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+.search-mob-reco {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-mob-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+header .input-group.search-dropdown:focus-within {
+  .search-reco {
+    display: block;
+  }
+  .search-mob-reco {
+    display: block;
+  }
+}
+
 // login btn
 header .nav-login-btn {
   @include icon-size(
@@ -742,4 +806,11 @@ header .navbar-toggler {
     margin-left: 16px;
     margin-right: 16px;
   }
+}
+
+.offcanvas-divider {
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 16px;
 }
