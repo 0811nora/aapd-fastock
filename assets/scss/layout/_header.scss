@@ -279,8 +279,8 @@ header ul.dropdown-menu.show {
   }
 }
 
-header .input-group.search-dropdown:focus-within {
-  .search-reco {
+header .input-group.search-dropdown .search-bar:focus {
+  ~ .search-reco {
     display: block;
   }
   .search-mob-reco {
