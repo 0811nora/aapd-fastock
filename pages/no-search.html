@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相片 | 快素 Fastock</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo icon.svg" />
+</head>
+
+<body><%- include('./layout/header'); -%>
+        <section class="container-fluid  bg-primary-50 no-search-banner py-8 px-12">
+            <h3 class="mb-2 h4 "><span class="h4 bg-accent-400 mx-1">?>/,.||\\</span>相關的素材資源
+            </h3>
+            <p class="fs-md text-neutral-600 fs-md-lg">瀏覽我們的素材庫，您將發現許多精彩的免版稅商業照片、圖片與影像。我們相信您一定能找到最適合您專案的素材！</p>
+
+        </section>
+        <main
+            class="no-search-container py-12 d-flex flex-column justify-content-center align-items-center position-relative">
+            <h2 class="fw-md-bold h4 mb-8">抱歉，沒有找到<span class="h6 bg-accent-400 mx-1">?>/,.||\\</span>相關的素材
+            </h2>
+            <p class="fs-sm fs-md-lg mb-4">或許是你用的關鍵字太獨特，也或許它正在創作的路上</p>
+            <p class="fs-sm fs-md-lg mb-4">別擔心，靈感總有其他出口：</p>
+            <ul>
+                <li class="mb-1 mb-md-2">
+                    <p class="fs-sm fs-md-lg">換個關鍵字再試試看</p>
+                </li>
+                <li class="mb-1 mb-md-2">
+                    <p class="fs-sm fs-md-lg">瀏覽我們的<a href="product-list.html"
+                            class="lh-1 d-inline-block text-neutral-800 border-bottom border-secondary-700 mx-1">熱門分類</a>和<a
+                            href="product-list.html"
+                            class="lh-1 d-inline-block text-neutral-800 border-bottom border-secondary-700 mx-1">推薦主題</a>
+                    </p>
+                </li>
+                <li>
+                    <p class="fs-sm fs-md-lg">或逛逛<a href="index.html"
+                            class="lh-1 d-inline-block text-neutral-800 border-bottom border-secondary-700 mx-1">首頁</a>，看看近期人氣素材
+                    </p>
+                </li>
+            </ul>
+            <img class="no-search-img" src="/assets/images/產品列表頁/image-搜尋失敗.png" alt="搜尋失敗">
+        </main>
+
+        <%- include('./layout/scroll-top-btn.ejs'); -%>
+            <%- include('./layout/footer'); -%>
+                <script type="module" src="../main.js"></script>
+</body>
+
+</html>

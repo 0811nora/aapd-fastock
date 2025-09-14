@@ -229,7 +229,7 @@
   }
 }
 
-// 要修改+手機版動畫
+// 手機版動畫
 @media (max-width: 992px) {
   .c-cta {
     margin-left: -12px;
@@ -282,9 +282,9 @@
 }
 @media (max-width: 576px) {
   .c-cta {
-    margin-left: -12px;
-    margin-right: -12px;
-    width: calc(100% + 24px);
+    margin-left: -16px;
+    margin-right: -16px;
+    width: calc(100% + 32px);
     border-radius: 0;
   }
   .cta-img img {

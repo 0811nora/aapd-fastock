@@ -1,0 +1,43 @@
+.no-search-container {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+
+    h2 {
+        @include size-sm {
+            font-size: 18px !important;
+        }
+    }
+
+    span {
+        @include size-sm {
+            font-size: 18px !important;
+        }
+    }
+}
+
+.no-search-banner {
+    h4 {
+        @include size-sm {
+            font-size: 24px !important;
+        }
+    }
+
+    span {
+        @include size-sm {
+            font-size: 24px !important;
+        }
+    }
+}
+
+.no-search-img {
+    position: absolute;
+    width: 322px;
+    height: 248px;
+    bottom: 0;
+    right: calc(50% + 162px);
+
+    @include size-sm {
+        display: none;
+    }
+}
