@@ -2,6 +2,32 @@
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+
+    h2 {
+        @include size-sm {
+            font-size: 18px !important;
+        }
+    }
+
+    span {
+        @include size-sm {
+            font-size: 18px !important;
+        }
+    }
+}
+
+.no-search-banner {
+    h4 {
+        @include size-sm {
+            font-size: 24px !important;
+        }
+    }
+
+    span {
+        @include size-sm {
+            font-size: 24px !important;
+        }
+    }
 }
 
 .no-search-img {

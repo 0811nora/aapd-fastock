@@ -135,6 +135,9 @@ header .input-group {
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
   box-shadow: none;
+  input::placeholder {
+    color: rgba($neutral-600, 1);
+  }
 
   @media (max-width: 992px) {
     width: 365px;
@@ -169,7 +172,10 @@ header .input-group {
   &:focus-within {
     border-color: $neutral-500;
     border-width: 2px;
-    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+    // box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+    input::placeholder {
+      color: rgba($neutral-600, 0.8);
+    }
     .divider {
       background-color: $neutral-500;
     }
@@ -195,9 +201,9 @@ header .search-bar-btn {
 header .input-group {
   // 當搜尋輸入框被 focus 時
   .form-control:focus ~ & {
-    border-color: $neutral-500;
-    border-width: 2px;
-    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+    // border-color: $neutral-500;
+    // border-width: 2px;
+    // box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
   }
 
   // 當下拉按鈕被 focus 時
@@ -210,18 +216,95 @@ header .input-group {
 header .input-group {
   // 明顯版
   &:focus-visible {
-    border-color: $primary;
-    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    // border-color: $primary;
+    // box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
   }
   // 輕微版
   &:focus:not(:focus-visible) {
-    border-color: $neutral-500;
-    box-shadow: 0 0 0 0.125rem rgba(140, 140, 140, 0.15);
+    // border-color: $neutral-500;
+    border-color: none;
+    // box-shadow: 0 0 0 0.125rem rgba(140, 140, 140, 0.15);
+    box-shadow: none;
   }
 }
 
 header ul.dropdown-menu.show {
   display: inline-block;
+}
+
+.input-divider {
+  width: calc(100% - 16px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 12px 8px;
+}
+
+.search-reco {
+  position: absolute;
+  width: calc(100% - 76px);
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+.search-mob-reco {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-mob-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+// pc版
+header .input-group.search-dropdown {
+  .search-bar:focus ~ .search-reco,
+  .search-reco:hover {
+    display: block;
+  }
+}
+// 手機板
+header .input-group.search-dropdown:focus-within {
+  .search-mob-reco {
+    display: block;
+  }
+}
+
+// 圖搜圖樣式
+#mobileImageSearchWrapper.image-search,
+#imageSearchWrapper.image-search {
+  border: 2px solid $neutral-500 !important;
 }
 
 // login btn
@@ -742,4 +825,11 @@ header .navbar-toggler {
     margin-left: 16px;
     margin-right: 16px;
   }
+}
+
+.offcanvas-divider {
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 16px;
 }
