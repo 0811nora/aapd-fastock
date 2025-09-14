@@ -199,19 +199,20 @@
 
 // ----- 人氣標籤樣式
 
-.tag {
-  &-m {
-    padding: 8px 12px;
-    font-size: 14px;
-    margin: 16px;
-  }
-  &-lg-s{
-    padding: 4px 8px;
-    font-size: 12px;
-    margin: 8px;
+@include size-lg {
+  .tag {
+    &-m {
+      padding: 8px 12px;
+      font-size: 14px;
+      margin: 16px;
+    }
+    &-lg-s {
+        padding: 4px 8px;
+        font-size: 12px;
+        margin: 8px;
+      }
   }
 }
-
 @include size-sm {
   .tag {
     &-s {
@@ -305,13 +306,7 @@
 
 .form-check-input:checked {
   background-color: currentColor;
-  // border-color: currentColor;
-  border-color: $primary;
-}
-
-.form-check-input:focus{
-  box-shadow: none;
-  border-color: #5553ba;
+  border-color: currentColor;
 }
 
 .checkbox-secondary {
