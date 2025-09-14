@@ -7,17 +7,20 @@
     padding-top: 37px;
     padding-bottom: 37px;
   }
-  .w-160px {
-    width: 160px;
+  .w-120px {
+    width: 120px;
   }
   .w-300px {
     width: 300px;
+  }
+  .h-90px{
+    height: 90px;
   }
 
   ul {
     list-style: none;
     padding-left: 0;
-  }
+  }｀
   .order-bg {
     position: absolute;
     bottom: 0;
@@ -32,7 +35,7 @@
     color: $white;
   }
   .btn.btn-pr:disabled {
-    background-color: #ADADAD;
+    background-color: #939393;
     color: $white;
   }
   .btn.btn-pr-outline:hover{
@@ -45,6 +48,9 @@
     border-color: #8c8c8c;
     outline: 0;
     box-shadow: 0 0 0 0.1rem rgb(140, 140, 140);
+  }
+  .img-object-cover{
+    object-fit: cover;
   }
 }
 
