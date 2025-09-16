@@ -189,22 +189,16 @@ header .search-bar-btn {
     outline: none !important;
     box-shadow: none !important;
   }
-
-  // 想要按鈕本身有 focus 樣式，可以這樣設定：
-  // &:focus-visible {
-  //   outline: 2px solid $primary;
-  //   outline-offset: 2px;
-  // }
 }
 
 // 如果想要更精確的控制，可以分別處理不同狀態
 header .input-group {
   // 當搜尋輸入框被 focus 時
-  .form-control:focus ~ & {
-    // border-color: $neutral-500;
-    // border-width: 2px;
-    // box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
-  }
+  // .form-control:focus ~ & {
+  // border-color: $neutral-500;
+  // border-width: 2px;
+  // box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+  // }
 
   // 當下拉按鈕被 focus 時
   .search-bar-btn:focus ~ & {
@@ -215,10 +209,10 @@ header .input-group {
 
 header .input-group {
   // 明顯版
-  &:focus-visible {
-    // border-color: $primary;
-    // box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
-  }
+  //&:focus-visible {
+  // border-color: $primary;
+  // box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  //}
   // 輕微版
   &:focus:not(:focus-visible) {
     // border-color: $neutral-500;
@@ -299,6 +293,26 @@ header .input-group.search-dropdown:focus-within {
   .search-mob-reco {
     display: block;
   }
+}
+
+// 搜尋欄內容清除樣式
+header .form-control {
+  padding-right: 0.375rem;
+}
+header .input-group.search-dropdown {
+  .search-bar:focus:not(:placeholder-shown) ~ .btn-image-search {
+    display: none !important;
+  }
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M17.2929%205.29289C17.6835%204.90237%2018.3165%204.90237%2018.707%205.29289C19.0974%205.68343%2019.0975%206.31647%2018.707%206.70696L13.414%2011.9999L18.707%2017.2929L18.7754%2017.3691C19.0956%2017.7618%2019.0731%2018.3409%2018.707%2018.707C18.3409%2019.073%2017.7619%2019.0955%2017.3691%2018.7753L17.2929%2018.707L12%2013.414L6.70701%2018.707C6.31652%2019.0974%205.68347%2019.0973%205.29294%2018.707C4.90243%2018.3164%204.90244%2017.6834%205.29294%2017.2929L10.5859%2011.9999L5.29294%206.70696C4.90243%206.31644%204.90244%205.68342%205.29294%205.29289C5.68347%204.90237%206.31648%204.90237%206.70701%205.29289L12%2010.5859L17.2929%205.29289Z%22%20fill%3D%22%23262626%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right -4px center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 // 圖搜圖樣式
