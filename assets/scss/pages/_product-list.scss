@@ -135,12 +135,11 @@
 }
 
 .pd-list-sidebar {
-  flex: 0 0 237px !important;
+  flex: 0 0 249px !important;
   /* 以 237px 為基準，且不允許縮 */
-  width: 237px !important;
-  /* 與 flex-basis 一致，易讀 */
-  min-width: 237px;
-  /* 雙保險（有時套件會再改 flex）*/
+  width: 249px !important;
+
+  min-width: 249px;
 }
 
 .pd-list-content {
