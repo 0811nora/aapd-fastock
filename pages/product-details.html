@@ -78,19 +78,19 @@
                   <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
                       <div class="modal-content">
-                        <div class="modal-header border-0 pb-0">
+                        <div class="modal-header border-0 pb-0 p-6">
                           <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
                           <button type="button" class="btn-close trybtn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <div class="modal-body p-6">
-                          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between mb-6 ">
+                          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4 mb-6 ">
                             <div class="w-lg-85 w-sm-100 h-lg-547px h-188px mb-4 mb-lg-0 ">
                               <img src="/assets/images/產品詳細頁/product-image.png" class="rounded-5 w-100 h-100  choose-normal " alt="">
                               <img src="/assets/images/產品詳細頁/porduct-cut-part.png" class="rounded-5 w-100  h-100 choose-cut-img d-none" alt="">
                               <img src="/assets/images/產品詳細頁/porduct-nobg.png" class="rounded-5 w-100 h-100 choose-only d-none" alt="">
                             </div>
-                            <div class="w-lg-15  d-flex flex-lg-column gap-3 text-end ">
+                            <div class="d-flex flex-lg-column gap-3 ">
                               <div>
                                 <button class="btn bg-primary-50 py-4 px-3 text-center choose-cut-btn">
                                   <img src="/assets/images/icon/icon-blue-crop.svg" alt="">
@@ -1014,11 +1014,10 @@
           
           // 成功提示
           copyImageBtn.textContent = '已複製圖片！';
-          copyImageBtn.classList.add('btn-success');
+          copyImageBtn.classList.add('btn-sec-outline');
           
           setTimeout(() => {
             copyImageBtn.textContent = '複製到剪貼簿';
-            copyImageBtn.classList.remove('btn-success');
           }, 2000);
           
         } catch (err) {
