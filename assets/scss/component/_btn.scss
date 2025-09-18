@@ -122,6 +122,8 @@
 
     &:hover {
         background-color: mix($secondary-black, $white, 5%);
+        border: 1px solid $secondary-700;
+
     }
 
     &:focus-visible {
